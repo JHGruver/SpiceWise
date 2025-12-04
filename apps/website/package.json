@@ -1,0 +1,28 @@
+{
+  "name": "@spicewise/website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SpiceWise companion website - marketing, blog, and information",
+  "scripts": {
+    "dev": "vite --port 3003",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "@spicewise/shared-data": "*",
+    "@spicewise/shared-types": "*",
+    "@spicewise/ui-components": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^6.20.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  }
+}

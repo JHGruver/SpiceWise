@@ -1,0 +1,208 @@
+// ============================================
+// Spicewise Advice - Design System Variables
+// Brand colors from Investor Document (Official)
+// ============================================
+
+// ===========================================
+// BRAND COLORS (from Spice Investor Invitation.pdf)
+// ===========================================
+
+// Primary Brand Colors
+$sw-color-sage: #E8E5DF;           // Background - light sage/cream
+$sw-color-olive: #6B7B4C;          // Primary accent - olive green
+$sw-color-charcoal: #2D2D2D;       // Primary text
+$sw-color-white: #FFFFFF;          // Cards, content areas
+$sw-color-black: #000000;          // Logo, headings, decorative elements
+
+// Derived Colors (based on brand palette)
+$sw-color-olive-light: #7D8F5E;    // Lighter olive for hover states
+$sw-color-olive-dark: #5A6940;     // Darker olive for active states
+$sw-color-sage-dark: #D9D6D0;      // Darker sage for secondary backgrounds
+$sw-color-charcoal-light: #4A4A4A; // Lighter charcoal for secondary text
+$sw-color-charcoal-muted: #757575; // Muted charcoal for placeholder/muted text
+
+// ===========================================
+// SEMANTIC COLORS
+// ===========================================
+
+// Primary Colors
+$sw-color-primary: $sw-color-olive;
+$sw-color-primary-light: $sw-color-olive-light;
+$sw-color-primary-dark: $sw-color-olive-dark;
+
+// Secondary Colors (warm earth tone complement)
+$sw-color-secondary: #8B6914;      // Warm brown/gold
+$sw-color-secondary-light: #A67C1A;
+
+// Accent Colors
+$sw-color-accent: #C4A574;         // Warm beige accent
+$sw-color-accent-light: #D9C4A0;
+
+// ===========================================
+// BACKGROUND COLORS
+// ===========================================
+$sw-color-bg-primary: $sw-color-sage;
+$sw-color-bg-secondary: $sw-color-sage-dark;
+$sw-color-bg-card: $sw-color-white;
+$sw-color-bg-dark: $sw-color-charcoal;
+
+// ===========================================
+// TEXT COLORS
+// ===========================================
+$sw-color-text-primary: $sw-color-charcoal;
+$sw-color-text-secondary: $sw-color-charcoal-light;
+$sw-color-text-muted: $sw-color-charcoal-muted;
+$sw-color-text-inverse: $sw-color-white;
+
+// ===========================================
+// STATUS COLORS
+// ===========================================
+$sw-color-success: #4A7C43;        // Green (herb-inspired)
+$sw-color-warning: #D4A017;        // Golden yellow
+$sw-color-error: #B94A48;          // Muted red
+$sw-color-info: #4A6B7C;           // Muted blue-gray
+
+// ===========================================
+// CATEGORY COLORS (Herb vs Spice)
+// ===========================================
+$sw-color-herb: #4A7C43;           // Green for herbs
+$sw-color-spice: #C17F24;          // Warm orange for spices
+
+// ===========================================
+// SPACING
+// ===========================================
+$sw-spacing-xs: 0.25rem;   // 4px
+$sw-spacing-sm: 0.5rem;    // 8px
+$sw-spacing-md: 1rem;      // 16px
+$sw-spacing-lg: 1.5rem;    // 24px
+$sw-spacing-xl: 2rem;      // 32px
+$sw-spacing-2xl: 3rem;     // 48px
+$sw-spacing-3xl: 4rem;     // 64px
+
+// ===========================================
+// BORDER RADIUS
+// ===========================================
+$sw-radius-sm: 4px;
+$sw-radius-md: 8px;
+$sw-radius-lg: 12px;
+$sw-radius-xl: 16px;
+$sw-radius-2xl: 24px;
+$sw-radius-full: 9999px;
+
+// ===========================================
+// SHADOWS
+// ===========================================
+$sw-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$sw-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08);
+$sw-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$sw-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.12);
+
+// ===========================================
+// TYPOGRAPHY
+// ===========================================
+
+// Font Families
+$sw-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$sw-font-family-heading: 'Merriweather', Georgia, serif;
+$sw-font-family-script: 'Dancing Script', cursive; // For decorative text like in investor doc
+
+// Font Sizes
+$sw-text-xs: 0.75rem;    // 12px
+$sw-text-sm: 0.875rem;   // 14px
+$sw-text-base: 1rem;     // 16px
+$sw-text-lg: 1.125rem;   // 18px
+$sw-text-xl: 1.25rem;    // 20px
+$sw-text-2xl: 1.5rem;    // 24px
+$sw-text-3xl: 1.875rem;  // 30px
+$sw-text-4xl: 2.25rem;   // 36px
+$sw-text-5xl: 3rem;      // 48px
+
+// Font Weights
+$sw-font-light: 300;
+$sw-font-normal: 400;
+$sw-font-medium: 500;
+$sw-font-semibold: 600;
+$sw-font-bold: 700;
+
+// Line Heights
+$sw-leading-tight: 1.25;
+$sw-leading-normal: 1.5;
+$sw-leading-relaxed: 1.75;
+
+// ===========================================
+// TRANSITIONS
+// ===========================================
+$sw-transition-fast: 150ms ease;
+$sw-transition-normal: 250ms ease;
+$sw-transition-slow: 350ms ease;
+
+// ===========================================
+// Z-INDEX LAYERS
+// ===========================================
+$sw-z-dropdown: 100;
+$sw-z-sticky: 200;
+$sw-z-modal-backdrop: 250;
+$sw-z-modal: 300;
+$sw-z-toast: 400;
+
+// ===========================================
+// LAYOUT
+// ===========================================
+$sw-header-height: 60px;
+$sw-header-height-lg: 70px;
+$sw-nav-height: 64px;
+$sw-max-width: 1200px;
+$sw-max-width-narrow: 800px;
+$sw-sidebar-width: 280px;
+
+// ===========================================
+// BREAKPOINTS
+// ===========================================
+$sw-breakpoint-sm: 640px;
+$sw-breakpoint-md: 768px;
+$sw-breakpoint-lg: 1024px;
+$sw-breakpoint-xl: 1280px;
+
+// ===========================================
+// MIXINS
+// ===========================================
+
+// Responsive breakpoint mixin
+@mixin breakpoint($size) {
+  @if $size == sm {
+    @media (min-width: $sw-breakpoint-sm) { @content; }
+  } @else if $size == md {
+    @media (min-width: $sw-breakpoint-md) { @content; }
+  } @else if $size == lg {
+    @media (min-width: $sw-breakpoint-lg) { @content; }
+  } @else if $size == xl {
+    @media (min-width: $sw-breakpoint-xl) { @content; }
+  }
+}
+
+// Focus visible outline
+@mixin focus-outline {
+  outline: 2px solid $sw-color-primary;
+  outline-offset: 2px;
+}
+
+// Card style mixin
+@mixin card($padding: $sw-spacing-md, $shadow: $sw-shadow-sm) {
+  background-color: $sw-color-bg-card;
+  border-radius: $sw-radius-lg;
+  box-shadow: $shadow;
+  padding: $padding;
+}
+
+// Button base mixin
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $sw-font-family;
+  font-weight: $sw-font-medium;
+  border-radius: $sw-radius-md;
+  cursor: pointer;
+  transition: all $sw-transition-fast;
+  border: 2px solid transparent;
+}

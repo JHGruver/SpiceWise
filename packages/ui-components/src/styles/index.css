@@ -1,0 +1,434 @@
+/* SpiceCraft Design System - Luxury Edition */
+/* A premium blend of sophistication, elegance, and timeless refinement */
+
+/* ============================================
+   CSS Variables (Design Tokens)
+   ============================================ */
+:root {
+  /* ========== Color Palette - Luxury Refined ========== */
+
+  /* Primary - Deep Emerald Forest */
+  --sw-color-primary: #2D4A3E;
+  --sw-color-primary-light: #3D5F50;
+  --sw-color-primary-dark: #1F352C;
+  --sw-color-primary-muted: rgba(45, 74, 62, 0.12);
+
+  /* Secondary - Burnished Bronze */
+  --sw-color-secondary: #8B5E3C;
+  --sw-color-secondary-light: #A67B5B;
+  --sw-color-secondary-dark: #6B4A2F;
+
+  /* Accent - Rich Gold / Champagne */
+  --sw-color-accent: #B8956E;
+  --sw-color-accent-light: #D4B896;
+  --sw-color-accent-dark: #9A7B54;
+
+  /* Luxury Metallics */
+  --sw-color-gold: #C4A265;
+  --sw-color-gold-light: #E8D4B0;
+  --sw-color-gold-dark: #9A7D4A;
+  --sw-color-champagne: #F7E7CE;
+  --sw-color-platinum: #E5E4E2;
+  --sw-color-rose-gold: #B76E79;
+
+  /* Warm Neutrals - Ivory & Pearl */
+  --sw-color-cream: #FDFBF7;
+  --sw-color-parchment: #F8F5EF;
+  --sw-color-sand: #EDE8E0;
+  --sw-color-stone: #DDD8CF;
+  --sw-color-clay: #C9C4BA;
+
+  /* Deep Neutrals - Obsidian & Onyx */
+  --sw-color-espresso: #1A1614;
+  --sw-color-charcoal: #2A2624;
+  --sw-color-bark: #4A4541;
+  --sw-color-driftwood: #6A655F;
+
+  /* Backgrounds */
+  --sw-color-bg-primary: #FAF7F2;
+  --sw-color-bg-secondary: #F5F0E6;
+  --sw-color-bg-tertiary: #E8E2D6;
+  --sw-color-bg-card: #FFFFFF;
+  --sw-color-bg-dark: #2C2520;
+  --sw-color-bg-dark-elevated: #3D3835;
+
+  /* Text Colors */
+  --sw-color-text-primary: #2C2520;
+  --sw-color-text-secondary: #5C534D;
+  --sw-color-text-muted: #7A716A;
+  --sw-color-text-light: #9A928A;
+  --sw-color-text-inverse: #FAF7F2;
+
+  /* Status Colors */
+  --sw-color-success: #4A7C5A;
+  --sw-color-success-light: rgba(74, 124, 90, 0.15);
+  --sw-color-warning: #C9A961;
+  --sw-color-warning-light: rgba(201, 169, 97, 0.15);
+  --sw-color-error: #A65D5D;
+  --sw-color-error-light: rgba(166, 93, 93, 0.15);
+  --sw-color-info: #5D7A8C;
+  --sw-color-info-light: rgba(93, 122, 140, 0.15);
+
+  /* Category Colors */
+  --sw-color-herb: #4A7C5A;
+  --sw-color-spice: #B87333;
+
+  /* ========== Typography ========== */
+
+  /* Font Families */
+  --sw-font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sw-font-heading: 'Cormorant Garamond', Georgia, serif;
+  --sw-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Legacy aliases */
+  --sw-font-family: var(--sw-font-body);
+  --sw-font-family-heading: var(--sw-font-heading);
+
+  /* Font Sizes */
+  --sw-text-xs: 0.75rem;
+  --sw-text-sm: 0.875rem;
+  --sw-text-base: 1rem;
+  --sw-text-lg: 1.125rem;
+  --sw-text-xl: 1.25rem;
+  --sw-text-2xl: 1.5rem;
+  --sw-text-3xl: 2rem;
+  --sw-text-4xl: 2.5rem;
+  --sw-text-5xl: 3rem;
+  --sw-text-6xl: 3.75rem;
+
+  /* Font Weights */
+  --sw-font-light: 300;
+  --sw-font-normal: 400;
+  --sw-font-medium: 500;
+  --sw-font-semibold: 600;
+  --sw-font-bold: 700;
+
+  /* Line Heights */
+  --sw-leading-tight: 1.15;
+  --sw-leading-snug: 1.3;
+  --sw-leading-normal: 1.5;
+  --sw-leading-relaxed: 1.625;
+  --sw-leading-loose: 1.8;
+
+  /* Letter Spacing */
+  --sw-tracking-tight: -0.01em;
+  --sw-tracking-normal: 0;
+  --sw-tracking-wide: 0.025em;
+  --sw-tracking-wider: 0.05em;
+  --sw-tracking-widest: 0.1em;
+
+  /* ========== Spacing ========== */
+  --sw-spacing-xs: 0.25rem;
+  --sw-spacing-sm: 0.5rem;
+  --sw-spacing-md: 1rem;
+  --sw-spacing-lg: 1.5rem;
+  --sw-spacing-xl: 2rem;
+  --sw-spacing-2xl: 3rem;
+  --sw-spacing-3xl: 4rem;
+  --sw-spacing-4xl: 6rem;
+  --sw-spacing-5xl: 8rem;
+
+  /* ========== Border Radius ========== */
+  --sw-radius-sm: 4px;
+  --sw-radius-md: 8px;
+  --sw-radius-lg: 12px;
+  --sw-radius-xl: 16px;
+  --sw-radius-2xl: 24px;
+  --sw-radius-3xl: 32px;
+  --sw-radius-full: 9999px;
+
+  /* ========== Shadows ========== */
+  --sw-shadow-xs: 0 1px 2px rgba(44, 37, 32, 0.04);
+  --sw-shadow-sm: 0 2px 4px rgba(44, 37, 32, 0.06);
+  --sw-shadow-md: 0 4px 12px rgba(44, 37, 32, 0.08);
+  --sw-shadow-lg: 0 8px 24px rgba(44, 37, 32, 0.1);
+  --sw-shadow-xl: 0 16px 48px rgba(44, 37, 32, 0.12);
+  --sw-shadow-inner: inset 0 2px 4px rgba(44, 37, 32, 0.06);
+  --sw-shadow-glow: 0 0 24px rgba(74, 93, 74, 0.2);
+
+  /* ========== Borders ========== */
+  --sw-border-thin: 1px solid var(--sw-color-sand);
+  --sw-border-medium: 2px solid var(--sw-color-sand);
+  --sw-border-accent: 2px solid var(--sw-color-accent);
+
+  /* ========== Transitions ========== */
+  --sw-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --sw-transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --sw-transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --sw-transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================
+   Button Component
+   ============================================ */
+.sw-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sw-spacing-sm);
+  font-family: var(--sw-font-body);
+  font-weight: var(--sw-font-medium);
+  letter-spacing: var(--sw-tracking-wide);
+  border-radius: var(--sw-radius-md);
+  cursor: pointer;
+  transition: all var(--sw-transition-normal);
+  border: 2px solid transparent;
+}
+
+.sw-button--sm {
+  padding: var(--sw-spacing-xs) var(--sw-spacing-md);
+  font-size: var(--sw-text-sm);
+}
+
+.sw-button--md {
+  padding: var(--sw-spacing-sm) var(--sw-spacing-lg);
+  font-size: var(--sw-text-base);
+}
+
+.sw-button--lg {
+  padding: var(--sw-spacing-md) var(--sw-spacing-xl);
+  font-size: var(--sw-text-lg);
+}
+
+.sw-button--primary {
+  background-color: var(--sw-color-primary);
+  color: var(--sw-color-text-inverse);
+}
+
+.sw-button--primary:hover {
+  background-color: var(--sw-color-primary-light);
+  transform: translateY(-1px);
+  box-shadow: var(--sw-shadow-md);
+}
+
+.sw-button--secondary {
+  background-color: var(--sw-color-secondary);
+  color: var(--sw-color-text-inverse);
+}
+
+.sw-button--secondary:hover {
+  background-color: var(--sw-color-secondary-light);
+  transform: translateY(-1px);
+  box-shadow: var(--sw-shadow-md);
+}
+
+.sw-button--outline {
+  background-color: transparent;
+  border-color: var(--sw-color-primary);
+  color: var(--sw-color-primary);
+}
+
+.sw-button--outline:hover {
+  background-color: var(--sw-color-primary);
+  color: var(--sw-color-text-inverse);
+}
+
+.sw-button--ghost {
+  background-color: transparent;
+  color: var(--sw-color-text-secondary);
+}
+
+.sw-button--ghost:hover {
+  background-color: var(--sw-color-primary-muted);
+  color: var(--sw-color-primary);
+}
+
+.sw-button--accent {
+  background-color: var(--sw-color-accent);
+  color: var(--sw-color-espresso);
+}
+
+.sw-button--accent:hover {
+  background-color: var(--sw-color-accent-light);
+  transform: translateY(-1px);
+  box-shadow: var(--sw-shadow-md);
+}
+
+/* ============================================
+   Card Component
+   ============================================ */
+.sw-card {
+  background-color: var(--sw-color-bg-card);
+  border-radius: var(--sw-radius-lg);
+  transition: all var(--sw-transition-normal);
+}
+
+.sw-card--default {
+  box-shadow: var(--sw-shadow-sm);
+}
+
+.sw-card--elevated {
+  box-shadow: var(--sw-shadow-md);
+}
+
+.sw-card--elevated:hover {
+  box-shadow: var(--sw-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.sw-card--outlined {
+  border: 1px solid var(--sw-color-sand);
+  box-shadow: none;
+}
+
+.sw-card--glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.sw-card--padding-none {
+  padding: 0;
+}
+
+.sw-card--padding-sm {
+  padding: var(--sw-spacing-md);
+}
+
+.sw-card--padding-md {
+  padding: var(--sw-spacing-lg);
+}
+
+.sw-card--padding-lg {
+  padding: var(--sw-spacing-xl);
+}
+
+/* ============================================
+   Badge Component
+   ============================================ */
+.sw-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--sw-font-body);
+  font-weight: var(--sw-font-medium);
+  border-radius: var(--sw-radius-full);
+  text-transform: uppercase;
+  letter-spacing: var(--sw-tracking-wider);
+}
+
+.sw-badge--sm {
+  padding: 2px var(--sw-spacing-sm);
+  font-size: var(--sw-text-xs);
+}
+
+.sw-badge--md {
+  padding: var(--sw-spacing-xs) var(--sw-spacing-md);
+  font-size: var(--sw-text-sm);
+}
+
+.sw-badge--default {
+  background-color: var(--sw-color-sand);
+  color: var(--sw-color-text-secondary);
+}
+
+.sw-badge--success {
+  background-color: var(--sw-color-success-light);
+  color: var(--sw-color-success);
+}
+
+.sw-badge--warning {
+  background-color: var(--sw-color-warning-light);
+  color: var(--sw-color-accent-dark);
+}
+
+.sw-badge--info {
+  background-color: var(--sw-color-info-light);
+  color: var(--sw-color-info);
+}
+
+.sw-badge--herb {
+  background-color: rgba(74, 124, 90, 0.15);
+  color: var(--sw-color-herb);
+}
+
+.sw-badge--spice {
+  background-color: rgba(184, 115, 51, 0.15);
+  color: var(--sw-color-spice);
+}
+
+/* ============================================
+   Search Input Component
+   ============================================ */
+.sw-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sw-search__icon {
+  position: absolute;
+  left: var(--sw-spacing-md);
+  color: var(--sw-color-text-muted);
+  pointer-events: none;
+}
+
+.sw-search__input {
+  width: 100%;
+  padding: var(--sw-spacing-md);
+  padding-left: calc(var(--sw-spacing-md) * 2 + 20px);
+  font-family: var(--sw-font-body);
+  font-size: var(--sw-text-base);
+  border: 2px solid var(--sw-color-sand);
+  border-radius: var(--sw-radius-lg);
+  background-color: var(--sw-color-bg-card);
+  transition: all var(--sw-transition-fast);
+}
+
+.sw-search__input:focus {
+  outline: none;
+  border-color: var(--sw-color-primary);
+  box-shadow: 0 0 0 3px var(--sw-color-primary-muted);
+}
+
+.sw-search__input::placeholder {
+  color: var(--sw-color-text-muted);
+}
+
+/* ============================================
+   Decorative Elements
+   ============================================ */
+.sw-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--sw-color-sand) 20%,
+    var(--sw-color-accent) 50%,
+    var(--sw-color-sand) 80%,
+    transparent
+  );
+}
+
+.sw-divider--thick {
+  height: 2px;
+}
+
+.sw-flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sw-spacing-md);
+}
+
+.sw-flourish::before,
+.sw-flourish::after {
+  content: '';
+  flex: 1;
+  max-width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--sw-color-accent));
+}
+
+.sw-flourish::after {
+  background: linear-gradient(90deg, var(--sw-color-accent), transparent);
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+.sw-text-gradient {
+  background: linear-gradient(135deg, var(--sw-color-primary) 0%, var(--sw-color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

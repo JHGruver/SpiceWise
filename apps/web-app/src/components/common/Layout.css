@@ -1,0 +1,40 @@
+/* Layout - Luxury Edition */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-primary) 0%,
+    var(--color-bg-secondary) 100%
+  );
+}
+
+.main-content {
+  flex: 1;
+  padding-top: var(--header-height);
+  padding-bottom: calc(var(--nav-height) + var(--spacing-md));
+  position: relative;
+}
+
+/* Subtle background texture */
+.main-content::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(196, 162, 101, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(45, 74, 62, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Tablet and up - no bottom nav padding needed if using sidebar */
+@media (min-width: 1024px) {
+  .main-content {
+    padding-bottom: var(--spacing-xl);
+  }
+}
