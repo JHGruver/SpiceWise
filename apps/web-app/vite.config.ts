@@ -4,6 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/app/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -19,6 +20,9 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    host: true, // Enable access from mobile devices on same network
+    host: true,
+  },
+  build: {
+    outDir: 'dist',
   },
 })

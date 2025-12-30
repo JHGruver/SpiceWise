@@ -1,11 +1,8 @@
-name: Deploy SpiceCraft Website to GitHub Pages
+name: Deploy SpiceCraft to GitHub Pages
 
 on:
   push:
     branches: ["main"]
-    paths:
-      - 'apps/website/**'
-      - '.github/workflows/deploy-wellness.yml'
   workflow_dispatch:
 
 permissions:
@@ -33,12 +30,39 @@ jobs:
       - name: Install root dependencies
         run: npm ci
 
-      - name: Build website
+      # Build Marketing Website (root /)
+      - name: Build Marketing Website
         run: npm run build
         working-directory: apps/website
 
-      - name: Add CNAME file
-        run: echo "spicecraft.world" > apps/website/dist/CNAME
+      # Build Web App (/app)
+      - name: Build Web App
+        run: npm run build
+        working-directory: apps/web-app
+
+      # Build Wellness Dashboard (/wellness)
+      - name: Build Wellness Dashboard
+        run: npm run build
+        working-directory: apps/wellness-dashboard
+
+      # Combine all builds into one directory
+      - name: Create combined dist
+        run: |
+          mkdir -p combined-dist
+
+          # Copy marketing website to root
+          cp -r apps/website/dist/* combined-dist/
+
+          # Copy web app to /app subdirectory
+          mkdir -p combined-dist/app
+          cp -r apps/web-app/dist/* combined-dist/app/
+
+          # Copy wellness dashboard to /wellness subdirectory
+          mkdir -p combined-dist/wellness
+          cp -r apps/wellness-dashboard/dist/* combined-dist/wellness/
+
+          # Add CNAME file
+          echo "spicecraft.world" > combined-dist/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -46,7 +70,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'apps/website/dist'
+          path: 'combined-dist'
 
   deploy:
     environment:

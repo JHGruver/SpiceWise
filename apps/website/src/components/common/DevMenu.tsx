@@ -1,34 +1,46 @@
 import { useState, useRef, useEffect } from 'react'
 import './DevMenu.css'
 
+const PROD_DOMAIN = 'spicecraft.world'
+
 const devLinks = {
   'Marketing Website': [
-    { label: 'Home', path: '/', port: 3003 },
-    { label: 'Features', path: '/features', port: 3003 },
-    { label: 'Community', path: '/community', port: 3003 },
-    { label: 'Suppliers', path: '/suppliers', port: 3003 },
-    { label: 'About', path: '/about', port: 3003 },
-    { label: 'Pricing', path: '/pricing', port: 3003 },
-    { label: 'Contact', path: '/contact', port: 3003 },
+    { label: 'Home', path: '/', basePath: '/' },
+    { label: 'Features', path: '/features', basePath: '/' },
+    { label: 'Community', path: '/community', basePath: '/' },
+    { label: 'Suppliers', path: '/suppliers', basePath: '/' },
+    { label: 'About', path: '/about', basePath: '/' },
+    { label: 'Pricing', path: '/pricing', basePath: '/' },
+    { label: 'Contact', path: '/contact', basePath: '/' },
   ],
   'Web App': [
-    { label: 'Home', path: '/', port: 3000 },
-    { label: 'Explore', path: '/explore', port: 3000 },
-    { label: 'Encyclopedia', path: '/encyclopedia', port: 3000 },
-    { label: 'Remedies', path: '/remedies', port: 3000 },
-    { label: 'Recipes', path: '/recipes', port: 3000 },
-    { label: 'Cabinet', path: '/cabinet', port: 3000 },
-    { label: 'Community', path: '/community', port: 3000 },
-    { label: 'Profile', path: '/profile', port: 3000 },
+    { label: 'Home', path: '/', basePath: '/app' },
+    { label: 'Explore', path: '/explore', basePath: '/app' },
+    { label: 'Encyclopedia', path: '/encyclopedia', basePath: '/app' },
+    { label: 'Remedies', path: '/remedies', basePath: '/app' },
+    { label: 'Recipes', path: '/recipes', basePath: '/app' },
+    { label: 'Cabinet', path: '/cabinet', basePath: '/app' },
+    { label: 'Community', path: '/community', basePath: '/app' },
+    { label: 'Profile', path: '/profile', basePath: '/app' },
   ],
   'Wellness Dashboard': [
-    { label: 'Dashboard', path: '/', port: 3001 },
+    { label: 'Dashboard', path: '/', basePath: '/wellness' },
   ],
+}
+
+// Local development port mapping
+const localPorts: Record<string, number> = {
+  '/': 3003,
+  '/app': 3000,
+  '/wellness': 3001,
 }
 
 export default function DevMenu() {
   const [isOpen, setIsOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
+
+  const isProduction = window.location.hostname === PROD_DOMAIN ||
+                       window.location.hostname === `www.${PROD_DOMAIN}`
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -51,14 +63,24 @@ export default function DevMenu() {
     }
   }, [])
 
-  const navigateTo = (port: number, path: string) => {
-    const currentPort = window.location.port ? parseInt(window.location.port) : 80
-    if (currentPort === port) {
-      window.location.href = path
+  const navigateTo = (basePath: string, path: string) => {
+    if (isProduction) {
+      // Production: use subdirectory paths
+      const fullPath = basePath === '/' ? path : `${basePath}${path === '/' ? '' : path}`
+      window.location.href = `https://${PROD_DOMAIN}${fullPath}`
     } else {
+      // Local development: use localhost with ports
+      const port = localPorts[basePath]
       window.location.href = `http://localhost:${port}${path}`
     }
     setIsOpen(false)
+  }
+
+  const getDisplayPath = (basePath: string) => {
+    if (isProduction) {
+      return basePath === '/' ? '/' : basePath
+    }
+    return `:${localPorts[basePath]}`
   }
 
   return (
@@ -66,7 +88,7 @@ export default function DevMenu() {
       <button
         className={`dev-menu-toggle ${isOpen ? 'active' : ''}`}
         onClick={() => setIsOpen(!isOpen)}
-        aria-label="Developer menu"
+        aria-label="Navigation menu"
         aria-expanded={isOpen}
       >
         <span className="hamburger-icon">
@@ -79,8 +101,8 @@ export default function DevMenu() {
       {isOpen && (
         <div className="dev-menu-dropdown">
           <div className="dev-menu-header">
-            <span className="dev-menu-badge">DEV</span>
-            <span className="dev-menu-title">Developer Navigation</span>
+            <span className="dev-menu-badge">{isProduction ? 'NAV' : 'DEV'}</span>
+            <span className="dev-menu-title">SpiceCraft Navigation</span>
           </div>
 
           {Object.entries(devLinks).map(([section, links]) => (
@@ -89,12 +111,12 @@ export default function DevMenu() {
               <div className="dev-menu-links">
                 {links.map((link) => (
                   <button
-                    key={`${link.port}${link.path}`}
+                    key={`${link.basePath}${link.path}`}
                     className="dev-menu-link"
-                    onClick={() => navigateTo(link.port, link.path)}
+                    onClick={() => navigateTo(link.basePath, link.path)}
                   >
                     <span className="link-label">{link.label}</span>
-                    <span className="link-port">:{link.port}</span>
+                    <span className="link-port">{getDisplayPath(link.basePath)}</span>
                   </button>
                 ))}
               </div>
@@ -102,7 +124,7 @@ export default function DevMenu() {
           ))}
 
           <div className="dev-menu-footer">
-            <span>SpiceCraft Dev Dashboard</span>
+            <span>{isProduction ? 'spicecraft.world' : 'Local Development'}</span>
           </div>
         </div>
       )}
