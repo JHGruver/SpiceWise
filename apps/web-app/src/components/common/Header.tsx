@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
 import Icon from './Icon'
+import DevMenu from './DevMenu'
 import './Header.css'
 
 export default function Header() {
@@ -42,10 +43,13 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-content container">
-        <Link to="/" className="logo">
-          <Icon name="leaf" size="md" className="logo-icon" />
-          <span className="logo-text">SpiceWise</span>
-        </Link>
+        <div className="header-left">
+          <DevMenu />
+          <Link to="/" className="logo">
+            <Icon name="leaf" size="md" className="logo-icon" />
+            <span className="logo-text">SpiceWise</span>
+          </Link>
+        </div>
         <div className="header-actions" ref={menuRef}>
           <button
             className={`profile-button ${isMenuOpen ? 'active' : ''}`}

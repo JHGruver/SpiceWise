@@ -41,6 +41,13 @@
   position: relative;
 }
 
+/* Header Left - Logo and Dev Menu */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
 /* Logo */
 .logo {
   display: flex;

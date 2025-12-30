@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import DevMenu from './DevMenu'
 import './Header.css'
 
 const navLinks = [
@@ -20,10 +21,13 @@ export default function Header() {
         Skip to main content
       </a>
       <div className="container header-content">
-        <Link to="/" className="logo" aria-label="SpiceCraft home">
-          <img src="/images/brand/logo.png" alt="SpiceCraft" className="logo-image" />
-          <span className="logo-text">SpiceCraft</span>
-        </Link>
+        <div className="header-left">
+          <DevMenu />
+          <Link to="/" className="logo" aria-label="SpiceCraft home">
+            <img src="/images/brand/logo.png" alt="SpiceCraft" className="logo-image" />
+            <span className="logo-text">SpiceCraft</span>
+          </Link>
+        </div>
 
         <nav
           className={`nav ${isMenuOpen ? 'nav--open' : ''}`}

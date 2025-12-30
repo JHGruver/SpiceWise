@@ -1,10 +1,10 @@
-name: Deploy Wellness Dashboard to GitHub Pages
+name: Deploy SpiceCraft Website to GitHub Pages
 
 on:
   push:
     branches: ["main"]
     paths:
-      - 'apps/wellness-dashboard/**'
+      - 'apps/website/**'
       - '.github/workflows/deploy-wellness.yml'
   workflow_dispatch:
 
@@ -30,16 +30,15 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: Install root dependencies
         run: npm ci
-        working-directory: apps/wellness-dashboard
 
-      - name: Build
+      - name: Build website
         run: npm run build
-        working-directory: apps/wellness-dashboard
+        working-directory: apps/website
 
       - name: Add CNAME file
-        run: echo "spicecraft.world" > apps/wellness-dashboard/dist/CNAME
+        run: echo "spicecraft.world" > apps/website/dist/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -47,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'apps/wellness-dashboard/dist'
+          path: 'apps/website/dist'
 
   deploy:
     environment:
