@@ -94,7 +94,7 @@ export default function DashboardResults({ data }: Props) {
           Chakra Energy Map
         </h2>
         <div className="chakra-grid">
-          {data.chakras.map((chakra, index) => (
+          {data.chakras.map((chakra) => (
             <div
               key={chakra.id}
               className="chakra-card glass-card"
