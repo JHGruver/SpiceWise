@@ -166,53 +166,6 @@ export default function HomePage() {
           )}
         </div>
 
-        {/* Primary Navigation */}
-        <div className="dashboard-card primary-navigation">
-          <div className="card-header">
-            <Icon name="sparkle" size="sm" />
-            <h3>Quick Access</h3>
-          </div>
-          <div className="actions-grid">
-            <Link to="/explore" className="action-btn">
-              <Icon name="book" size="md" />
-              <div className="action-text">
-                <span>Explore</span>
-                <small>{herbsAndSpices.length} herbs</small>
-              </div>
-            </Link>
-            <Link to="/remedies" className="action-btn">
-              <Icon name="heart" size="md" />
-              <div className="action-text">
-                <span>Remedies</span>
-                <small>For you</small>
-              </div>
-            </Link>
-            <Link to="/recipes" className="action-btn">
-              <Icon name="cooking" size="md" />
-              <div className="action-text">
-                <span>Recipes</span>
-                <small>Cook now</small>
-              </div>
-            </Link>
-            <Link to="/community" className="action-btn">
-              <Icon name="community" size="md" />
-              <div className="action-text">
-                <span>Community</span>
-                <small>Connect</small>
-              </div>
-            </Link>
-            {!hasCompletedProfile && (
-              <Link to="/profile" className="action-btn action-btn-highlight">
-                <Icon name="user" size="md" />
-                <div className="action-text">
-                  <span>Profile</span>
-                  <small>Complete</small>
-                </div>
-              </Link>
-            )}
-          </div>
-        </div>
-
         {/* Daily Wellness Tip */}
         <Link to={`/explore/${dailyTip.spice}`} className="dashboard-card daily-tip">
           <div className="card-header">
