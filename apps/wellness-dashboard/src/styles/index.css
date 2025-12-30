@@ -1,0 +1,529 @@
+/* ========================================
+   WELLNESS DASHBOARD - COSMIC GLASS MORPHISM
+   New Age Holistic Space Chakra Styling
+   ======================================== */
+
+:root {
+  /* Cosmic Dark Theme */
+  --bg-deep-space: #0a0a1a;
+  --bg-nebula: #12122a;
+  --bg-cosmic: #1a1a3a;
+
+  /* Glass Morphism */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.12);
+  --glass-shadow: rgba(0, 0, 0, 0.3);
+
+  /* Chakra Colors */
+  --chakra-root: #ff0000;        /* Red - Root/Base */
+  --chakra-sacral: #ff7f00;      /* Orange - Sacral */
+  --chakra-solar: #ffff00;       /* Yellow - Solar Plexus */
+  --chakra-heart: #00ff00;       /* Green - Heart */
+  --chakra-throat: #00bfff;      /* Blue - Throat */
+  --chakra-third-eye: #4b0082;   /* Indigo - Third Eye */
+  --chakra-crown: #9400d3;       /* Violet - Crown */
+
+  /* Holistic Accent Colors */
+  --accent-energy: #00f5d4;      /* Teal - Life Energy */
+  --accent-spirit: #9b5de5;      /* Purple - Spiritual */
+  --accent-vitality: #f15bb5;    /* Pink - Vitality */
+  --accent-balance: #fee440;     /* Gold - Balance */
+  --accent-healing: #00bbf9;     /* Cyan - Healing */
+  --accent-earth: #8ac926;       /* Green - Earth */
+
+  /* Status Colors */
+  --status-optimal: #00f5a0;
+  --status-good: #7ddf64;
+  --status-attention: #ffd93d;
+  --status-warning: #ff9f1c;
+  --status-critical: #ff6b6b;
+
+  /* Text Colors */
+  --text-primary: rgba(255, 255, 255, 0.95);
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-tertiary: rgba(255, 255, 255, 0.5);
+  --text-muted: rgba(255, 255, 255, 0.3);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Quicksand', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 50%;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-cosmic: 600ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-deep-space);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  /* Cosmic Background */
+  background-image:
+    radial-gradient(ellipse at 20% 20%, rgba(155, 93, 229, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(0, 245, 212, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(241, 91, 181, 0.08) 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg-deep-space) 0%, var(--bg-nebula) 50%, var(--bg-cosmic) 100%);
+  background-attachment: fixed;
+}
+
+/* Starfield Effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 40px 70px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 50px 160px, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1.5px 1.5px at 160px 120px, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 200px 200px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 250px 50px, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 300px 150px, rgba(255,255,255,0.2), transparent);
+  background-size: 350px 350px;
+  animation: starfield 120s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes starfield {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-350px); }
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+/* Glass Card Component */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-normal);
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    var(--glass-highlight),
+    transparent
+  );
+}
+
+.glass-card:hover {
+  border-color: var(--glass-highlight);
+  transform: translateY(-2px);
+  box-shadow:
+    0 20px 40px var(--glass-shadow),
+    0 0 60px rgba(155, 93, 229, 0.1);
+}
+
+/* Glow Effects */
+.glow-accent {
+  box-shadow:
+    0 0 20px rgba(0, 245, 212, 0.3),
+    0 0 40px rgba(0, 245, 212, 0.1);
+}
+
+.glow-spirit {
+  box-shadow:
+    0 0 20px rgba(155, 93, 229, 0.3),
+    0 0 40px rgba(155, 93, 229, 0.1);
+}
+
+.glow-vitality {
+  box-shadow:
+    0 0 20px rgba(241, 91, 181, 0.3),
+    0 0 40px rgba(241, 91, 181, 0.1);
+}
+
+/* Chakra Indicator Dots */
+.chakra-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  position: relative;
+}
+
+.chakra-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: var(--radius-full);
+  opacity: 0.3;
+  animation: chakra-pulse 2s ease-in-out infinite;
+}
+
+.chakra-root { background: var(--chakra-root); }
+.chakra-root::after { background: var(--chakra-root); }
+.chakra-sacral { background: var(--chakra-sacral); }
+.chakra-sacral::after { background: var(--chakra-sacral); }
+.chakra-solar { background: var(--chakra-solar); }
+.chakra-solar::after { background: var(--chakra-solar); }
+.chakra-heart { background: var(--chakra-heart); }
+.chakra-heart::after { background: var(--chakra-heart); }
+.chakra-throat { background: var(--chakra-throat); }
+.chakra-throat::after { background: var(--chakra-throat); }
+.chakra-third-eye { background: var(--chakra-third-eye); }
+.chakra-third-eye::after { background: var(--chakra-third-eye); }
+.chakra-crown { background: var(--chakra-crown); }
+.chakra-crown::after { background: var(--chakra-crown); }
+
+@keyframes chakra-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Status Indicators */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-optimal {
+  background: rgba(0, 245, 160, 0.15);
+  color: var(--status-optimal);
+  border: 1px solid rgba(0, 245, 160, 0.3);
+}
+
+.status-good {
+  background: rgba(125, 223, 100, 0.15);
+  color: var(--status-good);
+  border: 1px solid rgba(125, 223, 100, 0.3);
+}
+
+.status-attention {
+  background: rgba(255, 217, 61, 0.15);
+  color: var(--status-attention);
+  border: 1px solid rgba(255, 217, 61, 0.3);
+}
+
+.status-warning {
+  background: rgba(255, 159, 28, 0.15);
+  color: var(--status-warning);
+  border: 1px solid rgba(255, 159, 28, 0.3);
+}
+
+.status-critical {
+  background: rgba(255, 107, 107, 0.15);
+  color: var(--status-critical);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+/* Progress Ring */
+.progress-ring {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.progress-ring svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.progress-ring-bg {
+  fill: none;
+  stroke: var(--glass-border);
+  stroke-width: 8;
+}
+
+.progress-ring-fill {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset var(--transition-cosmic);
+}
+
+.progress-ring-value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+}
+
+.progress-ring-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.progress-ring-label {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-energy), var(--accent-spirit));
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 245, 212, 0.3);
+}
+
+.btn-secondary {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-energy);
+  color: var(--accent-energy);
+}
+
+.btn-cosmic {
+  background: linear-gradient(135deg, var(--chakra-crown), var(--chakra-third-eye));
+  color: white;
+  position: relative;
+}
+
+.btn-cosmic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: translateX(-100%);
+  transition: var(--transition-slow);
+}
+
+.btn-cosmic:hover::before {
+  transform: translateX(100%);
+}
+
+/* Scan Button Special */
+.btn-scan {
+  padding: var(--space-lg) var(--space-2xl);
+  font-size: 1.1rem;
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(135deg,
+      rgba(0, 245, 212, 0.8),
+      rgba(155, 93, 229, 0.8)
+    );
+  position: relative;
+  z-index: 1;
+}
+
+.btn-scan::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--accent-energy), var(--accent-spirit), var(--accent-vitality));
+  z-index: -1;
+  animation: scan-glow 3s ease-in-out infinite;
+}
+
+.btn-scan::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  background: inherit;
+  z-index: -1;
+}
+
+@keyframes scan-glow {
+  0%, 100% { opacity: 0.5; filter: blur(10px); }
+  50% { opacity: 1; filter: blur(20px); }
+}
+
+/* Data Grid */
+.data-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.data-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.data-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.data-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .data-grid-3, .data-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .data-grid-2, .data-grid-3, .data-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-nebula);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--glass-highlight);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-rotate {
+  animation: rotate-slow 20s linear infinite;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.fade-in-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-in-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-in-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.fade-in-delay-4 { animation-delay: 0.4s; opacity: 0; }
+.fade-in-delay-5 { animation-delay: 0.5s; opacity: 0; }

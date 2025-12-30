@@ -88,16 +88,7 @@ export default function ExplorePage() {
               </button>
               <Link to={`/explore/${herb.id}`} className="herb-card-link">
                 <div className="herb-image-wrapper">
-                  <img
-                    src={herb.imageUrl}
-                    alt={herb.name}
-                    className="herb-card-image"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none'
-                      e.currentTarget.nextElementSibling?.classList.remove('hidden')
-                    }}
-                  />
-                  <SpiceIcon name={herb.iconName} size="lg" className="herb-emoji hidden" />
+                  <SpiceIcon name={herb.iconName} size="lg" className="herb-emoji" />
                 </div>
                 <div className="herb-info">
                   <h3 className="herb-name">{herb.name}</h3>

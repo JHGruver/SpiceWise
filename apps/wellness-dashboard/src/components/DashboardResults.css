@@ -1,0 +1,639 @@
+.dashboard-results {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.results-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.results-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 300;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-spirit));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.results-timestamp {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Score Cards Section */
+.scores-section {
+  margin-bottom: 3rem;
+}
+
+.score-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.score-card {
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.score-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent-energy), transparent);
+  opacity: 0.5;
+}
+
+.glow-accent::before {
+  background: linear-gradient(90deg, transparent, var(--accent-energy), transparent);
+}
+
+.glow-spirit::before {
+  background: linear-gradient(90deg, transparent, var(--accent-spirit), transparent);
+}
+
+.glow-vitality::before {
+  background: linear-gradient(90deg, transparent, var(--accent-vitality), transparent);
+}
+
+/* Score Ring */
+.score-ring {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+
+.score-ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.score-ring-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 8;
+}
+
+.score-ring-fill {
+  fill: none;
+  stroke: var(--color);
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 1s ease-out;
+  filter: drop-shadow(0 0 10px var(--color));
+}
+
+.score-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: baseline;
+}
+
+.score-number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.score-unit {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-left: 2px;
+}
+
+.score-label {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.score-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Section Titles */
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-icon {
+  font-size: 1.3rem;
+}
+
+/* Chakra Section */
+.chakra-section {
+  margin-bottom: 3rem;
+}
+
+.chakra-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.chakra-card {
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border-left: 3px solid var(--chakra-color);
+}
+
+.chakra-visual {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chakra-orb {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px currentColor;
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 15px currentColor; }
+  50% { box-shadow: 0 0 25px currentColor, 0 0 40px currentColor; }
+}
+
+.chakra-percentage {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.chakra-bar-container {
+  flex: 1;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.chakra-bar-fill {
+  width: 100%;
+  border-radius: 4px;
+  transition: height 1s ease-out;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.chakra-info {
+  text-align: left;
+}
+
+.chakra-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.chakra-sanskrit {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+/* Status Indicators */
+.status-indicator {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-optimal {
+  background: rgba(0, 255, 136, 0.2);
+  color: var(--status-optimal);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.status-good {
+  background: rgba(102, 255, 178, 0.2);
+  color: var(--status-good);
+  border: 1px solid rgba(102, 255, 178, 0.3);
+}
+
+.status-attention {
+  background: rgba(255, 215, 0, 0.2);
+  color: var(--status-attention);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.status-warning {
+  background: rgba(255, 152, 0, 0.2);
+  color: var(--status-warning);
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.status-critical {
+  background: rgba(255, 82, 82, 0.2);
+  color: var(--status-critical);
+  border: 1px solid rgba(255, 82, 82, 0.3);
+}
+
+/* Body Systems Section */
+.systems-section {
+  margin-bottom: 3rem;
+}
+
+.systems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.system-card {
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.system-icon {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.system-info {
+  flex: 1;
+}
+
+.system-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.system-score-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.system-score-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-out;
+}
+
+.system-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.system-percent {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Markers Section (Minerals, Amino Acids, Tissues) */
+.markers-section {
+  margin-bottom: 3rem;
+}
+
+.markers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.markers-grid-wide {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.marker-card {
+  padding: 1.25rem;
+}
+
+.marker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.marker-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.marker-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.marker-value {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.marker-unit {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.marker-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Range Bar */
+.marker-range {
+  margin-top: 0.75rem;
+}
+
+.range-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.range-optimal {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: rgba(0, 255, 136, 0.3);
+  border-radius: 3px;
+}
+
+.range-marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Gauge */
+.marker-gauge {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.gauge-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-out;
+}
+
+/* Toxins & Pathogens */
+.dual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.toxin-group {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.group-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toxin-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.toxin-card {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toxin-card.toxin-optimal {
+  border-left: 3px solid var(--status-optimal);
+}
+
+.toxin-card.toxin-good {
+  border-left: 3px solid var(--status-good);
+}
+
+.toxin-card.toxin-attention {
+  border-left: 3px solid var(--status-attention);
+}
+
+.toxin-card.toxin-warning {
+  border-left: 3px solid var(--status-warning);
+}
+
+.toxin-card.toxin-critical {
+  border-left: 3px solid var(--status-critical);
+}
+
+.toxin-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toxin-header h4 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.toxin-value {
+  text-align: right;
+}
+
+.toxin-value .value {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.toxin-value .max {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-left: 0.25rem;
+}
+
+/* Disclaimer */
+.results-disclaimer {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: rgba(255, 152, 0, 0.1);
+  border: 1px solid rgba(255, 152, 0, 0.2);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.results-disclaimer p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.results-disclaimer strong {
+  color: var(--status-warning);
+}
+
+/* Fade-in Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.fade-in-delay-1 { animation-delay: 0.1s; }
+.fade-in-delay-2 { animation-delay: 0.2s; }
+.fade-in-delay-3 { animation-delay: 0.3s; }
+.fade-in-delay-4 { animation-delay: 0.4s; }
+.fade-in-delay-5 { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-results {
+    padding: 1rem;
+  }
+
+  .results-title {
+    font-size: 1.8rem;
+  }
+
+  .score-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .chakra-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .systems-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .markers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .score-ring {
+    width: 120px;
+    height: 120px;
+  }
+
+  .score-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chakra-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chakra-visual {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chakra-bar-container {
+    width: 100%;
+    height: 40px;
+  }
+}

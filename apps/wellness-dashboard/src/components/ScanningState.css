@@ -1,0 +1,214 @@
+.scanning-state {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.scanning-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Scan Visualization */
+.scan-visualization {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto var(--space-2xl);
+}
+
+.scan-outer-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--glass-border);
+}
+
+.scan-wave {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-energy);
+  opacity: 0;
+  animation: scan-wave 2s ease-out infinite;
+}
+
+.wave-1 { animation-delay: 0s; }
+.wave-2 { animation-delay: 0.5s; }
+.wave-3 { animation-delay: 1s; }
+
+@keyframes scan-wave {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.scan-inner-ring {
+  position: absolute;
+  inset: 40px;
+  border-radius: 50%;
+  border: 1px dashed var(--glass-highlight);
+  animation: rotate-slow 10s linear infinite;
+}
+
+.chakra-dots {
+  position: absolute;
+  inset: 0;
+}
+
+.chakra-scan-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color);
+  box-shadow: 0 0 15px var(--color);
+  animation: chakra-blink 1.4s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+.chakra-scan-dot:nth-child(1) { top: 50%; left: 0; transform: translate(-50%, -50%); }
+.chakra-scan-dot:nth-child(2) { top: 15%; left: 15%; }
+.chakra-scan-dot:nth-child(3) { top: 0; left: 50%; transform: translate(-50%, -50%); }
+.chakra-scan-dot:nth-child(4) { top: 15%; right: 15%; }
+.chakra-scan-dot:nth-child(5) { top: 50%; right: 0; transform: translate(50%, -50%); }
+.chakra-scan-dot:nth-child(6) { bottom: 15%; right: 15%; }
+.chakra-scan-dot:nth-child(7) { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+
+@keyframes chakra-blink {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.scan-center {
+  position: absolute;
+  inset: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle,
+    rgba(0, 245, 212, 0.15) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+}
+
+.scan-center-icon {
+  font-size: 3rem;
+  color: var(--accent-energy);
+  animation: pulse-glow 1s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    text-shadow: 0 0 20px var(--accent-energy);
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 40px var(--accent-energy), 0 0 60px var(--accent-spirit);
+    transform: scale(1.1);
+  }
+}
+
+/* Progress Bar */
+.scan-progress-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.scan-progress-bar {
+  height: 6px;
+  background: var(--glass-bg);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  margin-bottom: var(--space-md);
+}
+
+.scan-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg,
+    var(--accent-energy),
+    var(--accent-spirit),
+    var(--accent-vitality)
+  );
+  background-size: 200% 100%;
+  animation: gradient-flow 2s linear infinite;
+  transition: width 0.3s ease;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 10px var(--accent-energy);
+}
+
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.scan-progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scan-progress-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.scan-progress-percent {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent-energy);
+}
+
+/* Data Stream */
+.data-stream {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.data-particle {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  left: var(--x);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent-energy),
+    transparent
+  );
+  opacity: 0.3;
+  animation: data-fall var(--duration) linear infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes data-fall {
+  0% {
+    top: -20px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}

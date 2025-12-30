@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useUser } from '../context/UserContext'
 import { herbsAndSpices, healthConditions } from '../data/mockData'
 import Icon from '../components/common/Icon'
+import SpiceIcon from '../components/common/SpiceIcon'
 import './HomePage.css'
 
 // Spice of the week rotates based on week number
@@ -109,7 +110,7 @@ export default function HomePage() {
           <div className="card-badge">Featured</div>
           <div className="spice-week-content">
             <div className="spice-week-image">
-              <img src={spiceOfWeek.imageUrl} alt={spiceOfWeek.name} />
+              <SpiceIcon name={spiceOfWeek.iconName} size="xl" />
             </div>
             <div className="spice-week-info">
               <h2 className="spice-week-name">{spiceOfWeek.name}</h2>
@@ -235,7 +236,7 @@ export default function HomePage() {
               const spice = herbsAndSpices.find(s => s.id === spiceId)
               return spice ? (
                 <Link to={`/explore/${spice.id}`} key={spice.id} className="seasonal-spice">
-                  <img src={spice.imageUrl} alt={spice.name} />
+                  <SpiceIcon name={spice.iconName} size="md" />
                   <span>{spice.name}</span>
                 </Link>
               ) : null

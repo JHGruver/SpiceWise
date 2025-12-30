@@ -60,17 +60,7 @@ export default function HerbDetailPage() {
 
         <header className="herb-header">
           <div className="herb-image-container">
-            <img
-              src={herb.imageUrl}
-              alt={herb.name}
-              className="herb-header-image"
-              onError={(e) => {
-                // Fallback to SpiceIcon if image fails to load
-                e.currentTarget.style.display = 'none'
-                e.currentTarget.nextElementSibling?.classList.remove('hidden')
-              }}
-            />
-            <SpiceIcon name={herb.iconName} size="xl" className="herb-header-icon hidden" />
+            <SpiceIcon name={herb.iconName} size="xl" className="herb-header-icon" />
           </div>
           <div className="herb-header-info">
             <h1 className="herb-title">{herb.name}</h1>

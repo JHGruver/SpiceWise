@@ -11,6 +11,7 @@
     "dev": "npm run dev --workspaces --if-present",
     "dev:app": "npm run dev --workspace=apps/web-app",
     "dev:website": "npm run dev --workspace=apps/website",
+    "dev:wellness": "npm run dev --workspace=apps/wellness-dashboard",
     "build": "npm run build --workspaces --if-present",
     "build:app": "npm run build --workspace=apps/web-app",
     "build:website": "npm run build --workspace=apps/website",
