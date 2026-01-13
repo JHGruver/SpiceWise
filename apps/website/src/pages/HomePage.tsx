@@ -45,7 +45,7 @@ const popularSpices = [
 const features = [
   {
     icon: 'book' as const,
-    title: 'Spice Encyclopedia',
+    title: 'Spice Index',
     description: 'Explore 50+ healing spices with research-backed benefits, origins, and how to use them in your daily life.'
   },
   {
@@ -57,11 +57,6 @@ const features = [
     icon: 'map' as const,
     title: 'Remedy Road Maps',
     description: 'Follow guided paths that show you which spices work together for specific health goals.'
-  },
-  {
-    icon: 'cabinet' as const,
-    title: 'Your Digital Cabinet',
-    description: 'Track what\'s in your pantry and get personalized recommendations based on what you already have.'
   },
 ]
 
@@ -293,7 +288,7 @@ export default function HomePage() {
       {/* What You'll Get Section */}
       <section className="section section--alt value-section">
         <div className="container">
-          <h2 className="section-title">What SpiceCraft Does For You</h2>
+          <h2 className="section-title">Why Spices? Why Now?</h2>
           <p className="section-subtitle">
             Turn your spice rack into your first line of natural wellness support.
           </p>
