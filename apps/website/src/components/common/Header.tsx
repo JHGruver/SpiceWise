@@ -6,7 +6,6 @@ import './Header.css'
 const navLinks = [
   { to: '/features', label: 'Features' },
   { to: '/community', label: 'Community' },
-  { to: '/suppliers', label: 'Suppliers' },
   { to: '/about', label: 'About' },
   { to: '/pricing', label: 'Pricing' },
 ]

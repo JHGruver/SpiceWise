@@ -212,9 +212,9 @@ export default function HomePage() {
           }}
         >
           <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="10" cy="8" rx="8" ry="6" fill="#C9A961" stroke="#8B7355" strokeWidth="1.5"/>
-            <path d="M10 14 L12 28 Q10 30 8 28 L10 14" fill="#8B7355" stroke="#6B5344" strokeWidth="1"/>
-            <ellipse cx="10" cy="8" rx="5" ry="3.5" fill="#DEB887" opacity="0.6"/>
+            <ellipse cx="10" cy="8" rx="6" ry="8" fill="#C9A961" stroke="#8B7355" strokeWidth="1.5"/>
+            <path d="M10 16 L12 28 Q10 30 8 28 L10 16" fill="#8B7355" stroke="#6B5344" strokeWidth="1"/>
+            <ellipse cx="10" cy="8" rx="3.5" ry="5" fill="#DEB887" opacity="0.6"/>
           </svg>
         </div>
       )}
