@@ -18,7 +18,7 @@ const features = [
   {
     icon: 'book' as const,
     title: 'Spice Index',
-    description: 'Browse 50+ healing spices with comprehensive profiles including notable compounds, growth origins, and hardiness zones.',
+    description: 'Browse 40+ healing spices with comprehensive profiles including notable compounds, growth origins, and hardiness zones.',
     details: [
       'Scientific names and traditional names',
       'Notable compounds and active ingredients',

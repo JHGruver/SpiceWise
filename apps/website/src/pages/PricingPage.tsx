@@ -28,7 +28,7 @@ const pricingTiers = [
     yearlyPrice: 49,
     description: 'For wellness enthusiasts',
     features: [
-      'Full database (50+ spices)',
+      'Full database (40+ spices)',
       'Create your health profile',
       'Personalized recommendations',
       'Advanced search & filters',
@@ -297,8 +297,8 @@ export default function PricingPage() {
                 <tr>
                   <td>Spice Database</td>
                   <td>15 spices</td>
-                  <td className="comparison-featured">50+ spices</td>
-                  <td>50+ spices</td>
+                  <td className="comparison-featured">40+ spices</td>
+                  <td>40+ spices</td>
                 </tr>
                 <tr>
                   <td>Health Profile</td>

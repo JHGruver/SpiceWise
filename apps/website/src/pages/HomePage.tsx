@@ -46,7 +46,7 @@ const features = [
   {
     icon: 'book' as const,
     title: 'Spice Index',
-    description: 'Explore 50+ healing spices with research-backed benefits, origins, and how to use them in your daily life.'
+    description: 'Explore 40+ healing spices with research-backed benefits, origins, and how to use them in your daily life.'
   },
   {
     icon: 'search' as const,
@@ -306,49 +306,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Common Questions Section */}
-      <section className="section questions-section">
-        <div className="container">
-          <h2 className="section-title">Find Answers to Everyday Health Questions</h2>
-          <div className="questions-grid">
-            <div className="question-card">
-              <span className="question-icon">
-                <Icon name="moon" size="xl" />
-              </span>
-              <h3>"I can't sleep at night"</h3>
-              <p>Discover calming spices like chamomile, lavender, and nutmeg that promote restful sleep.</p>
-            </div>
-            <div className="question-card">
-              <span className="question-icon">
-                <Icon name="flame" size="xl" />
-              </span>
-              <h3>"My joints hurt all the time"</h3>
-              <p>Learn about anti-inflammatory powerhouses like turmeric, ginger, and boswellia.</p>
-            </div>
-            <div className="question-card">
-              <span className="question-icon">
-                <Icon name="heart-pulse" size="xl" />
-              </span>
-              <h3>"I'm stressed and anxious"</h3>
-              <p>Find adaptogenic herbs like ashwagandha, holy basil, and lemon balm for calm.</p>
-            </div>
-            <div className="question-card">
-              <span className="question-icon">
-                <Icon name="utensils" size="xl" />
-              </span>
-              <h3>"My digestion is off"</h3>
-              <p>Explore digestive aids like fennel, peppermint, ginger, and cardamom.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Spice Preview */}
       <section className="section section--alt herbs-preview">
         <div className="container">
-          <h2 className="section-title">Explore 50+ Healing Spices</h2>
+          <h2 className="section-title">Explore 40+ Healing Spices</h2>
           <p className="section-subtitle">
-            Each spice profile includes benefits, how to use it, what it pairs with, and the research behind it.
+            Each spice profile includes researched benefits, notable compounds, region of origin, and growth zones.
           </p>
           <div className="herbs-preview-grid">
             {popularSpices.map(spice => (

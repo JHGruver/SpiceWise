@@ -29,7 +29,7 @@ export default function WelcomePage() {
                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
               </svg>
             </span>
-            <span>Browse 50+ healing spices</span>
+            <span>Browse 40+ healing spices</span>
           </div>
           <div className="welcome-feature">
             <span className="feature-icon">
