@@ -44,14 +44,14 @@ const popularSpices = [
 
 const features = [
   {
-    icon: 'book' as const,
-    title: 'Spice Index',
-    description: 'Explore 40+ healing spices with research-backed benefits, origins, and how to use them in your daily life.'
+    icon: 'leaf' as const,
+    title: 'Why Spice?',
+    description: 'They are accessible, versatile, and digestible. Most spices are easily found in marketplaces plus you likely already have some in your kitchen cupboard. Spices are culinary whereas many herbs are not so multifaceted in cooking. Toss spices in soups, salads, smoothies, or simply steep them and sip as tea. Our bodies recognize spices as food, allowing their precious compounds to absorb naturally without residues that can cause harmful side effects.'
   },
   {
-    icon: 'search' as const,
-    title: 'Symptom Search',
-    description: 'Search for what bothers you—bloating, fatigue, joint pain, stress—and discover natural spice remedies.'
+    icon: 'sparkles' as const,
+    title: 'Why Now?',
+    description: 'It\'s high time to incite a spice revival! Spices provide us with a holistic pathway to wellness yet spice-based wisdom is underrepresented in wellness tech. SpiceCraft offers a rich, easy-to-navigate reference while taking a "return to our roots" approach. Our tool connects users with information based on research of the effectiveness of spices, most of which are culturally-rooted and were used in early civilizations throughout the world.'
   },
   {
     icon: 'map' as const,
