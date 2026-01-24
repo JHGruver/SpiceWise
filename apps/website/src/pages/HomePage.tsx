@@ -337,7 +337,8 @@ export default function HomePage() {
       {/* How It Works */}
       <section className="section how-it-works">
         <div className="container">
-          <h2 className="section-title">Simple to Start, Easy to Use</h2>
+          <h2 className="section-title">Join the Movement</h2>
+          <p className="section-subtitle">Get the App. Get Involved.</p>
           <div className="steps-grid">
             <div className="step-card">
               <span className="step-number">1</span>
