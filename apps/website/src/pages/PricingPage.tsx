@@ -7,77 +7,75 @@ import './PricingPage.css'
 
 const pricingTiers = [
   {
-    name: 'Free',
+    name: 'Membership',
     monthlyPrice: 0,
     yearlyPrice: 0,
-    description: 'Perfect for curious explorers',
+    description: 'Start your spice journey',
     features: [
-      'Browse 15 popular spices',
-      'Basic health benefit info',
-      'Simple search',
-      'Save 3 favorites',
-      'Community access',
+      'Download the app',
+      'Full Spice Index access',
+      'Dozens of common & rare spices',
+      'Research-backed benefits',
+      'Save your favorites',
     ],
-    cta: 'Get Started Free',
+    cta: 'Download Free',
     featured: false,
     icon: 'leaf' as const,
   },
   {
-    name: 'Spice Seeker',
-    monthlyPrice: 4.99,
-    yearlyPrice: 49,
-    description: 'For wellness enthusiasts',
+    name: 'Advocacy',
+    monthlyPrice: 0,
+    yearlyPrice: 0,
+    description: 'Champion spice-forward wellness',
     features: [
-      'Full database (40+ spices)',
-      'Create your health profile',
-      'Personalized recommendations',
-      'Advanced search & filters',
-      'Unlimited favorites',
-      'Evidence citations',
+      'Become a spice enthusiast',
+      'Ambassador among your circles',
+      'Recognize healing potential',
+      'Share remedies for ailments',
+      'Promote natural wellness',
     ],
-    cta: 'Start 7-Day Free Trial',
+    cta: 'Become an Advocate',
     featured: true,
-    icon: 'search' as const,
+    icon: 'users' as const,
   },
   {
-    name: 'Spice Master',
-    monthlyPrice: 9.99,
-    yearlyPrice: 99,
-    description: 'The complete experience',
+    name: 'Growth & Host',
+    monthlyPrice: 0,
+    yearlyPrice: 0,
+    description: 'Lead the community',
     features: [
-      'Everything in Spice Seeker',
-      'Digital Cabinet tracking',
-      'Remedy Road Maps',
-      '"Use what you have" mode',
-      'Priority support',
-      'Early access to features',
+      'Train as Spicetress or Spicemeister',
+      'Learn spice remedy hacks',
+      'Regional & seasonal grow-alongs',
+      'Grow your own spices',
+      'Optional host opportunities',
     ],
-    cta: 'Start 7-Day Free Trial',
+    cta: 'Start Training',
     featured: false,
-    icon: 'cabinet' as const,
+    icon: 'sparkles' as const,
   }
 ]
 
 const faqs = [
   {
     question: 'When does the app launch?',
-    answer: 'We\'re launching next week! Join the waitlist to be the first to know and get exclusive early-bird pricing.'
+    answer: 'We\'re launching next week! Join the waitlist to be the first to know.'
   },
   {
-    question: 'Is there a free trial?',
-    answer: 'Yes! All paid plans include a 7-day free trial. Try everything risk-free before you commit.'
+    question: 'Is SpiceCraft free?',
+    answer: 'Yes! The app and membership are completely free. We\'re building a community-driven movement for spice-based wellness.'
   },
   {
-    question: 'Can I switch plans anytime?',
-    answer: 'Absolutely. Upgrade, downgrade, or cancel anytime. Changes take effect at your next billing cycle.'
+    question: 'What is a Spicetress or Spicemeister?',
+    answer: 'These are ranking members in our community who have trained with us, learned spice remedy techniques, and help lead grow-alongs and educational sessions.'
   },
   {
-    question: 'What payment methods do you accept?',
-    answer: 'We accept all major credit cards, Apple Pay, Google Pay, and PayPal through our secure payment processor.'
+    question: 'What are grow-alongs?',
+    answer: 'Grow-alongs are regional and seasonal community events where members learn to grow their own spices together, sharing tips and experiences.'
   },
   {
     question: 'Is my data safe?',
-    answer: 'Your privacy is our priority. We never sell your data and use bank-level encryption to protect your information.'
+    answer: 'Your privacy is our priority. We never sell your data and use encryption to protect your information.'
   },
   {
     question: 'Is this medical advice?',
@@ -86,7 +84,6 @@ const faqs = [
 ]
 
 export default function PricingPage() {
-  const [isYearly, setIsYearly] = useState(true)
   const [email, setEmail] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -99,22 +96,6 @@ export default function PricingPage() {
     await new Promise(resolve => setTimeout(resolve, 500))
     setIsSubmitted(true)
     setIsLoading(false)
-  }
-
-  const formatPrice = (monthly: number, yearly: number) => {
-    if (monthly === 0) return { price: 'Free', period: 'forever' }
-    if (isYearly) {
-      const monthlyEquiv = (yearly / 12).toFixed(2)
-      return { price: `$${monthlyEquiv}`, period: '/month' }
-    }
-    return { price: `$${monthly.toFixed(2)}`, period: '/month' }
-  }
-
-  const getSavings = (monthly: number, yearly: number) => {
-    if (monthly === 0) return null
-    const annualIfMonthly = monthly * 12
-    const savings = Math.round(((annualIfMonthly - yearly) / annualIfMonthly) * 100)
-    return savings
   }
 
   return (
@@ -133,26 +114,10 @@ export default function PricingPage() {
             <Icon name="star-filled" size="sm" />
             Launching Next Week
           </span>
-          <h1>Choose Your Wellness Journey</h1>
+          <h1>Choose Your Path</h1>
           <p className="pricing-hero-subtitle">
-            Start free, upgrade when you're ready. All paid plans include a 7-day free trial.
+            Join the spice wellness movement. Start as a member, grow into an advocate, lead as a host.
           </p>
-
-          {/* Billing Toggle */}
-          <div className="billing-toggle">
-            <span className={!isYearly ? 'billing-active' : ''}>Monthly</span>
-            <button
-              className="toggle-switch"
-              onClick={() => setIsYearly(!isYearly)}
-              aria-label={`Switch to ${isYearly ? 'monthly' : 'yearly'} billing`}
-            >
-              <span className={`toggle-slider ${isYearly ? 'toggle-yearly' : ''}`} />
-            </button>
-            <span className={isYearly ? 'billing-active' : ''}>
-              Yearly
-              <span className="billing-save">Save up to 17%</span>
-            </span>
-          </div>
         </div>
       </section>
 
@@ -160,14 +125,10 @@ export default function PricingPage() {
       <section className="section pricing-cards-section">
         <div className="container">
           <div className="pricing-grid">
-            {pricingTiers.map((tier, idx) => {
-              const { price, period } = formatPrice(tier.monthlyPrice, tier.yearlyPrice)
-              const savings = getSavings(tier.monthlyPrice, tier.yearlyPrice)
-
-              return (
+            {pricingTiers.map((tier, idx) => (
                 <div key={idx} className={`pricing-card ${tier.featured ? 'pricing-card--featured' : ''}`}>
                   {tier.featured && (
-                    <span className="pricing-badge">Most Popular</span>
+                    <span className="pricing-badge">Make an Impact</span>
                   )}
 
                   <div className="pricing-card-header">
@@ -176,24 +137,6 @@ export default function PricingPage() {
                     </span>
                     <h3 className="pricing-name">{tier.name}</h3>
                     <p className="pricing-description">{tier.description}</p>
-                  </div>
-
-                  <div className="pricing-price-wrapper">
-                    <div className="pricing-price">
-                      <span className="price-amount">{price}</span>
-                      <span className="price-period">{period}</span>
-                    </div>
-                    {isYearly && savings && (
-                      <p className="pricing-billed">
-                        Billed ${tier.yearlyPrice}/year
-                        <span className="pricing-savings">Save {savings}%</span>
-                      </p>
-                    )}
-                    {!isYearly && tier.monthlyPrice > 0 && (
-                      <p className="pricing-billed">
-                        Billed monthly
-                      </p>
-                    )}
                   </div>
 
                   <ul className="pricing-features">
@@ -214,27 +157,26 @@ export default function PricingPage() {
                     {tier.cta}
                   </button>
                 </div>
-              )
-            })}
+              ))}
           </div>
 
           {/* Trust Indicators */}
           <div className="pricing-trust">
             <div className="trust-item">
               <Icon name="check-circle" size="md" />
-              <span>7-day free trial</span>
+              <span>100% Free to start</span>
             </div>
             <div className="trust-item">
               <Icon name="check-circle" size="md" />
-              <span>Cancel anytime</span>
+              <span>Community driven</span>
             </div>
             <div className="trust-item">
               <Icon name="check-circle" size="md" />
-              <span>No hidden fees</span>
+              <span>Learn at your pace</span>
             </div>
             <div className="trust-item">
               <Icon name="check-circle" size="md" />
-              <span>Secure payment</span>
+              <span>Grow together</span>
             </div>
           </div>
         </div>
@@ -275,69 +217,6 @@ export default function PricingPage() {
             <p className="waitlist-note">
               <Icon name="check" size="sm" /> Join 2,000+ people on the waitlist
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Feature Comparison */}
-      <section className="section">
-        <div className="container">
-          <h2 className="section-title">Compare Plans</h2>
-          <div className="comparison-table-wrapper">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>Feature</th>
-                  <th>Free</th>
-                  <th className="comparison-featured">Spice Seeker</th>
-                  <th>Spice Master</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Spice Database</td>
-                  <td>15 spices</td>
-                  <td className="comparison-featured">40+ spices</td>
-                  <td>40+ spices</td>
-                </tr>
-                <tr>
-                  <td>Health Profile</td>
-                  <td><Icon name="minus" size="sm" /></td>
-                  <td className="comparison-featured"><Icon name="check" size="sm" /></td>
-                  <td><Icon name="check" size="sm" /></td>
-                </tr>
-                <tr>
-                  <td>Personalized Recommendations</td>
-                  <td><Icon name="minus" size="sm" /></td>
-                  <td className="comparison-featured"><Icon name="check" size="sm" /></td>
-                  <td><Icon name="check" size="sm" /></td>
-                </tr>
-                <tr>
-                  <td>Favorites</td>
-                  <td>3</td>
-                  <td className="comparison-featured">Unlimited</td>
-                  <td>Unlimited</td>
-                </tr>
-                <tr>
-                  <td>Digital Cabinet</td>
-                  <td><Icon name="minus" size="sm" /></td>
-                  <td className="comparison-featured"><Icon name="minus" size="sm" /></td>
-                  <td><Icon name="check" size="sm" /></td>
-                </tr>
-                <tr>
-                  <td>Remedy Road Maps</td>
-                  <td><Icon name="minus" size="sm" /></td>
-                  <td className="comparison-featured"><Icon name="minus" size="sm" /></td>
-                  <td><Icon name="check" size="sm" /></td>
-                </tr>
-                <tr>
-                  <td>Priority Support</td>
-                  <td><Icon name="minus" size="sm" /></td>
-                  <td className="comparison-featured"><Icon name="minus" size="sm" /></td>
-                  <td><Icon name="check" size="sm" /></td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </section>
