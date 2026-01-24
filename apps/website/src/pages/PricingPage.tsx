@@ -153,6 +153,11 @@ export default function PricingPage() {
                   <button
                     className={`pricing-cta ${tier.featured ? 'pricing-cta--primary' : ''}`}
                     onClick={() => document.getElementById('waitlist-form')?.scrollIntoView({ behavior: 'smooth' })}
+                    style={{
+                      background: tier.featured ? 'linear-gradient(135deg, #C9A961 0%, #B8956A 100%)' : '#2D4A3E',
+                      color: tier.featured ? '#1A1A1A' : '#FFFFFF',
+                      border: 'none',
+                    }}
                   >
                     {tier.cta}
                   </button>
