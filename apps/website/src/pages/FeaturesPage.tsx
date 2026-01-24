@@ -65,14 +65,14 @@ const features = [
   },
   {
     icon: 'map' as const,
-    title: 'Spice Pairing Guide',
-    description: 'Discover which spices pair well together for enhanced flavor and health benefits.',
+    title: 'Remedy Road Maps',
+    description: 'Follow guided paths that show you which spices work together for specific health goals.',
     details: [
-      'Complementary spice combinations',
-      'Synergistic health benefits',
-      'Culinary pairing suggestions',
-      'Traditional remedy blends',
-      'Taste profile matching'
+      'Step-by-step remedy guides',
+      'Spice combinations for specific conditions',
+      'Dosage and preparation instructions',
+      'Traditional healing protocols',
+      'Progress tracking for your wellness journey'
     ]
   },
   {
