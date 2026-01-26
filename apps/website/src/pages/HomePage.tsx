@@ -344,7 +344,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Join the Movement - Pricing Tiers */}
       <section className="section how-it-works">
         <div className="container">
           <h2 className="section-title">Join the Movement</h2>
@@ -352,18 +352,29 @@ export default function HomePage() {
           <div className="steps-grid">
             <div className="step-card">
               <span className="step-number">1</span>
-              <h3>Tell Us About You</h3>
-              <p>Share your health goals and concerns. We'll personalize your experience.</p>
+              <h3>The Freemium</h3>
+              <ul className="tier-features">
+                <li>22 spices</li>
+              </ul>
             </div>
-            <div className="step-card">
+            <div className="step-card step-card--featured">
               <span className="step-number">2</span>
-              <h3>Search or Browse</h3>
-              <p>Look up symptoms, explore spices, or follow curated remedy paths.</p>
+              <h3>The Essentials</h3>
+              <ul className="tier-features">
+                <li>Full database of spices</li>
+                <li>Search features</li>
+                <li>Remedy Road Maps</li>
+              </ul>
             </div>
             <div className="step-card">
               <span className="step-number">3</span>
-              <h3>Start Feeling Better</h3>
-              <p>Use what's already in your kitchen to support your natural wellness journey.</p>
+              <h3>The Premium</h3>
+              <ul className="tier-features">
+                <li>Everything in Essentials</li>
+                <li>Spicetress/Spicemeister training</li>
+                <li>Community access</li>
+                <li>Leadership opportunities</li>
+              </ul>
             </div>
           </div>
         </div>

@@ -723,6 +723,48 @@
   margin: 0 auto;
 }
 
+/* Tier features list */
+.tier-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.tier-features li {
+  position: relative;
+  padding-left: var(--sw-spacing-lg);
+  margin-bottom: var(--sw-spacing-sm);
+  color: var(--sw-color-text-secondary);
+  line-height: var(--sw-leading-relaxed);
+  font-size: var(--sw-text-base);
+}
+
+.tier-features li:last-child {
+  margin-bottom: 0;
+}
+
+.tier-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--sw-color-gold);
+  font-weight: 600;
+}
+
+/* Featured step card */
+.step-card--featured {
+  background: linear-gradient(135deg, var(--sw-color-bg-card) 0%, rgba(201, 169, 97, 0.08) 100%);
+  border: 2px solid var(--sw-color-gold-light);
+  border-radius: var(--sw-radius-xl);
+  box-shadow: var(--sw-shadow-premium-md);
+}
+
+.step-card--featured .step-number {
+  background: linear-gradient(135deg, var(--sw-color-gold) 0%, var(--sw-color-gold-dark) 100%);
+  color: var(--sw-color-text-primary);
+}
+
 /* ============================================
    Audience Section
    ============================================ */
