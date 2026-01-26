@@ -7,52 +7,53 @@ import './PricingPage.css'
 
 const pricingTiers = [
   {
-    name: 'Membership',
-    monthlyPrice: 0,
-    yearlyPrice: 0,
-    description: 'Start your spice journey',
+    name: 'Freemium',
+    price: 'Free',
+    priceNote: 'forever',
+    description: 'Explore the basics',
     features: [
-      'Download the app',
-      'Full Spice Index access',
-      'Dozens of common & rare spices',
-      'Research-backed benefits',
+      '22 spices',
+      'Basic spice profiles',
       'Save your favorites',
     ],
-    cta: 'Download Free',
+    cta: 'Get Started Free',
     featured: false,
     icon: 'leaf' as const,
+    tierClass: 'basic',
   },
   {
-    name: 'Advocacy',
-    monthlyPrice: 0,
-    yearlyPrice: 0,
-    description: 'Champion spice-forward wellness',
+    name: 'The Essentials',
+    price: '$29',
+    priceNote: 'one-time purchase',
+    description: 'Lifetime access to the full database',
     features: [
-      'Become a spice enthusiast',
-      'Ambassador among your circles',
-      'Recognize healing potential',
-      'Share remedies for ailments',
-      'Promote natural wellness',
+      'Full database of spices',
+      'Search features',
+      'Remedy Road Maps',
+      'Research-backed benefits',
+      'Lifetime updates',
     ],
-    cta: 'Become an Advocate',
+    cta: 'Get Lifetime Access',
     featured: true,
-    icon: 'users' as const,
+    icon: 'book' as const,
+    tierClass: 'featured',
   },
   {
-    name: 'Growth & Host',
-    monthlyPrice: 0,
-    yearlyPrice: 0,
-    description: 'Lead the community',
+    name: 'Premium',
+    price: '$99',
+    priceNote: '/year',
+    description: 'Full access + community',
     features: [
-      'Train as Spicetress or Spicemeister',
-      'Learn spice remedy hacks',
-      'Regional & seasonal grow-alongs',
-      'Grow your own spices',
-      'Optional host opportunities',
+      'Everything in Essentials',
+      'Spicetress/Spicemeister training',
+      'Community access',
+      'Leadership opportunities',
+      'Exclusive events & grow-alongs',
     ],
-    cta: 'Start Training',
+    cta: 'Join Premium',
     featured: false,
     icon: 'sparkles' as const,
+    tierClass: 'premium',
   }
 ]
 
@@ -126,9 +127,9 @@ export default function PricingPage() {
         <div className="container">
           <div className="pricing-grid">
             {pricingTiers.map((tier, idx) => (
-                <div key={idx} className={`pricing-card ${tier.featured ? 'pricing-card--featured' : ''}`}>
+                <div key={idx} className={`pricing-card pricing-card--${tier.tierClass}`}>
                   {tier.featured && (
-                    <span className="pricing-badge">Make an Impact</span>
+                    <span className="pricing-badge">Best Value</span>
                   )}
 
                   <div className="pricing-card-header">
@@ -136,6 +137,10 @@ export default function PricingPage() {
                       <Icon name={tier.icon} size="lg" />
                     </span>
                     <h3 className="pricing-name">{tier.name}</h3>
+                    <div className="pricing-price">
+                      <span className="price-amount">{tier.price}</span>
+                      <span className="price-note">{tier.priceNote}</span>
+                    </div>
                     <p className="pricing-description">{tier.description}</p>
                   </div>
 
@@ -154,9 +159,13 @@ export default function PricingPage() {
                     className={`pricing-cta ${tier.featured ? 'pricing-cta--primary' : ''}`}
                     onClick={() => document.getElementById('waitlist-form')?.scrollIntoView({ behavior: 'smooth' })}
                     style={{
-                      background: tier.featured ? 'linear-gradient(135deg, #C9A961 0%, #B8956A 100%)' : '#2D4A3E',
+                      background: tier.tierClass === 'premium'
+                        ? 'linear-gradient(135deg, #2D4A3E 0%, #1a2e26 100%)'
+                        : tier.featured
+                          ? 'linear-gradient(135deg, #C9A961 0%, #B8956A 100%)'
+                          : '#2D4A3E',
                       color: tier.featured ? '#1A1A1A' : '#FFFFFF',
-                      border: 'none',
+                      border: tier.tierClass === 'premium' ? '2px solid #C9A961' : 'none',
                     }}
                   >
                     {tier.cta}

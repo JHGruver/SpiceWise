@@ -723,7 +723,17 @@
   font-family: var(--sw-font-heading);
   font-size: var(--sw-text-xl);
   color: var(--sw-color-text-primary);
+  margin-bottom: var(--sw-spacing-xs);
+}
+
+.step-tagline {
+  font-size: var(--sw-text-sm);
+  color: var(--sw-color-text-muted);
   margin-bottom: var(--sw-spacing-md);
+}
+
+.step-card--premium .step-tagline {
+  color: rgba(250, 247, 242, 0.7);
 }
 
 .step-card p {

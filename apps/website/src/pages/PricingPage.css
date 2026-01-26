@@ -160,13 +160,72 @@
   transform: scaleX(1);
 }
 
+/* Tier: Basic/Freemium */
+.pricing-card--basic {
+  border-color: rgba(45, 74, 62, 0.15);
+}
+
+.pricing-card--basic:hover {
+  border-color: rgba(45, 74, 62, 0.3);
+}
+
+/* Tier: Featured/Essentials */
 .pricing-card--featured {
-  border-color: var(--sw-color-primary);
-  box-shadow: var(--sw-shadow-premium-lg);
+  border-color: var(--sw-color-gold);
+  background: linear-gradient(135deg, var(--sw-color-bg-card) 0%, rgba(201, 169, 97, 0.08) 100%);
+  box-shadow:
+    0 4px 20px rgba(201, 169, 97, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .pricing-card--featured::before {
   transform: scaleX(1);
+  background: var(--sw-gold-gradient);
+}
+
+.pricing-card--featured .pricing-icon {
+  background: linear-gradient(135deg, var(--sw-color-gold) 0%, var(--sw-color-gold-dark) 100%);
+  color: var(--sw-color-text-primary);
+  border-color: transparent;
+}
+
+/* Tier: Premium */
+.pricing-card--premium {
+  background: linear-gradient(135deg, var(--sw-color-primary) 0%, var(--sw-color-primary-dark) 100%);
+  border-color: var(--sw-color-gold);
+  box-shadow:
+    0 8px 32px rgba(45, 74, 62, 0.35),
+    0 4px 16px rgba(201, 169, 97, 0.2);
+}
+
+.pricing-card--premium::before {
+  transform: scaleX(1);
+  background: var(--sw-gold-gradient);
+}
+
+.pricing-card--premium .pricing-icon {
+  background: linear-gradient(135deg, var(--sw-color-gold) 0%, #D4AF37 50%, var(--sw-color-gold-dark) 100%);
+  color: var(--sw-color-primary-dark);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(201, 169, 97, 0.4);
+}
+
+.pricing-card--premium .pricing-name,
+.pricing-card--premium .pricing-description,
+.pricing-card--premium .price-note {
+  color: rgba(250, 247, 242, 0.9);
+}
+
+.pricing-card--premium .price-amount {
+  color: var(--sw-color-gold);
+}
+
+.pricing-card--premium .pricing-features li {
+  color: rgba(250, 247, 242, 0.85);
+}
+
+.pricing-card--premium .feature-check {
+  color: var(--sw-color-gold);
 }
 
 .pricing-badge {
@@ -224,6 +283,12 @@
 .pricing-description {
   font-size: var(--sw-text-sm);
   color: var(--sw-color-text-muted);
+}
+
+.price-note {
+  font-size: var(--sw-text-sm);
+  color: var(--sw-color-text-muted);
+  font-weight: var(--sw-font-normal);
 }
 
 /* Pricing Price */

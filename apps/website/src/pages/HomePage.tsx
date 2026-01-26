@@ -352,28 +352,35 @@ export default function HomePage() {
           <div className="steps-grid">
             <div className="step-card step-card--basic">
               <span className="step-number">1</span>
-              <h3>Freemium</h3>
+              <h3>Membership</h3>
+              <p className="step-tagline">Start your spice journey</p>
               <ul className="tier-features">
-                <li>22 spices</li>
+                <li>Download the app</li>
+                <li>Full Spice Index access</li>
+                <li>Research-backed benefits</li>
+                <li>Save your favorites</li>
               </ul>
             </div>
             <div className="step-card step-card--featured">
               <span className="step-number">2</span>
-              <h3>The Essentials</h3>
+              <h3>Advocacy</h3>
+              <p className="step-tagline">Champion spice-forward wellness</p>
               <ul className="tier-features">
-                <li>Full database of spices</li>
-                <li>Search features</li>
-                <li>Remedy Road Maps</li>
+                <li>Become a spice enthusiast</li>
+                <li>Ambassador among your circles</li>
+                <li>Share remedies for ailments</li>
+                <li>Promote natural wellness</li>
               </ul>
             </div>
             <div className="step-card step-card--premium">
               <span className="step-number">3</span>
-              <h3>Premium</h3>
+              <h3>Growth & Host</h3>
+              <p className="step-tagline">Lead the community</p>
               <ul className="tier-features">
-                <li>Everything in Essentials</li>
-                <li>Spicetress/Spicemeister training</li>
-                <li>Community access</li>
-                <li>Leadership opportunities</li>
+                <li>Train as Spicetress/Spicemeister</li>
+                <li>Learn spice remedy hacks</li>
+                <li>Regional & seasonal grow-alongs</li>
+                <li>Optional host opportunities</li>
               </ul>
             </div>
           </div>
