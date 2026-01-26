@@ -352,7 +352,7 @@ export default function HomePage() {
           <div className="steps-grid">
             <div className="step-card step-card--basic">
               <span className="step-number">1</span>
-              <h3>The Freemium</h3>
+              <h3>Freemium</h3>
               <ul className="tier-features">
                 <li>22 spices</li>
               </ul>
@@ -368,7 +368,7 @@ export default function HomePage() {
             </div>
             <div className="step-card step-card--premium">
               <span className="step-number">3</span>
-              <h3>The Premium</h3>
+              <h3>Premium</h3>
               <ul className="tier-features">
                 <li>Everything in Essentials</li>
                 <li>Spicetress/Spicemeister training</li>
