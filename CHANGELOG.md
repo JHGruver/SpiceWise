@@ -1,5 +1,25 @@
 # SpiceWise Changelog & Bug Log
 
+## 2026-01-26
+
+### Changes Made
+- Fixed pricing card styling to meet exact design specifications:
+  - All three pricing tiers now have equal height (removed scale(1.05) from Essentials)
+  - CTA button hierarchy implemented:
+    - Freemium: white fill, green border, green text
+    - Essentials: green fill, white text
+    - Premium: gold fill, black text
+  - Icon default state (all tiers): green stroke (#2D4A3E), white fill, green icon
+  - Icon hover states per tier:
+    - Freemium: green fill, white icon
+    - Essentials: gold gradient fill
+    - Premium: gold stroke, green-gold gradient fill, white icon
+- Removed duplicate/conflicting CSS in PricingPage.css:
+  - Removed duplicate .pricing-icon definition
+  - Removed old Premium dark-background styling (cream/gold text colors)
+  - Removed scale transform from featured tier media query
+- Removed inline styles from PricingPage.tsx buttons (CSS now handles all styling)
+
 ## 2026-01-24
 
 ### Changes Made

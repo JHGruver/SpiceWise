@@ -168,7 +168,7 @@
 }
 
 .pricing-card:hover {
-  transform: translateY(-12px) scale(1.02);
+  transform: translateY(-8px);
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.12),
     0 8px 16px rgba(45, 74, 62, 0.08);
@@ -192,150 +192,125 @@
 }
 
 /* ============================================
-   TIER 1: Basic/Freemium - Clean & Simple
+   SHARED ICON STYLING - Default State
+   Green stroke, white fill, green icon
+   ============================================ */
+.pricing-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--sw-spacing-md);
+  background: #FFFFFF;
+  border: 2px solid var(--sw-color-primary);
+  border-radius: var(--sw-radius-xl);
+  color: var(--sw-color-primary);
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   TIER 1: Freemium
    ============================================ */
 .pricing-card--basic {
-  border-color: rgba(45, 74, 62, 0.12);
+  border-color: rgba(45, 74, 62, 0.15);
   background: var(--sw-color-bg-card);
 }
 
 .pricing-card--basic:hover {
   border-color: var(--sw-color-primary);
-  box-shadow:
-    0 20px 40px rgba(45, 74, 62, 0.12),
-    0 8px 16px rgba(45, 74, 62, 0.06);
 }
 
-.pricing-card--basic:hover::after {
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(45, 74, 62, 0.08) 0%,
-    transparent 60%
-  );
+/* Freemium icon hover: green fill, white icon */
+.pricing-card--basic:hover .pricing-icon {
+  background: var(--sw-color-primary);
+  color: #FFFFFF;
 }
 
-.pricing-card--basic .feature-check {
+/* Freemium CTA: white fill, green border, green text */
+.pricing-card--basic .pricing-cta {
+  background: #FFFFFF !important;
+  color: var(--sw-color-primary) !important;
+  border: 2px solid var(--sw-color-primary) !important;
+}
+
+.pricing-card--basic:hover .pricing-cta {
+  background: var(--sw-color-primary) !important;
+  color: #FFFFFF !important;
+}
+
+/* ============================================
+   TIER 2: Essentials
+   ============================================ */
+.pricing-card--featured {
+  border-color: rgba(45, 74, 62, 0.15);
+  background: var(--sw-color-bg-card);
+}
+
+.pricing-card--featured:hover {
+  border-color: var(--sw-color-primary);
+}
+
+/* Essentials icon hover: gold fill */
+.pricing-card--featured:hover .pricing-icon {
+  background: linear-gradient(135deg, var(--sw-color-gold) 0%, var(--sw-color-gold-dark) 100%);
+  border-color: var(--sw-color-gold);
+  color: #1a1a1a;
+}
+
+/* Essentials CTA: green fill, white text */
+.pricing-card--featured .pricing-cta {
+  background: var(--sw-color-primary) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+}
+
+.pricing-card--featured:hover .pricing-cta {
+  background: #3D5A4E !important;
+}
+
+/* ============================================
+   TIER 3: Premium
+   ============================================ */
+.pricing-card--premium {
+  border-color: rgba(45, 74, 62, 0.15);
+  background: var(--sw-color-bg-card);
+}
+
+.pricing-card--premium:hover {
+  border-color: var(--sw-color-gold);
+}
+
+/* Premium icon hover: gold stroke, green & gold gradient fill, white icon */
+.pricing-card--premium:hover .pricing-icon {
+  background: linear-gradient(135deg, var(--sw-color-primary) 0%, var(--sw-color-gold-dark) 100%);
+  border-color: var(--sw-color-gold);
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(201, 169, 97, 0.3);
+}
+
+/* Premium CTA: gold fill, black text */
+.pricing-card--premium .pricing-cta {
+  background: linear-gradient(135deg, var(--sw-color-gold) 0%, var(--sw-color-gold-dark) 100%) !important;
+  color: #1a1a1a !important;
+  border: none !important;
+}
+
+.pricing-card--premium:hover .pricing-cta {
+  background: linear-gradient(135deg, #D4AF37 0%, var(--sw-color-gold) 100%) !important;
+  box-shadow: 0 6px 20px rgba(201, 169, 97, 0.4);
+}
+
+/* Shared feature check styling */
+.pricing-card .feature-check {
   background: rgba(45, 74, 62, 0.1);
   color: var(--sw-color-primary);
 }
 
-/* ============================================
-   TIER 2: Essentials - Golden Elegance
-   ============================================ */
-.pricing-card--featured {
-  border: 2px solid var(--sw-color-gold);
-  background:
-    linear-gradient(180deg, rgba(201, 169, 97, 0.08) 0%, transparent 40%),
-    var(--sw-color-bg-card);
-  box-shadow:
-    0 4px 24px rgba(201, 169, 97, 0.15),
-    0 2px 8px rgba(0, 0, 0, 0.04),
-    inset 0 1px 0 rgba(201, 169, 97, 0.1);
-}
-
-.pricing-card--featured::before {
-  transform: scaleX(1);
-  background: linear-gradient(90deg, var(--sw-color-gold-dark), var(--sw-color-gold), var(--sw-color-gold-dark));
-  height: 4px;
-}
-
-.pricing-card--featured:hover {
-  transform: translateY(-12px) scale(1.02);
-  border-color: var(--sw-color-gold-dark);
-  box-shadow:
-    0 28px 56px rgba(201, 169, 97, 0.2),
-    0 12px 24px rgba(45, 74, 62, 0.08),
-    inset 0 1px 0 rgba(201, 169, 97, 0.15);
-}
-
-.pricing-card--featured:hover::after {
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(201, 169, 97, 0.2) 0%,
-    transparent 65%
-  );
-}
-
-.pricing-card--featured .pricing-icon {
-  background: linear-gradient(135deg, var(--sw-color-gold) 0%, var(--sw-color-gold-dark) 100%);
-  color: #1a1a1a;
-  border: none;
-  box-shadow: 0 4px 16px rgba(201, 169, 97, 0.35);
-}
-
-.pricing-card--featured:hover .pricing-icon {
-  transform: scale(1.15) rotate(-8deg);
-  box-shadow: 0 8px 28px rgba(201, 169, 97, 0.45);
-}
-
-.pricing-card--featured .price-amount {
-  color: var(--sw-color-gold-dark);
-}
-
-.pricing-card--featured .feature-check {
-  background: rgba(201, 169, 97, 0.15);
-  color: var(--sw-color-gold-dark);
-}
-
-/* ============================================
-   TIER 3: Premium - Luxurious Showstopper
-   ============================================ */
-.pricing-card--premium {
-  background:
-    linear-gradient(145deg, #2D4A3E 0%, #1a2e26 50%, #0f1c17 100%);
-  border: 2px solid var(--sw-color-gold);
-  box-shadow:
-    0 8px 32px rgba(45, 74, 62, 0.4),
-    0 4px 16px rgba(201, 169, 97, 0.2),
-    0 0 0 1px rgba(201, 169, 97, 0.1) inset;
-  position: relative;
-}
-
-/* Animated shimmer overlay */
-.pricing-card--premium::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      105deg,
-      transparent 20%,
-      rgba(201, 169, 97, 0.1) 35%,
-      rgba(201, 169, 97, 0.2) 50%,
-      rgba(201, 169, 97, 0.1) 65%,
-      transparent 80%
-    );
-  background-size: 200% 100%;
-  animation: none;
-}
-
-.pricing-card--premium:hover::after {
-  opacity: 1;
-  animation: shimmer 2s ease-in-out infinite;
-}
-
+/* Remove old animations that caused issues */
 @keyframes shimmer {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
-}
-
-/* Premium top bar - thicker and animated */
-.pricing-card--premium::before {
-  transform: scaleX(1);
-  background: linear-gradient(90deg,
-    var(--sw-color-gold-dark),
-    var(--sw-color-gold),
-    #D4AF37,
-    var(--sw-color-gold),
-    var(--sw-color-gold-dark)
-  );
-  background-size: 200% 100%;
-  height: 5px;
-  animation: goldShift 3s ease-in-out infinite;
 }
 
 @keyframes goldShift {
@@ -343,103 +318,14 @@
   50% { background-position: 100% 50%; }
 }
 
-/* Premium corner accent */
-.pricing-card--premium .pricing-card-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(
-    circle at 100% 0%,
-    rgba(201, 169, 97, 0.15) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-}
-
-.pricing-card--premium:hover {
-  transform: translateY(-16px) scale(1.04);
-  border-color: #D4AF37;
-  box-shadow:
-    0 32px 64px rgba(45, 74, 62, 0.45),
-    0 16px 32px rgba(201, 169, 97, 0.25),
-    0 0 60px rgba(201, 169, 97, 0.15),
-    0 0 0 1px rgba(201, 169, 97, 0.2) inset;
-}
-
-/* Premium icon - golden with glow */
-.pricing-card--premium .pricing-icon {
-  background: linear-gradient(135deg, #D4AF37 0%, var(--sw-color-gold) 50%, var(--sw-color-gold-dark) 100%);
-  color: #1a2e26;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  box-shadow:
-    0 4px 20px rgba(201, 169, 97, 0.5),
-    0 0 30px rgba(201, 169, 97, 0.2);
-  animation: iconPulse 3s ease-in-out infinite;
-}
-
 @keyframes iconPulse {
   0%, 100% {
-    box-shadow:
-      0 4px 20px rgba(201, 169, 97, 0.5),
-      0 0 30px rgba(201, 169, 97, 0.2);
-  }
-  50% {
     box-shadow:
       0 4px 24px rgba(201, 169, 97, 0.6),
       0 0 40px rgba(201, 169, 97, 0.3);
   }
 }
 
-.pricing-card--premium:hover .pricing-icon {
-  transform: scale(1.2) rotate(-10deg);
-  box-shadow:
-    0 8px 32px rgba(201, 169, 97, 0.6),
-    0 0 50px rgba(201, 169, 97, 0.35);
-  animation: none;
-}
-
-/* Premium text styling */
-.pricing-card--premium .pricing-name {
-  color: var(--sw-color-cream);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.pricing-card--premium .pricing-description,
-.pricing-card--premium .price-note {
-  color: rgba(250, 247, 242, 0.8);
-}
-
-.pricing-card--premium .price-amount {
-  color: var(--sw-color-gold);
-  text-shadow: 0 2px 8px rgba(201, 169, 97, 0.3);
-}
-
-.pricing-card--premium .pricing-features li {
-  color: rgba(250, 247, 242, 0.9);
-}
-
-.pricing-card--premium .feature-check {
-  background: rgba(201, 169, 97, 0.2);
-  color: var(--sw-color-gold);
-  box-shadow: 0 0 8px rgba(201, 169, 97, 0.2);
-}
-
-/* Premium CTA button - special styling */
-.pricing-card--premium .pricing-cta {
-  background: linear-gradient(135deg, var(--sw-color-gold) 0%, var(--sw-color-gold-dark) 100%) !important;
-  color: #1a2e26 !important;
-  border: none !important;
-  box-shadow: 0 4px 16px rgba(201, 169, 97, 0.4);
-  font-weight: 700;
-}
-
-.pricing-card--premium:hover .pricing-cta {
-  box-shadow: 0 8px 24px rgba(201, 169, 97, 0.5);
-  transform: translateY(-3px);
-}
 
 .pricing-badge {
   position: absolute;
@@ -461,28 +347,6 @@
 .pricing-card-header {
   text-align: center;
   margin-bottom: var(--sw-spacing-lg);
-}
-
-.pricing-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  margin-bottom: var(--sw-spacing-md);
-  background: linear-gradient(135deg, var(--sw-color-champagne) 0%, var(--sw-color-cream) 100%);
-  border: 1px solid var(--sw-color-gold-light);
-  border-radius: var(--sw-radius-xl);
-  color: var(--sw-color-primary);
-  transition: all var(--sw-duration-normal) var(--sw-ease-luxury);
-}
-
-.pricing-card:hover .pricing-icon {
-  transform: scale(1.15) rotate(-8deg);
-  background: linear-gradient(135deg, var(--sw-color-primary) 0%, var(--sw-color-primary-dark) 100%);
-  color: var(--sw-color-text-inverse);
-  border-color: transparent;
-  box-shadow: 0 10px 28px rgba(45, 74, 62, 0.35);
 }
 
 .pricing-name {
@@ -969,13 +833,9 @@
     align-items: stretch;
   }
 
-  .pricing-card--featured {
-    transform: scale(1.05);
-    z-index: 1;
-  }
-
+  /* All cards same size - no scaling */
   .pricing-card--featured:hover {
-    transform: scale(1.05) translateY(-8px);
+    transform: translateY(-8px);
   }
 }
 
