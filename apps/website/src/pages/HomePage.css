@@ -678,6 +678,16 @@
   position: relative;
   text-align: center;
   padding: var(--sw-spacing-2xl);
+  background: var(--sw-color-bg-card);
+  border-radius: var(--sw-radius-xl);
+  border: 1px solid rgba(45, 74, 62, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all var(--sw-duration-normal) var(--sw-ease-luxury);
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .step-number {
@@ -752,17 +762,74 @@
   font-weight: 600;
 }
 
-/* Featured step card */
+/* Tier 1: Basic/Freemium - Clean and inviting */
+.step-card--basic {
+  background: var(--sw-color-bg-card);
+  border: 1px solid rgba(45, 74, 62, 0.15);
+}
+
+.step-card--basic:hover {
+  border-color: rgba(45, 74, 62, 0.3);
+}
+
+/* Tier 2: Essentials/Featured - Highlighted mid-tier */
 .step-card--featured {
   background: linear-gradient(135deg, var(--sw-color-bg-card) 0%, rgba(201, 169, 97, 0.08) 100%);
   border: 2px solid var(--sw-color-gold-light);
-  border-radius: var(--sw-radius-xl);
-  box-shadow: var(--sw-shadow-premium-md);
+  box-shadow:
+    0 4px 20px rgba(201, 169, 97, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.step-card--featured:hover {
+  box-shadow:
+    0 8px 32px rgba(201, 169, 97, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: var(--sw-color-gold);
 }
 
 .step-card--featured .step-number {
   background: linear-gradient(135deg, var(--sw-color-gold) 0%, var(--sw-color-gold-dark) 100%);
   color: var(--sw-color-text-primary);
+}
+
+/* Tier 3: Premium - Luxurious and prestigious */
+.step-card--premium {
+  background: linear-gradient(135deg, var(--sw-color-primary) 0%, var(--sw-color-primary-dark) 100%);
+  border: 2px solid var(--sw-color-gold);
+  box-shadow:
+    0 8px 32px rgba(45, 74, 62, 0.35),
+    0 4px 16px rgba(201, 169, 97, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.step-card--premium:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 12px 40px rgba(45, 74, 62, 0.45),
+    0 6px 20px rgba(201, 169, 97, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.step-card--premium .step-number {
+  background: linear-gradient(135deg, var(--sw-color-gold) 0%, #D4AF37 50%, var(--sw-color-gold-dark) 100%);
+  color: var(--sw-color-primary-dark);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 4px 20px rgba(201, 169, 97, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.step-card--premium h3 {
+  color: var(--sw-color-text-inverse);
+}
+
+.step-card--premium .tier-features li {
+  color: rgba(250, 247, 242, 0.9);
+}
+
+.step-card--premium .tier-features li::before {
+  color: var(--sw-color-gold);
 }
 
 /* ============================================

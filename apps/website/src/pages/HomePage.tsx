@@ -350,7 +350,7 @@ export default function HomePage() {
           <h2 className="section-title">Join the Movement</h2>
           <p className="section-subtitle">Get the App. Get Involved.</p>
           <div className="steps-grid">
-            <div className="step-card">
+            <div className="step-card step-card--basic">
               <span className="step-number">1</span>
               <h3>The Freemium</h3>
               <ul className="tier-features">
@@ -366,7 +366,7 @@ export default function HomePage() {
                 <li>Remedy Road Maps</li>
               </ul>
             </div>
-            <div className="step-card">
+            <div className="step-card step-card--premium">
               <span className="step-number">3</span>
               <h3>The Premium</h3>
               <ul className="tier-features">
