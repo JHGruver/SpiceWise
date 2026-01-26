@@ -128,9 +128,6 @@ export default function PricingPage() {
           <div className="pricing-grid">
             {pricingTiers.map((tier, idx) => (
                 <div key={idx} className={`pricing-card pricing-card--${tier.tierClass}`}>
-                  {tier.featured && (
-                    <span className="pricing-badge">Best Value</span>
-                  )}
 
                   <div className="pricing-card-header">
                     <span className="pricing-icon">
