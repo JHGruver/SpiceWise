@@ -191,124 +191,254 @@
   box-shadow: 0 6px 20px rgba(45, 74, 62, 0.25);
 }
 
-/* Tier: Basic/Freemium */
+/* ============================================
+   TIER 1: Basic/Freemium - Clean & Simple
+   ============================================ */
 .pricing-card--basic {
-  border-color: rgba(45, 74, 62, 0.15);
+  border-color: rgba(45, 74, 62, 0.12);
+  background: var(--sw-color-bg-card);
 }
 
 .pricing-card--basic:hover {
   border-color: var(--sw-color-primary);
   box-shadow:
-    0 20px 40px rgba(45, 74, 62, 0.15),
-    0 8px 16px rgba(45, 74, 62, 0.08);
+    0 20px 40px rgba(45, 74, 62, 0.12),
+    0 8px 16px rgba(45, 74, 62, 0.06);
 }
 
 .pricing-card--basic:hover::after {
   background: radial-gradient(
     ellipse at 50% 0%,
-    rgba(45, 74, 62, 0.1) 0%,
-    transparent 70%
+    rgba(45, 74, 62, 0.08) 0%,
+    transparent 60%
   );
 }
 
-/* Tier: Featured/Essentials */
+.pricing-card--basic .feature-check {
+  background: rgba(45, 74, 62, 0.1);
+  color: var(--sw-color-primary);
+}
+
+/* ============================================
+   TIER 2: Essentials - Golden Elegance
+   ============================================ */
 .pricing-card--featured {
-  border-color: var(--sw-color-gold);
-  background: linear-gradient(135deg, var(--sw-color-bg-card) 0%, rgba(201, 169, 97, 0.08) 100%);
+  border: 2px solid var(--sw-color-gold);
+  background:
+    linear-gradient(180deg, rgba(201, 169, 97, 0.08) 0%, transparent 40%),
+    var(--sw-color-bg-card);
   box-shadow:
-    0 4px 20px rgba(201, 169, 97, 0.15),
-    0 2px 8px rgba(0, 0, 0, 0.05);
+    0 4px 24px rgba(201, 169, 97, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(201, 169, 97, 0.1);
 }
 
 .pricing-card--featured::before {
   transform: scaleX(1);
-  background: var(--sw-gold-gradient);
+  background: linear-gradient(90deg, var(--sw-color-gold-dark), var(--sw-color-gold), var(--sw-color-gold-dark));
+  height: 4px;
 }
 
 .pricing-card--featured:hover {
-  box-shadow:
-    0 24px 48px rgba(201, 169, 97, 0.25),
-    0 12px 24px rgba(45, 74, 62, 0.1);
+  transform: translateY(-12px) scale(1.02);
   border-color: var(--sw-color-gold-dark);
+  box-shadow:
+    0 28px 56px rgba(201, 169, 97, 0.2),
+    0 12px 24px rgba(45, 74, 62, 0.08),
+    inset 0 1px 0 rgba(201, 169, 97, 0.15);
 }
 
 .pricing-card--featured:hover::after {
   background: radial-gradient(
     ellipse at 50% 0%,
     rgba(201, 169, 97, 0.2) 0%,
-    transparent 70%
+    transparent 65%
   );
 }
 
 .pricing-card--featured .pricing-icon {
   background: linear-gradient(135deg, var(--sw-color-gold) 0%, var(--sw-color-gold-dark) 100%);
-  color: var(--sw-color-text-primary);
-  border-color: transparent;
+  color: #1a1a1a;
+  border: none;
+  box-shadow: 0 4px 16px rgba(201, 169, 97, 0.35);
+}
+
+.pricing-card--featured:hover .pricing-icon {
+  transform: scale(1.15) rotate(-8deg);
+  box-shadow: 0 8px 28px rgba(201, 169, 97, 0.45);
 }
 
 .pricing-card--featured .price-amount {
   color: var(--sw-color-gold-dark);
 }
 
-/* Tier: Premium */
+.pricing-card--featured .feature-check {
+  background: rgba(201, 169, 97, 0.15);
+  color: var(--sw-color-gold-dark);
+}
+
+/* ============================================
+   TIER 3: Premium - Luxurious Showstopper
+   ============================================ */
 .pricing-card--premium {
-  background: linear-gradient(145deg, var(--sw-color-primary) 0%, #1e3a31 100%);
-  border-color: var(--sw-color-gold);
+  background:
+    linear-gradient(145deg, #2D4A3E 0%, #1a2e26 50%, #0f1c17 100%);
+  border: 2px solid var(--sw-color-gold);
   box-shadow:
-    0 8px 32px rgba(45, 74, 62, 0.35),
-    0 4px 16px rgba(201, 169, 97, 0.2);
+    0 8px 32px rgba(45, 74, 62, 0.4),
+    0 4px 16px rgba(201, 169, 97, 0.2),
+    0 0 0 1px rgba(201, 169, 97, 0.1) inset;
+  position: relative;
 }
 
-.pricing-card--premium::before {
-  transform: scaleX(1);
-  background: var(--sw-gold-gradient);
-  height: 5px;
-}
-
-.pricing-card--premium:hover {
-  transform: translateY(-14px) scale(1.03);
-  box-shadow:
-    0 28px 56px rgba(45, 74, 62, 0.4),
-    0 12px 24px rgba(201, 169, 97, 0.2),
-    0 0 40px rgba(201, 169, 97, 0.15);
+/* Animated shimmer overlay */
+.pricing-card--premium::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      105deg,
+      transparent 20%,
+      rgba(201, 169, 97, 0.1) 35%,
+      rgba(201, 169, 97, 0.2) 50%,
+      rgba(201, 169, 97, 0.1) 65%,
+      transparent 80%
+    );
+  background-size: 200% 100%;
+  animation: none;
 }
 
 .pricing-card--premium:hover::after {
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(201, 169, 97, 0.25) 0%,
-    transparent 70%
-  );
+  opacity: 1;
+  animation: shimmer 2s ease-in-out infinite;
 }
 
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Premium top bar - thicker and animated */
+.pricing-card--premium::before {
+  transform: scaleX(1);
+  background: linear-gradient(90deg,
+    var(--sw-color-gold-dark),
+    var(--sw-color-gold),
+    #D4AF37,
+    var(--sw-color-gold),
+    var(--sw-color-gold-dark)
+  );
+  background-size: 200% 100%;
+  height: 5px;
+  animation: goldShift 3s ease-in-out infinite;
+}
+
+@keyframes goldShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Premium corner accent */
+.pricing-card--premium .pricing-card-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle at 100% 0%,
+    rgba(201, 169, 97, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.pricing-card--premium:hover {
+  transform: translateY(-16px) scale(1.04);
+  border-color: #D4AF37;
+  box-shadow:
+    0 32px 64px rgba(45, 74, 62, 0.45),
+    0 16px 32px rgba(201, 169, 97, 0.25),
+    0 0 60px rgba(201, 169, 97, 0.15),
+    0 0 0 1px rgba(201, 169, 97, 0.2) inset;
+}
+
+/* Premium icon - golden with glow */
 .pricing-card--premium .pricing-icon {
-  background: linear-gradient(135deg, var(--sw-color-gold) 0%, #D4AF37 50%, var(--sw-color-gold-dark) 100%);
-  color: var(--sw-color-primary-dark);
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 16px rgba(201, 169, 97, 0.4);
+  background: linear-gradient(135deg, #D4AF37 0%, var(--sw-color-gold) 50%, var(--sw-color-gold-dark) 100%);
+  color: #1a2e26;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 4px 20px rgba(201, 169, 97, 0.5),
+    0 0 30px rgba(201, 169, 97, 0.2);
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    box-shadow:
+      0 4px 20px rgba(201, 169, 97, 0.5),
+      0 0 30px rgba(201, 169, 97, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 4px 24px rgba(201, 169, 97, 0.6),
+      0 0 40px rgba(201, 169, 97, 0.3);
+  }
 }
 
 .pricing-card--premium:hover .pricing-icon {
-  background: linear-gradient(135deg, #D4AF37 0%, var(--sw-color-gold) 100%);
-  box-shadow: 0 8px 24px rgba(201, 169, 97, 0.5);
+  transform: scale(1.2) rotate(-10deg);
+  box-shadow:
+    0 8px 32px rgba(201, 169, 97, 0.6),
+    0 0 50px rgba(201, 169, 97, 0.35);
+  animation: none;
 }
 
-.pricing-card--premium .pricing-name,
+/* Premium text styling */
+.pricing-card--premium .pricing-name {
+  color: var(--sw-color-cream);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .pricing-card--premium .pricing-description,
 .pricing-card--premium .price-note {
-  color: rgba(250, 247, 242, 0.9);
+  color: rgba(250, 247, 242, 0.8);
 }
 
 .pricing-card--premium .price-amount {
   color: var(--sw-color-gold);
+  text-shadow: 0 2px 8px rgba(201, 169, 97, 0.3);
 }
 
 .pricing-card--premium .pricing-features li {
-  color: rgba(250, 247, 242, 0.85);
+  color: rgba(250, 247, 242, 0.9);
 }
 
 .pricing-card--premium .feature-check {
+  background: rgba(201, 169, 97, 0.2);
   color: var(--sw-color-gold);
+  box-shadow: 0 0 8px rgba(201, 169, 97, 0.2);
+}
+
+/* Premium CTA button - special styling */
+.pricing-card--premium .pricing-cta {
+  background: linear-gradient(135deg, var(--sw-color-gold) 0%, var(--sw-color-gold-dark) 100%) !important;
+  color: #1a2e26 !important;
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(201, 169, 97, 0.4);
+  font-weight: 700;
+}
+
+.pricing-card--premium:hover .pricing-cta {
+  box-shadow: 0 8px 24px rgba(201, 169, 97, 0.5);
+  transform: translateY(-3px);
 }
 
 .pricing-badge {
