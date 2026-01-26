@@ -46,17 +46,22 @@ const features = [
   {
     icon: 'leaf' as const,
     title: 'Why Spice?',
-    description: 'They are accessible, versatile, and digestible. Most spices are easily found in marketplaces plus you likely already have some in your kitchen cupboard. Spices are culinary whereas many herbs are not so multifaceted in cooking. Toss spices in soups, salads, smoothies, or simply steep them and sip as tea. Our bodies recognize spices as food, allowing their precious compounds to absorb naturally without residues that can cause harmful side effects.'
+    subtitle: 'Accessible, versatile, and digestible.',
+    bullets: [
+      'Easily found in marketplaces—you likely have some in your kitchen already',
+      'Culinary versatility: toss in soups, salads, smoothies, or steep as tea',
+      'Our bodies recognize spices as food, absorbing compounds naturally without harmful side effects',
+    ]
   },
   {
     icon: 'sparkles' as const,
     title: 'Why Now?',
-    description: 'It\'s high time to incite a spice revival! Spices provide us with a holistic pathway to wellness yet spice-based wisdom is underrepresented in wellness tech. SpiceCraft offers a rich, easy-to-navigate reference while taking a "return to our roots" approach. Our tool connects users with information based on research of the effectiveness of spices, most of which are culturally-rooted and were used in early civilizations throughout the world.'
-  },
-  {
-    icon: 'map' as const,
-    title: 'Remedy Road Maps',
-    description: 'Follow guided paths that show you which spices work together for specific health goals.'
+    subtitle: 'It\'s time for a spice revival!',
+    bullets: [
+      'Spices offer a holistic pathway to wellness, yet are underrepresented in wellness tech',
+      'SpiceCraft provides a rich, easy-to-navigate reference with a "return to our roots" approach',
+      'Research-backed information on culturally-rooted spices used in early civilizations worldwide',
+    ]
   },
 ]
 
@@ -292,14 +297,19 @@ export default function HomePage() {
           <p className="section-subtitle">
             Turn your spice rack into your first line of natural wellness support.
           </p>
-          <div className="features-grid">
+          <div className="features-grid features-grid--two">
             {features.map((feature, idx) => (
-              <div key={idx} className="feature-card">
+              <div key={idx} className="feature-card feature-card--bullets">
                 <span className="feature-icon">
                   <Icon name={feature.icon} size="xl" />
                 </span>
                 <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
+                <p className="feature-subtitle">{feature.subtitle}</p>
+                <ul className="feature-bullets">
+                  {feature.bullets.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

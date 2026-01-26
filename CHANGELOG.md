@@ -6,7 +6,12 @@
 - Updated homepage "Why Spices? Why Now?" section with Rachel's content:
   - Box 1: "Why Spice?" - accessibility, versatility, digestibility messaging
   - Box 2: "Why Now?" - spice revival, holistic pathway messaging
-  - Box 3: "Remedy Road Maps" - kept as is
+  - ~~Box 3: "Remedy Road Maps" - kept as is~~ REMOVED (already on Features page)
+- Reformatted Why Spice/Why Now tiles:
+  - Changed from 3-column to 2-column centered layout
+  - Added bullet points for easier readability
+  - Added subtitle headers for each box
+  - Gold bullet point styling to match brand
 - Updated pricing page with community-focused tiers (Membership, Advocacy, Growth & Host)
 - Fixed pricing button contrast with inline styles
 - Added SPA routing fix for GitHub Pages (404.html redirect)

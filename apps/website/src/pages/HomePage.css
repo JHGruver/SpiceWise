@@ -488,6 +488,55 @@
   font-size: var(--sw-text-base);
 }
 
+/* Two-column features grid */
+.features-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Feature cards with bullets */
+.feature-card--bullets {
+  text-align: left;
+}
+
+.feature-subtitle {
+  font-size: var(--sw-text-lg);
+  font-weight: 600;
+  color: var(--sw-color-primary);
+  margin-bottom: var(--sw-spacing-md);
+}
+
+.feature-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-bullets li {
+  position: relative;
+  padding-left: var(--sw-spacing-lg);
+  margin-bottom: var(--sw-spacing-sm);
+  color: var(--sw-color-text-secondary);
+  line-height: var(--sw-leading-relaxed);
+  font-size: var(--sw-text-base);
+}
+
+.feature-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.feature-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background: var(--sw-color-gold);
+  border-radius: 50%;
+}
+
 /* Solution Note */
 .solution-note {
   max-width: 700px;
@@ -1163,6 +1212,10 @@
     margin: 0 auto;
   }
 
+  .features-grid--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .steps-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1214,6 +1267,10 @@
     grid-template-columns: repeat(3, 1fr);
     max-width: 1000px;
     margin: 0 auto;
+  }
+
+  .features-grid--two {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .herb-preview-image {
