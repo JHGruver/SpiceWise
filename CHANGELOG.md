@@ -12,6 +12,10 @@
   - Added bullet points for easier readability
   - Added subtitle headers for each box
   - Gold bullet point styling to match brand
+- Updated "Join the Movement" section with pricing tiers:
+  - Tier 1: The Freemium (22 spices)
+  - Tier 2: The Essentials (full database, search, Remedy Road Maps) - featured
+  - Tier 3: The Premium (Essentials + training, community, leadership)
 - Updated pricing page with community-focused tiers (Membership, Advocacy, Growth & Host)
 - Fixed pricing button contrast with inline styles
 - Added SPA routing fix for GitHub Pages (404.html redirect)
