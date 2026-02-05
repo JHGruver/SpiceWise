@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { submitWaitlist } from '../utils/formSubmit'
 import { Link } from 'react-router-dom'
 import Icon from '../components/common/Icon'
 import SEO from '../components/common/SEO'
@@ -186,12 +187,11 @@ export default function HomePage() {
     if (!email) return
 
     setIsLoading(true)
-    // TODO: Connect to Supabase or email service
-    // For now, simulate submission
-    await new Promise(resolve => setTimeout(resolve, 500))
-    setIsSubmitted(true)
+    const success = await submitWaitlist({ email, source: 'HomePage' })
+    if (success) {
+      setIsSubmitted(true)
+    }
     setIsLoading(false)
-    console.log('Email submitted:', email)
   }
 
   return (
@@ -489,7 +489,7 @@ export default function HomePage() {
             <span><Icon name="check" size="sm" /> Unsubscribe anytime</span>
           </div>
           <div className="cta-contact">
-            <p>Questions? <a href="mailto:hello@spicecraft.com">hello@spicecraft.com</a></p>
+            <p>Questions? <a href="mailto:spiciety21@gmail.com">spiciety21@gmail.com</a></p>
           </div>
         </div>
       </section>

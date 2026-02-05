@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '../components/common/Icon'
 import SEO from '../components/common/SEO'
+import { submitWaitlist } from '../utils/formSubmit'
 import './PageStyles.css'
 import './SuppliersPage.css'
 
@@ -92,8 +93,10 @@ export default function SuppliersPage() {
     e.preventDefault()
     if (!email) return
     setIsLoading(true)
-    await new Promise(resolve => setTimeout(resolve, 500))
-    setIsSubmitted(true)
+    const success = await submitWaitlist({ email, source: 'SuppliersPage' })
+    if (success) {
+      setIsSubmitted(true)
+    }
     setIsLoading(false)
   }
 

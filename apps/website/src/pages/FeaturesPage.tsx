@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '../components/common/Icon'
 import SEO from '../components/common/SEO'
+import { submitWaitlist } from '../utils/formSubmit'
 import './PageStyles.css'
 import './FeaturesPage.css'
 
@@ -96,9 +97,10 @@ export default function FeaturesPage() {
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email) return
-    await new Promise(resolve => setTimeout(resolve, 500))
-    setIsSubmitted(true)
-    console.log('Email submitted:', email)
+    const success = await submitWaitlist({ email, source: 'FeaturesPage' })
+    if (success) {
+      setIsSubmitted(true)
+    }
   }
 
   return (

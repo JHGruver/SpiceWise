@@ -31,6 +31,7 @@ export default function Footer() {
               <li><Link to="/community">Community Hub</Link></li>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/contact">Contact</Link></li>
+              <li><a href="mailto:spiciety21@gmail.com">spiciety21@gmail.com</a></li>
             </ul>
           </div>
 

@@ -2,6 +2,18 @@
 
 ## 2026-01-26
 
+### Email Integration
+- Replaced all placeholder emails across the site with spiciety21@gmail.com:
+  - hello@spicecraft.com (HomePage, ContactPage, DisclaimerPage)
+  - privacy@spicecraft.com (PrivacyPage x2)
+  - legal@spicecraft.com (TermsPage)
+- Added spiciety21@gmail.com to Footer (visible on every page)
+- Wired up all 8 forms to Formsubmit.co so submissions actually reach spiciety21@gmail.com:
+  - 7 waitlist forms (HomePage x2, PricingPage, FeaturesPage, CommunityPage, SuppliersPage)
+  - 1 contact form (ContactPage — name, email, subject, message)
+- Created shared utility: src/utils/formSubmit.ts
+- **NOTE:** First form submission will trigger a confirmation email from Formsubmit.co — click the link to activate
+
 ### Changes Made
 - Fixed pricing card styling to meet exact design specifications:
   - All three pricing tiers now have equal height (removed scale(1.05) from Essentials)

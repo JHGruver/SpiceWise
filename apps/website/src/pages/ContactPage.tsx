@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '../components/common/Icon'
 import SEO from '../components/common/SEO'
+import { submitContact } from '../utils/formSubmit'
 import './PageStyles.css'
 import './ContactPage.css'
 
@@ -9,8 +10,8 @@ const contactInfo = [
   {
     icon: 'mail' as const,
     title: 'Email',
-    value: 'hello@spicecraft.com',
-    link: 'mailto:hello@spicecraft.com'
+    value: 'spiciety21@gmail.com',
+    link: 'mailto:spiciety21@gmail.com'
   },
   {
     icon: 'map-pin' as const,
@@ -61,11 +62,16 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
-    // TODO: Connect to backend
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setIsSubmitted(true)
+    const success = await submitContact({
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    })
+    if (success) {
+      setIsSubmitted(true)
+    }
     setIsLoading(false)
-    console.log('Contact form submitted:', formData)
   }
 
   return (
