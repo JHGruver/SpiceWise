@@ -104,7 +104,7 @@ export default function PrivacyPage() {
             </ul>
             <p>
               To exercise these rights, please contact us at{' '}
-              <a href="mailto:hello@spicecraft.com">hello@spicecraft.com</a>.
+              <a href="mailto:hello@spicecraft.world">hello@spicecraft.world</a>.
             </p>
           </div>
 
@@ -149,7 +149,7 @@ export default function PrivacyPage() {
               If you have questions about this Privacy Policy or our data practices, please contact us at:
             </p>
             <p>
-              <strong>Email:</strong> <a href="mailto:hello@spicecraft.com">hello@spicecraft.com</a>
+              <strong>Email:</strong> <a href="mailto:hello@spicecraft.world">hello@spicecraft.world</a>
             </p>
             <p>
               <strong>Address:</strong> SpiceCraft, Atlanta, Georgia, USA

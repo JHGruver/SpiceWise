@@ -31,7 +31,7 @@ export default function Footer() {
               <li><Link to="/community">Community Hub</Link></li>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/contact">Contact</Link></li>
-              <li><a href="mailto:hello@spicecraft.com">hello@spicecraft.com</a></li>
+              <li><a href="mailto:hello@spicecraft.world">hello@spicecraft.world</a></li>
             </ul>
           </div>
 
