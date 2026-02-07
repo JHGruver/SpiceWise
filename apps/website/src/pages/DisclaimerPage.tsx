@@ -136,7 +136,7 @@ export default function DisclaimerPage() {
             <h2>Questions?</h2>
             <p>
               If you have any questions about this disclaimer or our services, please contact us at{' '}
-              <a href="mailto:spiciety21@gmail.com">spiciety21@gmail.com</a>
+              <a href="mailto:hello@spicecraft.com">hello@spicecraft.com</a>
             </p>
           </div>
 

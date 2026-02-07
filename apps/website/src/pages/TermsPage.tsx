@@ -192,7 +192,7 @@ export default function TermsPage() {
               For questions about these Terms, please contact us at:
             </p>
             <p>
-              <strong>Email:</strong> <a href="mailto:spiciety21@gmail.com">spiciety21@gmail.com</a>
+              <strong>Email:</strong> <a href="mailto:hello@spicecraft.com">hello@spicecraft.com</a>
             </p>
             <p>
               <strong>Address:</strong> SpiceCraft, Atlanta, Georgia, USA
