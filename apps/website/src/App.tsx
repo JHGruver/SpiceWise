@@ -5,7 +5,7 @@ import Footer from './components/common/Footer'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import FeaturesPage from './pages/FeaturesPage'
-import CommunityPage from './pages/CommunityPage'
+// import CommunityPage from './pages/CommunityPage' // Hidden until post-launch
 import SuppliersPage from './pages/SuppliersPage'
 import ContactPage from './pages/ContactPage'
 import PricingPage from './pages/PricingPage'
@@ -32,7 +32,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/features" element={<FeaturesPage />} />
-            <Route path="/community" element={<CommunityPage />} />
+            {/* <Route path="/community" element={<CommunityPage />} /> Hidden until post-launch */}
             <Route path="/suppliers" element={<SuppliersPage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/contact" element={<ContactPage />} />

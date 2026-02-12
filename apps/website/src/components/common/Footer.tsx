@@ -26,9 +26,8 @@ export default function Footer() {
           </div>
 
           <div className="footer-column">
-            <h4>Community</h4>
+            <h4>Company</h4>
             <ul>
-              <li><Link to="/community">Community Hub</Link></li>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><a href="mailto:hello@spicecraft.world">hello@spicecraft.world</a></li>
