@@ -13,8 +13,8 @@ const pricingTiers = [
     priceNote: 'forever',
     description: 'Explore the basics',
     features: [
-      '22 spices',
-      'Basic spice profiles',
+      'Access 22 spice profiles featuring notable compounds and growing zones',
+      'Peruse research-backed benefits',
       'Save your favorites',
     ],
     cta: 'Get Started Free',
@@ -28,10 +28,9 @@ const pricingTiers = [
     priceNote: 'one-time purchase',
     description: 'Lifetime access to the full database',
     features: [
-      'Full database of spices',
-      'Search features',
-      'Remedy Road Maps',
-      'Research-backed benefits',
+      'Full spice database access',
+      'Keyword search feature',
+      'Access Remedy Road Maps',
       'Lifetime updates',
     ],
     cta: 'Get Lifetime Access',
@@ -41,17 +40,16 @@ const pricingTiers = [
   },
   {
     name: 'Premium',
-    price: '$99',
-    priceNote: '/year',
-    description: 'Full access + community',
+    price: '$7',
+    priceNote: '/month subscription',
+    description: 'Training + Community',
     features: [
-      'Everything in Essentials',
-      'Spicetress/Spicemeister training',
+      'Spicetress & Spicemeister course',
+      'Grow-along invitations',
       'Community access',
       'Leadership opportunities',
-      'Exclusive events & grow-alongs',
     ],
-    cta: 'Join Premium',
+    cta: 'Coming Soon',
     featured: false,
     icon: 'sparkles' as const,
     tierClass: 'premium',
@@ -61,7 +59,7 @@ const pricingTiers = [
 const faqs = [
   {
     question: 'When does the app launch?',
-    answer: 'We\'re launching next week! Join the waitlist to be the first to know.'
+    answer: 'We\'re launching in spring 2026! Join the waitlist to be the first to know.'
   },
   {
     question: 'Is SpiceCraft free?',
@@ -69,7 +67,7 @@ const faqs = [
   },
   {
     question: 'What is a Spicetress or Spicemeister?',
-    answer: 'These are ranking members in our community who have trained with us, learned spice remedy techniques, and help lead grow-alongs and educational sessions.'
+    answer: 'These are ranking members in our community who have trained with us to learn core remedy techniques, share spice recipes, grow their own spices, and potentially host private spice events.'
   },
   {
     question: 'What are grow-alongs?',
@@ -116,7 +114,7 @@ export default function PricingPage() {
         <div className="container">
           <span className="pricing-hero-badge">
             <Icon name="star-filled" size="sm" />
-            Launching Next Week
+            Launching This Spring
           </span>
           <h1>Choose Your Path</h1>
           <p className="pricing-hero-subtitle">
@@ -192,7 +190,7 @@ export default function PricingPage() {
         <div className="container">
           <div className="waitlist-cta">
             <h2>Join the Waitlist</h2>
-            <p>Be the first to access SpiceCraft when we launch next week.</p>
+            <p>Be the first to access SpiceCraft when we launch this spring.</p>
 
             {isSubmitted ? (
               <div className="waitlist-success">
@@ -220,7 +218,7 @@ export default function PricingPage() {
               </form>
             )}
             <p className="waitlist-note">
-              <Icon name="check" size="sm" /> Join 2,000+ people on the waitlist
+              <Icon name="check" size="sm" /> Join hundreds of people on our waitlist
             </p>
           </div>
         </div>
@@ -259,7 +257,7 @@ export default function PricingPage() {
       <section className="section pricing-final-cta">
         <div className="container">
           <h2>Ready to Start Your Wellness Journey?</h2>
-          <p>Join thousands of people discovering the healing power of spices.</p>
+          <p>Join hundreds of people discovering the healing power of spices.</p>
           <div className="final-cta-actions">
             <button
               className="btn btn--primary btn--lg"
