@@ -39,7 +39,7 @@ const testimonials = [
 const popularSpices = [
   { name: 'Turmeric', image: '/images/spices/Turmeric_X.png', benefit: 'Anti-inflammatory' },
   { name: 'Ginger', image: '/images/spices/Ginger_X.png', benefit: 'Digestive Health' },
-  { name: 'Black Cumin Seed', image: '/images/spices/BlackCuminSeed_X.png', benefit: 'Immune Support' },
+  { name: 'Garlic', image: '/images/spices/garlic_X.png', benefit: 'Immune Support' },
   { name: 'Cinnamon', image: '/images/spices/Cinnamon_X.png', benefit: 'Blood Sugar Balance' },
 ]
 
@@ -198,7 +198,7 @@ export default function HomePage() {
     <div className="home-page">
       <SEO
         title="Natural Healing Through Spices"
-        description="Discover the healing power of herbs and spices with SpiceCraft. Your personal guide to natural wellness through everyday kitchen ingredients. Launching next week!"
+        description="Discover the healing power of herbs and spices with SpiceCraft. Your personal guide to natural wellness through everyday kitchen ingredients. Launching this spring!"
         keywords="herbs, spices, health benefits, natural remedies, cooking, wellness, turmeric, ginger, cinnamon, natural health"
         canonical="/"
       />
@@ -256,7 +256,7 @@ export default function HomePage() {
         <div className="container hero-content">
           <div className="launch-badge">
             <Icon name="star-filled" size="sm" />
-            <span>Launching Next Week</span>
+            <span>Launching This Spring</span>
           </div>
           <h1>SpiceCraft</h1>
           <p className="hero-tagline">Spice-based Wellness Wisdom at Your Fingertips</p>
@@ -285,7 +285,7 @@ export default function HomePage() {
                 </button>
               </form>
             )}
-            <p className="waitlist-note">Join 2,000+ people waiting for launch. No spam, ever.</p>
+            <p className="waitlist-note">Join hundreds of people waiting for launch. No spam, ever.</p>
           </div>
         </div>
       </section>
@@ -454,7 +454,7 @@ export default function HomePage() {
           </div>
           <h2>Be First in Line</h2>
           <p className="cta-lead">
-            SpiceCraft launches next week. Join the waitlist now and be the first to explore the healing power of your kitchen.
+            SpiceCraft launches this spring. Join the waitlist now and be the first to explore the healing power of your kitchen.
           </p>
 
           {/* CTA Email Capture */}
