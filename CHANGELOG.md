@@ -4,7 +4,7 @@
 
 ### Bug Fix: Secret Menu — Hamburger Still Visible on Homepage
 
-**Status:** FIXED (pending deploy)
+**Status:** FIXED
 
 **Symptoms:**
 - Hamburger menu is still visible on the homepage in its default (locked) state
@@ -46,6 +46,19 @@ Additionally, the original `.menu-toggle--secret` class used `opacity: 0; width:
 **Files Modified:**
 - `apps/website/src/components/common/Header.tsx` (lines 90, 103, 125)
 - `apps/website/src/components/common/Header.css` (lines 434–468)
+
+### Bug Fix: DevMenu Dropdown Behind Sidebar in Web App
+
+**Status:** FIXED
+
+**Symptoms:**
+- In the web app, clicking the DevMenu hamburger opens a dropdown that renders BEHIND the left sidebar navigation (Home, Explore, Cabinet, Community, Profile)
+
+**Root Cause Analysis:**
+Both the header (`.header`) and the sidebar (`.navigation`) use `z-index: var(--z-sticky)` (value: 200) with `position: fixed`. Since Navigation renders after Header in the DOM, it paints on top. The DevMenu container's `z-index: 1001` is trapped inside the header's stacking context (200), so it can never appear above the sidebar.
+
+**Fix Applied:**
+- `apps/web-app/src/components/common/Header.css` — Changed header z-index from `var(--z-sticky)` to `calc(var(--z-sticky) + 10)` (210 vs 200), ensuring the header and all its children (including DevMenu dropdown) stack above the sidebar.
 
 ---
 
