@@ -87,7 +87,7 @@ export default function Header() {
         </a>
         <div className="container header-content">
           <div className="header-left">
-            <DevMenu />
+            {!isSecretMode && <DevMenu />}
             <Link
               to="/"
               className={`logo ${isHomePage && menuUnlocked ? 'logo--shifted' : ''}`}
@@ -100,7 +100,7 @@ export default function Header() {
           </div>
 
           <nav
-            className={`nav ${isMenuOpen ? 'nav--open' : ''}`}
+            className={`nav ${isMenuOpen ? 'nav--open' : ''} ${isSecretMode ? 'nav--secret' : ''} ${isHomePage && menuUnlocked ? 'nav--revealed' : ''}`}
             aria-label="Main navigation"
             role="navigation"
           >
@@ -122,7 +122,7 @@ export default function Header() {
           </nav>
 
           <div className="header-actions">
-            <Link to="/pricing" className="cta-button">
+            <Link to="/pricing" className={`cta-button ${isSecretMode ? 'cta-button--secret' : ''} ${isHomePage && menuUnlocked ? 'cta-button--revealed' : ''}`}>
               Join Waitlist
             </Link>
             <button

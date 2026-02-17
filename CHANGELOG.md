@@ -1,5 +1,54 @@
 # SpiceWise Changelog & Bug Log
 
+## 2026-02-16
+
+### Bug Fix: Secret Menu — Hamburger Still Visible on Homepage
+
+**Status:** FIXED (pending deploy)
+
+**Symptoms:**
+- Hamburger menu is still visible on the homepage in its default (locked) state
+- User expects ONLY the logo to be visible on the homepage before entering the secret code
+
+**Root Cause Analysis:**
+The original secret menu implementation (commit `4b3bf36`) only hid **one element** — the `.menu-toggle` (mobile hamburger button). Three other navigation elements were left completely untouched:
+
+1. **DevMenu component** (`DevMenu.tsx`) — Renders its own hamburger icon button in `.header-left` before the logo. This is a separate component with its own `.dev-menu-toggle` / `.hamburger-icon` elements. It was never conditionally hidden.
+
+2. **Desktop nav links** (`.nav`) — The CSS media query at 768px+ sets `.nav { display: block }`, making the Features / About / Pricing links always visible on desktop. The secret mode classes only targeted `.menu-toggle`, which is already `display: none` on desktop anyway.
+
+3. **CTA button** (`.cta-button` / "Join Waitlist") — Same issue as nav links. The desktop media query sets `.cta-button { display: block }` and it was never given a secret mode class.
+
+Additionally, the original `.menu-toggle--secret` class used `opacity: 0; width: 0` instead of `display: none`, which could leave layout artifacts.
+
+**What was visible in each viewport (BEFORE fix):**
+
+| Viewport | DevMenu hamburger | Nav links | CTA button | Menu toggle |
+|----------|------------------|-----------|------------|-------------|
+| Desktop  | Visible          | Visible   | Visible    | Already hidden by media query |
+| Mobile   | Visible          | Hidden (normal) | Hidden (normal) | Hidden by secret class |
+
+**Fix Applied (3 changes):**
+
+1. **Header.tsx** — DevMenu conditionally rendered: `{!isSecretMode && <DevMenu />}`
+2. **Header.tsx** — Added `nav--secret` / `cta-button--secret` classes to `<nav>` and CTA `<Link>`
+3. **Header.css** — Added `display: none !important` rules for `.nav--secret`, `.cta-button--secret`, and updated `.menu-toggle--secret` to use `display: none !important`
+4. **Header.css** — Added `secretReveal` animation for smooth fade-in on unlock
+
+**What is visible after fix:**
+
+| Page | DevMenu | Nav links | CTA button | Hamburger |
+|------|---------|-----------|------------|-----------|
+| Homepage (locked) | Hidden | Hidden | Hidden | Hidden |
+| Homepage (unlocked) | Visible | Visible (desktop) | Visible | Visible (mobile only) |
+| All other pages | Visible | Visible | Visible | Visible (mobile only) |
+
+**Files Modified:**
+- `apps/website/src/components/common/Header.tsx` (lines 90, 103, 125)
+- `apps/website/src/components/common/Header.css` (lines 434–468)
+
+---
+
 ## 2026-01-26
 
 ### Email Integration
