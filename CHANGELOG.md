@@ -55,10 +55,14 @@ Additionally, the original `.menu-toggle--secret` class used `opacity: 0; width:
 - In the web app, clicking the DevMenu hamburger opens a dropdown that renders BEHIND the left sidebar navigation (Home, Explore, Cabinet, Community, Profile)
 
 **Root Cause Analysis:**
-Both the header (`.header`) and the sidebar (`.navigation`) use `z-index: var(--z-sticky)` (value: 200) with `position: fixed`. Since Navigation renders after Header in the DOM, it paints on top. The DevMenu container's `z-index: 1001` is trapped inside the header's stacking context (200), so it can never appear above the sidebar.
+Both the header (`.header`) and the sidebar (`.navigation`) use `z-index: var(--z-sticky)` (value: 200) with `position: fixed`. The header's `backdrop-filter: blur(20px)` creates a compositing layer that traps child elements — even with higher z-index values, the DevMenu dropdown (positioned absolutely inside the header) cannot escape the header's stacking context to render above the sidebar.
 
-**Fix Applied:**
-- `apps/web-app/src/components/common/Header.css` — Changed header z-index from `var(--z-sticky)` to `calc(var(--z-sticky) + 10)` (210 vs 200), ensuring the header and all its children (including DevMenu dropdown) stack above the sidebar.
+A simple z-index bump on the header is insufficient because `backdrop-filter` in WebKit/Safari creates rendering isolation that prevents overflow content from stacking above sibling fixed elements.
+
+**Fix Applied (React Portal approach):**
+- `apps/web-app/src/components/common/DevMenu.tsx` — Dropdown now renders via `createPortal(...)` directly into `document.body`, completely outside the header's stacking context. Position is calculated from the toggle button's bounding rect and updates on scroll/resize.
+- `apps/web-app/src/components/common/DevMenu.css` — Dropdown changed from `position: absolute` to portal-based `position: fixed` with `z-index: 9999`.
+- `apps/web-app/src/components/common/Header.css` — Header z-index bumped to `calc(var(--z-sticky) + 10)` as additional safety.
 
 ---
 

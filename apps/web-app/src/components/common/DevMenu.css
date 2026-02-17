@@ -85,12 +85,10 @@
   transform: translateY(50%) rotate(-45deg);
 }
 
-/* Dropdown Menu */
+/* Dropdown Menu - rendered via portal at body level */
 .dev-menu-dropdown {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
   width: 320px;
+  z-index: 9999;
   max-height: 80vh;
   overflow-y: auto;
   background: linear-gradient(

@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
+import { createPortal } from 'react-dom'
 import './DevMenu.css'
 
 const PROD_DOMAIN = 'spicecraft.world'
@@ -37,14 +38,30 @@ const localPorts: Record<string, number> = {
 
 export default function DevMenu() {
   const [isOpen, setIsOpen] = useState(false)
-  const menuRef = useRef<HTMLDivElement>(null)
+  const [dropdownPos, setDropdownPos] = useState({ top: 0, left: 0 })
+  const toggleRef = useRef<HTMLButtonElement>(null)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   const isProduction = window.location.hostname === PROD_DOMAIN ||
                        window.location.hostname === `www.${PROD_DOMAIN}`
 
+  const updatePosition = useCallback(() => {
+    if (toggleRef.current) {
+      const rect = toggleRef.current.getBoundingClientRect()
+      setDropdownPos({
+        top: rect.bottom + 8,
+        left: rect.left,
+      })
+    }
+  }, [])
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      const target = event.target as Node
+      if (
+        toggleRef.current && !toggleRef.current.contains(target) &&
+        dropdownRef.current && !dropdownRef.current.contains(target)
+      ) {
         setIsOpen(false)
       }
     }
@@ -62,6 +79,19 @@ export default function DevMenu() {
       document.removeEventListener('keydown', handleEscape)
     }
   }, [])
+
+  // Update position when opening and on scroll/resize
+  useEffect(() => {
+    if (isOpen) {
+      updatePosition()
+      window.addEventListener('scroll', updatePosition, true)
+      window.addEventListener('resize', updatePosition)
+      return () => {
+        window.removeEventListener('scroll', updatePosition, true)
+        window.removeEventListener('resize', updatePosition)
+      }
+    }
+  }, [isOpen, updatePosition])
 
   const navigateTo = (basePath: string, path: string) => {
     if (isProduction) {
@@ -84,8 +114,9 @@ export default function DevMenu() {
   }
 
   return (
-    <div className="dev-menu-container" ref={menuRef}>
+    <div className="dev-menu-container">
       <button
+        ref={toggleRef}
         className={`dev-menu-toggle ${isOpen ? 'active' : ''}`}
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Navigation menu"
@@ -98,8 +129,16 @@ export default function DevMenu() {
         </span>
       </button>
 
-      {isOpen && (
-        <div className="dev-menu-dropdown">
+      {isOpen && createPortal(
+        <div
+          ref={dropdownRef}
+          className="dev-menu-dropdown"
+          style={{
+            position: 'fixed',
+            top: dropdownPos.top,
+            left: dropdownPos.left,
+          }}
+        >
           <div className="dev-menu-header">
             <span className="dev-menu-badge">{isProduction ? 'NAV' : 'DEV'}</span>
             <span className="dev-menu-title">SpiceCraft Navigation</span>
@@ -126,7 +165,8 @@ export default function DevMenu() {
           <div className="dev-menu-footer">
             <span>{isProduction ? 'spicecraft.world' : 'Local Development'}</span>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   )
