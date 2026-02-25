@@ -102,7 +102,7 @@ export default function CommunityPage() {
       <SEO
         title="Community"
         description="Join the SpiceCraft community. Play trivia games, learn from educational content, connect with fellow spice enthusiasts, and attend virtual tasting events."
-        keywords="spice community, herbal wellness community, spice trivia, virtual tasting, wellness education"
+        keywords="spice community, spice wellness community, spice trivia, virtual tasting, wellness education"
         canonical="/community"
       />
 

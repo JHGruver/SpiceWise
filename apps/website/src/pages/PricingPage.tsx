@@ -105,7 +105,7 @@ export default function PricingPage() {
       <SEO
         title="Pricing"
         description="Simple, transparent pricing for SpiceCraft. Start free, upgrade when ready. 7-day free trial on all paid plans."
-        keywords="SpiceCraft pricing, wellness app subscription, herbal app plans, spice guide pricing"
+        keywords="SpiceCraft pricing, wellness app subscription, spice app plans, spice guide pricing"
         canonical="/pricing"
       />
 

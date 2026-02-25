@@ -7,7 +7,7 @@ export default function DisclaimerPage() {
       <SEO
         title="Health Disclaimer"
         description="Important health disclaimer for SpiceCraft. Our information is for educational purposes only and not intended as medical advice."
-        keywords="health disclaimer, medical disclaimer, herbal information disclaimer"
+        keywords="health disclaimer, medical disclaimer, spice information disclaimer"
         canonical="/disclaimer"
       />
       <section className="page-hero">
@@ -34,7 +34,7 @@ export default function DisclaimerPage() {
           <div className="disclaimer-section">
             <h2>Not Medical Advice</h2>
             <p>
-              SpiceCraft does not provide medical advice. The information about herbs, spices, and their
+              SpiceCraft does not provide medical advice. The information about spices and their
               potential health benefits is compiled from traditional uses and published research, but should
               not be interpreted as medical recommendations.
             </p>
@@ -48,7 +48,7 @@ export default function DisclaimerPage() {
           <div className="disclaimer-section">
             <h2>What We Do NOT Do</h2>
             <ul>
-              <li>We do not sell supplements or herbal products</li>
+              <li>We do not sell supplements or spice products</li>
               <li>We do not suggest specific dosages</li>
               <li>We do not claim to cure, treat, or prevent any disease</li>
               <li>We do not provide personalized medical recommendations</li>
@@ -59,7 +59,7 @@ export default function DisclaimerPage() {
           <div className="disclaimer-section">
             <h2>What We DO Provide</h2>
             <ul>
-              <li>Educational information about herbs and spices</li>
+              <li>Educational information about spices</li>
               <li>Historical and traditional use information</li>
               <li>Links to published research when available</li>
               <li>General wellness information</li>
@@ -70,7 +70,7 @@ export default function DisclaimerPage() {
           <div className="disclaimer-section">
             <h2>Individual Variation</h2>
             <p>
-              Herbs and spices may affect individuals differently. What works for one person may not work
+              Spices may affect individuals differently. What works for one person may not work
               for another, and some substances may cause adverse reactions in certain individuals. Factors
               such as age, health status, medications, and individual sensitivities can all affect how your
               body responds to any substance.
@@ -80,9 +80,9 @@ export default function DisclaimerPage() {
           <div className="disclaimer-section">
             <h2>Drug Interactions</h2>
             <p>
-              Many herbs and spices can interact with prescription medications, over-the-counter drugs,
+              Many spices can interact with prescription medications, over-the-counter drugs,
               and other supplements. <strong>If you are taking any medications, please consult with your
-              healthcare provider or pharmacist before adding new herbs or spices to your routine.</strong>
+              healthcare provider or pharmacist before adding new spices to your routine.</strong>
             </p>
           </div>
 
@@ -91,7 +91,7 @@ export default function DisclaimerPage() {
             <p>
               If you are pregnant, nursing, planning to become pregnant, have a chronic health condition,
               or are under 18 years of age, please consult with a healthcare professional before using
-              any herbs or spices for health purposes.
+              any spices for health purposes.
             </p>
           </div>
 
@@ -110,7 +110,7 @@ export default function DisclaimerPage() {
             <p>
               While we strive to provide accurate and up-to-date information, SpiceCraft makes no
               warranties or representations about the accuracy, completeness, or suitability of the
-              information contained on the application or website. The field of herbal medicine and
+              information contained on the application or website. The field of spice-based wellness and
               nutrition is constantly evolving, and information may become outdated.
             </p>
           </div>

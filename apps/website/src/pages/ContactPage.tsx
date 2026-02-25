@@ -78,8 +78,8 @@ export default function ContactPage() {
     <div className="page contact-page">
       <SEO
         title="Contact Us"
-        description="Get in touch with the SpiceCraft team. We're here to answer your questions about herbs, spices, and natural wellness."
-        keywords="contact SpiceCraft, herbal wellness support, spice app help"
+        description="Get in touch with the SpiceCraft team. We're here to answer your questions about spices and natural wellness."
+        keywords="contact SpiceCraft, spice wellness support, spice app help"
         canonical="/contact"
       />
       <section className="page-hero">

@@ -43,11 +43,11 @@ export default function TermsPage() {
           <div className="disclaimer-section">
             <h2>2. Description of Service</h2>
             <p>
-              SpiceCraft is an educational platform that provides information about herbs, spices, and
+              SpiceCraft is an educational platform that provides information about spices and
               their traditional uses. The Service includes:
             </p>
             <ul>
-              <li>A searchable database of herbs and spices</li>
+              <li>A searchable database of spices</li>
               <li>Information about traditional and historical uses</li>
               <li>Digital cabinet tracking features</li>
               <li>Personalized recommendations based on user preferences</li>

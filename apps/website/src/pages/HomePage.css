@@ -571,7 +571,7 @@
 
 .herbs-preview-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--sw-spacing-lg);
   margin-bottom: var(--sw-spacing-2xl);
 }
@@ -893,7 +893,7 @@
 
 .audience-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--sw-spacing-lg);
 }
 
@@ -1334,6 +1334,35 @@
 }
 
 /* ============================================
+   Mobile Optimizations
+   ============================================ */
+@media (max-width: 639px) {
+  .step-card {
+    padding: var(--sw-spacing-lg) var(--sw-spacing-md);
+  }
+
+  .audience-card {
+    padding: var(--sw-spacing-lg);
+  }
+
+  .feature-card {
+    padding: var(--sw-spacing-lg);
+  }
+
+  .question-card {
+    padding: var(--sw-spacing-lg);
+  }
+
+  .hero h1 {
+    font-size: var(--sw-text-4xl);
+  }
+
+  .cta-content h2 {
+    font-size: var(--sw-text-2xl);
+  }
+}
+
+/* ============================================
    Responsive Styles
    ============================================ */
 @media (min-width: 640px) {
@@ -1364,7 +1393,7 @@
   }
 
   .herbs-preview-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .features-grid {
@@ -1394,7 +1423,7 @@
   }
 
   .audience-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1432,6 +1461,14 @@
 
   .features-grid--two {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .herbs-preview-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .audience-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .herb-preview-image {

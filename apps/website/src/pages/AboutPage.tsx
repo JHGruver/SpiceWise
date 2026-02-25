@@ -32,8 +32,8 @@ export default function AboutPage() {
     <div className="page about-page">
       <SEO
         title="About Us"
-        description="Learn about SpiceCraft's mission to bridge ancient wellness wisdom with modern science. Discover our evidence-based approach to herbal healing."
-        keywords="about SpiceCraft, herbal wellness, ancestral wisdom, natural healing, evidence-based herbs"
+        description="Learn about SpiceCraft's mission to bridge ancient wellness wisdom with modern science. Discover our evidence-based approach to spice-based healing."
+        keywords="about SpiceCraft, spice wellness, ancestral wisdom, natural healing, evidence-based spices"
         canonical="/about"
       />
       <section className="page-hero">

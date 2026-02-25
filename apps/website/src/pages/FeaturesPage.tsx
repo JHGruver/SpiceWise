@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+
 import Icon from '../components/common/Icon'
 import SEO from '../components/common/SEO'
 import { submitWaitlist } from '../utils/formSubmit'
@@ -10,7 +10,7 @@ const showcaseSpices = [
   { name: 'Turmeric', image: '/images/spices/Turmeric_X.png', benefit: 'Anti-inflammatory powerhouse' },
   { name: 'Ginger', image: '/images/spices/Ginger_X.png', benefit: 'Digestive & nausea relief' },
   { name: 'Cinnamon', image: '/images/spices/Cinnamon_X.png', benefit: 'Blood sugar support' },
-  { name: 'Black Cumin Seed', image: '/images/spices/BlackCuminSeed_X.png', benefit: 'Immune system boost' },
+
   { name: 'Cardamom', image: '/images/spices/Cardamom_X.png', benefit: 'Digestive wellness' },
   { name: 'Clove', image: '/images/spices/Clove_X.png', benefit: 'Natural pain relief' },
 ]
@@ -19,73 +19,28 @@ const features = [
   {
     icon: 'book' as const,
     title: 'Spice Index',
-    description: 'Browse 40+ healing spices with comprehensive profiles including notable compounds, growth origins, and hardiness zones.',
     details: [
-      'Scientific names and traditional names',
-      'Notable compounds and active ingredients',
-      'Growth origin and geographic regions',
-      'Hardiness zones for home growing',
-      'Healing potential with evidence levels'
+      'Browse 40+ spices, both common and rare',
+      'Notable compounds and scientific names',
+      'Growth origin and hardiness zones',
+      'Evidence based healing potential'
     ]
   },
   {
     icon: 'search' as const,
     title: 'Keyword Search',
-    description: 'Search by symptom, condition, or spice name to find natural remedies quickly.',
     details: [
-      'Search by health condition (inflammation, sleep, digestion)',
-      'Search by spice name or scientific name',
-      'Filter by herb or spice category',
-      'Clear text and filter options',
-      'Sort by relevance or alphabetically'
-    ]
-  },
-  {
-    icon: 'cabinet' as const,
-    title: 'Digital Cabinet',
-    description: 'Track what\'s in your pantry, fridge, and medicine cabinet. Digital scan feature to quickly add items.',
-    details: [
-      'Organize by Pantry, Fridge, Cupboard, Medicine Cabinet',
-      'Digital scan to add items quickly',
-      'Track quantities and expiration dates',
-      '"Use what you have" recommendations',
-      'Coming soon: Barcode scanning & AI recognition'
-    ]
-  },
-  {
-    icon: 'heart' as const,
-    title: 'Personalized Recommendations',
-    description: 'Create your profile and get personalized spice recommendations based on your health goals.',
-    details: [
-      'Create your health profile',
-      'Select conditions you want to address',
-      'Get matched spices based on your needs',
-      'Save favorites for quick access',
-      'Integration with your Digital Cabinet'
+      'Search spice by common or scientific name',
+      'Search by health condition (digestion, insomnia, gout)',
+      'Save favorites for quick access'
     ]
   },
   {
     icon: 'map' as const,
     title: 'Remedy Road Maps',
-    description: 'Follow guided paths that show you which spices work together for specific health goals.',
     details: [
-      'Step-by-step remedy guides',
-      'Spice combinations for specific conditions',
-      'Dosage and preparation instructions',
-      'Traditional healing protocols',
-      'Progress tracking for your wellness journey'
-    ]
-  },
-  {
-    icon: 'globe' as const,
-    title: 'Growth & Origin Info',
-    description: 'Learn where spices come from, their hardiness zones, and how to grow them yourself.',
-    details: [
-      'Geographic origin regions',
-      'USDA hardiness zones',
-      'Growing difficulty ratings',
-      'Cultivation tips',
-      'Seasonal availability'
+      'Spice groupings for common conditions and ailments',
+      'Explore maps like Digestive Diamonds, Joint Joy, Cancer Cancellers, Matters of the Heart and more'
     ]
   }
 ]
@@ -107,15 +62,15 @@ export default function FeaturesPage() {
     <div className="page features-page">
       <SEO
         title="Features"
-        description="Explore SpiceCraft's powerful features: Spice Index, Digital Cabinet, Remedy Road Maps, personalized recommendations, and more. Your complete herbal wellness toolkit."
-        keywords="spice database, herbal remedies, digital cabinet, wellness app features, spice guide"
+        description="Explore SpiceCraft's powerful features: Spice Index, Keyword Search, and Remedy Road Maps. Your complete spice-based wellness toolkit."
+        keywords="spice database, spice remedies, wellness app features, spice guide"
         canonical="/features"
       />
       <section className="page-hero">
         <div className="container">
           <h1>Features</h1>
           <p className="page-subtitle">
-            Everything you need to harness the healing power of spices — rooted in ancestral wisdom, backed by research.
+            Empowering you to harness the healing power of spices
           </p>
         </div>
       </section>
@@ -124,7 +79,7 @@ export default function FeaturesPage() {
         <div className="container">
           <div className="spice-showcase">
             <h2>Explore Our Spice Library</h2>
-            <p className="showcase-subtitle">Discover the healing potential of nature's most powerful spices</p>
+            <p className="showcase-subtitle">Discover the healing potential</p>
             <div className="showcase-grid">
               {showcaseSpices.map((spice, idx) => (
                 <div key={idx} className="showcase-card">
@@ -156,7 +111,6 @@ export default function FeaturesPage() {
                   </span>
                   <h2>{feature.title}</h2>
                 </div>
-                <p className="feature-detail-description">{feature.description}</p>
                 <ul className="feature-detail-list">
                   {feature.details.map((detail, i) => (
                     <li key={i}>{detail}</li>
@@ -175,17 +129,10 @@ export default function FeaturesPage() {
             <div className="coming-soon-grid">
               <div className="coming-soon-item">
                 <span className="coming-soon-icon">
-                  <Icon name="camera" size="xl" />
+                  <Icon name="users" size="xl" />
                 </span>
-                <h3>Barcode Scanning</h3>
-                <p>Scan spice jars to instantly add them to your cabinet</p>
-              </div>
-              <div className="coming-soon-item">
-                <span className="coming-soon-icon">
-                  <Icon name="cpu" size="xl" />
-                </span>
-                <h3>AI Image Recognition</h3>
-                <p>Take a photo of a spice and let AI identify it for you</p>
+                <h3>Virtual Training</h3>
+                <p>Become a Spicetress/Spicemeister, participate in grow-alongs, host pop-up spice crafting circles</p>
               </div>
               <div className="coming-soon-item">
                 <span className="coming-soon-icon">
@@ -236,7 +183,7 @@ export default function FeaturesPage() {
             )}
 
             <p className="features-cta-note">
-              <Link to="/disclaimer">Read our health disclaimer</Link>
+              <span>Read our health disclaimer</span>
             </p>
           </div>
         </div>

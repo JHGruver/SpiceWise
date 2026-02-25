@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { submitWaitlist } from '../utils/formSubmit'
-import { Link } from 'react-router-dom'
+
 import Icon from '../components/common/Icon'
 import SEO from '../components/common/SEO'
 import './HomePage.css'
@@ -198,8 +198,8 @@ export default function HomePage() {
     <div className="home-page">
       <SEO
         title="Natural Healing Through Spices"
-        description="Discover the healing power of herbs and spices with SpiceCraft. Your personal guide to natural wellness through everyday kitchen ingredients. Launching this spring!"
-        keywords="herbs, spices, health benefits, natural remedies, cooking, wellness, turmeric, ginger, cinnamon, natural health"
+        description="Discover the healing power and potential of spices with SpiceCraft. Your personal guide to natural wellness through everyday kitchen ingredients. Launching this spring!"
+        keywords="spices, health benefits, natural remedies, cooking, wellness, turmeric, ginger, cinnamon, natural health"
         canonical="/"
       />
       {/* Custom Spoon Cursor */}
@@ -246,7 +246,7 @@ export default function HomePage() {
         >
           <img
             src="/images/brand/Gemini_Generated_Image_jz446njz446njz44.png"
-            alt="Aromatic spices and herbs arranged beautifully"
+            alt="Aromatic spices arranged beautifully"
             className="hero-image"
             fetchPriority="high"
             decoding="async"
@@ -338,9 +338,9 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <Link to="/features" className="preview-link">
+          <span className="preview-link preview-link--disabled">
             See All Spices →
-          </Link>
+          </span>
         </div>
       </section>
 
@@ -356,7 +356,7 @@ export default function HomePage() {
               <p className="step-tagline">Start your spice journey</p>
               <ul className="tier-features">
                 <li>Download the app</li>
-                <li>Full Spice Index access</li>
+                <li>Spice Index access</li>
                 <li>Research-backed benefits</li>
                 <li>Save your favorites</li>
               </ul>

@@ -27,7 +27,7 @@
 
 .showcase-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--sw-spacing-lg);
 }
 
@@ -217,7 +217,7 @@
 .coming-soon-grid {
   display: grid;
   gap: var(--sw-spacing-lg);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .coming-soon-item {
@@ -384,6 +384,10 @@
   }
 
   .showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coming-soon-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -393,8 +397,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .coming-soon-grid {
-    grid-template-columns: repeat(4, 1fr);
+  .showcase-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .showcase-image {
@@ -409,7 +413,7 @@
   }
 
   .showcase-grid {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .spice-showcase h2 {

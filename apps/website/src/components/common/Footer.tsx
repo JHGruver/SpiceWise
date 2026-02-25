@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import './Footer.css'
 
 export default function Footer() {
@@ -6,10 +5,10 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-content">
         <div className="footer-brand">
-          <Link to="/" className="footer-logo">
+          <div className="footer-logo">
             <img src="/images/brand/logo.png" alt="SpiceCraft" className="footer-logo-image" />
             <span className="logo-text">SpiceCraft</span>
-          </Link>
+          </div>
           <p className="footer-tagline">
             Spice-based Wellness Wisdom
           </p>
@@ -19,17 +18,17 @@ export default function Footer() {
           <div className="footer-column">
             <h4>Product</h4>
             <ul>
-              <li><Link to="/features">Features</Link></li>
-              <li><Link to="/pricing">Pricing</Link></li>
-              <li><Link to="/suppliers">Suppliers</Link></li>
+              <li><span>Features</span></li>
+              <li><span>Pricing</span></li>
+              <li><span>Suppliers</span></li>
             </ul>
           </div>
 
           <div className="footer-column">
             <h4>Company</h4>
             <ul>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li><span>About Us</span></li>
+              <li><span>Contact</span></li>
               <li><a href="mailto:hello@spicecraft.world">hello@spicecraft.world</a></li>
             </ul>
           </div>
@@ -37,9 +36,9 @@ export default function Footer() {
           <div className="footer-column">
             <h4>Legal</h4>
             <ul>
-              <li><Link to="/privacy">Privacy Policy</Link></li>
-              <li><Link to="/terms">Terms of Service</Link></li>
-              <li><Link to="/disclaimer">Health Disclaimer</Link></li>
+              <li><span>Privacy Policy</span></li>
+              <li><span>Terms of Service</span></li>
+              <li><span>Health Disclaimer</span></li>
             </ul>
           </div>
         </div>
@@ -54,7 +53,7 @@ export default function Footer() {
             </p>
             <p>
               We do not sell supplements, suggest dosages, or make claims to cure any disease.
-              Individual results may vary. <Link to="/disclaimer">Read full disclaimer</Link>
+              Individual results may vary. Read full disclaimer
             </p>
           </div>
         </div>
