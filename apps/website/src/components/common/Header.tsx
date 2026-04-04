@@ -91,11 +91,11 @@ export default function Header() {
             <Link
               to="/"
               className={`logo ${isHomePage && menuUnlocked ? 'logo--shifted' : ''}`}
-              aria-label="SpiceCraft home"
+              aria-label="SpiceMight home"
               onClick={handleLogoClick}
             >
-              <img src="/images/brand/logo.png" alt="SpiceCraft" className="logo-image" />
-              <span className="logo-text">SpiceCraft</span>
+              <img src="/images/brand/logo.png" alt="SpiceMight" className="logo-image" />
+              <span className="logo-text">SpiceMight</span>
             </Link>
           </div>
 
