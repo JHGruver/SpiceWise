@@ -119,16 +119,31 @@
   font-family: var(--sw-font-display);
   font-size: var(--sw-text-2xl);
   font-weight: var(--sw-font-bold);
-  color: var(--sw-color-primary);
   letter-spacing: var(--sw-tracking-tight);
-  transition: color var(--sw-duration-normal) var(--sw-ease-smooth);
-}
-
-.logo:hover .logo-text {
-  background: linear-gradient(135deg, var(--sw-color-primary) 0%, var(--sw-color-gold) 100%);
+  background: linear-gradient(
+    90deg,
+    #1a5c2e 0%,
+    #4caf6e 20%,
+    #a8e6bc 35%,
+    #e0ffe8 50%,
+    #a8e6bc 65%,
+    #4caf6e 80%,
+    #1a5c2e 100%
+  );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: metallic-shimmer 3s linear infinite;
+}
+
+@keyframes metallic-shimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.logo:hover .logo-text {
+  animation-duration: 1.5s;
 }
 
 /* ============================================
