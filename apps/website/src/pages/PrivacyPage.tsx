@@ -7,7 +7,7 @@ export default function PrivacyPage() {
     <div className="page privacy-page">
       <SEO
         title="Privacy Policy"
-        description="SpiceCraft Privacy Policy. Learn how we collect, use, and protect your personal information."
+        description="SpiceMight Privacy Policy. Learn how we collect, use, and protect your personal information."
         keywords="privacy policy, data protection, personal information, GDPR, CCPA"
         canonical="/privacy"
       />
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
           <div className="disclaimer-section">
             <h2>Introduction</h2>
             <p>
-              SpiceCraft ("we," "our," or "us") is committed to protecting your privacy. This Privacy
+              SpiceMight ("we," "our," or "us") is committed to protecting your privacy. This Privacy
               Policy explains how we collect, use, disclose, and safeguard your information when you
               use our website and mobile application (collectively, the "Service").
             </p>
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
             </ul>
             <p>
               To exercise these rights, please contact us at{' '}
-              <a href="mailto:hello@spicecraft.world">hello@spicecraft.world</a>.
+              <a href="mailto:hello@spicemight.world">hello@spicemight.world</a>.
             </p>
           </div>
 
@@ -149,10 +149,10 @@ export default function PrivacyPage() {
               If you have questions about this Privacy Policy or our data practices, please contact us at:
             </p>
             <p>
-              <strong>Email:</strong> <a href="mailto:hello@spicecraft.world">hello@spicecraft.world</a>
+              <strong>Email:</strong> <a href="mailto:hello@spicemight.world">hello@spicemight.world</a>
             </p>
             <p>
-              <strong>Address:</strong> SpiceCraft, Atlanta, Georgia, USA
+              <strong>Address:</strong> SpiceMight, Atlanta, Georgia, USA
             </p>
           </div>
 

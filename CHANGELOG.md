@@ -70,9 +70,9 @@ A simple z-index bump on the header is insufficient because `backdrop-filter` in
 
 ### Email Integration
 - Replaced all placeholder emails across the site with spiciety21@gmail.com:
-  - hello@spicecraft.com (HomePage, ContactPage, DisclaimerPage)
-  - privacy@spicecraft.com (PrivacyPage x2)
-  - legal@spicecraft.com (TermsPage)
+  - hello@spicemight.com (HomePage, ContactPage, DisclaimerPage)
+  - privacy@spicemight.com (PrivacyPage x2)
+  - legal@spicemight.com (TermsPage)
 - Added spiciety21@gmail.com to Footer (visible on every page)
 - Wired up all 8 forms to Formsubmit.co so submissions actually reach spiciety21@gmail.com:
   - 7 waitlist forms (HomePage x2, PricingPage, FeaturesPage, CommunityPage, SuppliersPage)
@@ -129,7 +129,7 @@ A simple z-index bump on the header is insufficient because `backdrop-filter` in
 **Debug Findings:**
 1. ✅ File exists: `/apps/website/public/favicon.svg` (253 bytes)
 2. ✅ File included in build: `/apps/website/dist/favicon.svg` confirmed
-3. ✅ Live URL accessible: `https://spicecraft.world/favicon.svg` returns HTTP 200
+3. ✅ Live URL accessible: `https://spicemight.world/favicon.svg` returns HTTP 200
 4. ✅ Correct content-type: `image/svg+xml`
 5. ✅ HTML links present in deployed index.html:
    - `<link rel="icon" type="image/svg+xml" href="/favicon.svg" />`

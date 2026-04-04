@@ -7,7 +7,7 @@ export default function TermsPage() {
     <div className="page terms-page">
       <SEO
         title="Terms of Service"
-        description="SpiceCraft Terms of Service. Read our terms and conditions for using the SpiceCraft application and website."
+        description="SpiceMight Terms of Service. Read our terms and conditions for using the SpiceMight application and website."
         keywords="terms of service, terms and conditions, user agreement, legal terms"
         canonical="/terms"
       />
@@ -15,7 +15,7 @@ export default function TermsPage() {
         <div className="container">
           <h1>Terms of Service</h1>
           <p className="page-subtitle">
-            Please read these terms carefully before using SpiceCraft.
+            Please read these terms carefully before using SpiceMight.
           </p>
         </div>
       </section>
@@ -31,7 +31,7 @@ export default function TermsPage() {
           <div className="disclaimer-section">
             <h2>1. Acceptance of Terms</h2>
             <p>
-              By accessing or using SpiceCraft (the "Service"), you agree to be bound by these Terms
+              By accessing or using SpiceMight (the "Service"), you agree to be bound by these Terms
               of Service ("Terms"). If you do not agree to these Terms, please do not use the Service.
             </p>
             <p>
@@ -43,7 +43,7 @@ export default function TermsPage() {
           <div className="disclaimer-section">
             <h2>2. Description of Service</h2>
             <p>
-              SpiceCraft is an educational platform that provides information about spices and
+              SpiceMight is an educational platform that provides information about spices and
               their traditional uses. The Service includes:
             </p>
             <ul>
@@ -53,7 +53,7 @@ export default function TermsPage() {
               <li>Personalized recommendations based on user preferences</li>
             </ul>
             <p>
-              <strong>Important:</strong> SpiceCraft does not provide medical advice, diagnosis, or
+              <strong>Important:</strong> SpiceMight does not provide medical advice, diagnosis, or
               treatment. See our <Link to="/disclaimer">Health Disclaimer</Link> for more information.
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function TermsPage() {
           <div className="disclaimer-section">
             <h2>4. Subscription and Payments</h2>
             <p>
-              SpiceCraft offers both free and paid subscription tiers. For paid subscriptions:
+              SpiceMight offers both free and paid subscription tiers. For paid subscriptions:
             </p>
             <ul>
               <li>Payments are processed securely through our payment provider</li>
@@ -103,8 +103,8 @@ export default function TermsPage() {
           <div className="disclaimer-section">
             <h2>6. Intellectual Property</h2>
             <p>
-              All content on SpiceCraft, including text, graphics, logos, images, and software, is
-              the property of SpiceCraft or its licensors and is protected by copyright, trademark,
+              All content on SpiceMight, including text, graphics, logos, images, and software, is
+              the property of SpiceMight or its licensors and is protected by copyright, trademark,
               and other intellectual property laws.
             </p>
             <p>
@@ -155,7 +155,7 @@ export default function TermsPage() {
           <div className="disclaimer-section">
             <h2>10. Indemnification</h2>
             <p>
-              You agree to indemnify and hold harmless SpiceCraft and its officers, directors,
+              You agree to indemnify and hold harmless SpiceMight and its officers, directors,
               employees, and agents from any claims, damages, or expenses arising from your
               use of the Service or violation of these Terms.
             </p>
@@ -192,10 +192,10 @@ export default function TermsPage() {
               For questions about these Terms, please contact us at:
             </p>
             <p>
-              <strong>Email:</strong> <a href="mailto:hello@spicecraft.world">hello@spicecraft.world</a>
+              <strong>Email:</strong> <a href="mailto:hello@spicemight.world">hello@spicemight.world</a>
             </p>
             <p>
-              <strong>Address:</strong> SpiceCraft, Atlanta, Georgia, USA
+              <strong>Address:</strong> SpiceMight, Atlanta, Georgia, USA
             </p>
           </div>
 

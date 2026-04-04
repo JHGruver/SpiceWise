@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="container footer-content">
         <div className="footer-brand">
           <div className="footer-logo">
-            <img src="/images/brand/logo.png" alt="SpiceCraft" className="footer-logo-image" />
-            <span className="logo-text">SpiceCraft</span>
+            <img src="/images/brand/logo.png" alt="SpiceMight" className="footer-logo-image" />
+            <span className="logo-text">SpiceMight</span>
           </div>
           <p className="footer-tagline">
             Spice-based Wellness Wisdom
@@ -29,7 +29,7 @@ export default function Footer() {
             <ul>
               <li><span>About Us</span></li>
               <li><span>Contact</span></li>
-              <li><a href="mailto:hello@spicecraft.world">hello@spicecraft.world</a></li>
+              <li><a href="mailto:hello@spicemight.world">hello@spicemight.world</a></li>
             </ul>
           </div>
 
@@ -44,10 +44,10 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} SpiceCraft. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SpiceMight. All rights reserved.</p>
           <div className="disclaimer">
             <p>
-              <strong>Medical Disclaimer:</strong> The information provided by SpiceCraft is for educational purposes only
+              <strong>Medical Disclaimer:</strong> The information provided by SpiceMight is for educational purposes only
               and is not intended as medical advice, diagnosis, or treatment. Always consult with a qualified healthcare
               provider before starting any new health regimen or if you have questions about a medical condition.
             </p>

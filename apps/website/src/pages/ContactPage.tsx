@@ -10,8 +10,8 @@ const contactInfo = [
   {
     icon: 'mail' as const,
     title: 'Email',
-    value: 'hello@spicecraft.world',
-    link: 'mailto:hello@spicecraft.world'
+    value: 'hello@spicemight.world',
+    link: 'mailto:hello@spicemight.world'
   },
   {
     icon: 'map-pin' as const,
@@ -29,7 +29,7 @@ const contactInfo = [
 
 const faqItems = [
   {
-    question: 'When will SpiceCraft launch?',
+    question: 'When will SpiceMight launch?',
     answer: 'We\'re targeting Autumn-Winter 2025 for our official launch. Join the waitlist to be notified!'
   },
   {
@@ -38,7 +38,7 @@ const faqItems = [
   },
   {
     question: 'Do you provide medical advice?',
-    answer: 'No. SpiceCraft provides educational information only. Always consult a healthcare provider for medical advice.'
+    answer: 'No. SpiceMight provides educational information only. Always consult a healthcare provider for medical advice.'
   }
 ]
 
@@ -78,8 +78,8 @@ export default function ContactPage() {
     <div className="page contact-page">
       <SEO
         title="Contact Us"
-        description="Get in touch with the SpiceCraft team. We're here to answer your questions about spices and natural wellness."
-        keywords="contact SpiceCraft, spice wellness support, spice app help"
+        description="Get in touch with the SpiceMight team. We're here to answer your questions about spices and natural wellness."
+        keywords="contact SpiceMight, spice wellness support, spice app help"
         canonical="/contact"
       />
       <section className="page-hero">
@@ -98,7 +98,7 @@ export default function ContactPage() {
             <div className="contact-info">
               <h2>Get in Touch</h2>
               <p>
-                Have questions about SpiceCraft? Want to share feedback or suggest a feature?
+                Have questions about SpiceMight? Want to share feedback or suggest a feature?
                 We're here to help.
               </p>
 

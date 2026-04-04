@@ -32,13 +32,13 @@ export default function AboutPage() {
     <div className="page about-page">
       <SEO
         title="About Us"
-        description="Learn about SpiceCraft's mission to bridge ancient wellness wisdom with modern science. Discover our evidence-based approach to spice-based healing."
-        keywords="about SpiceCraft, spice wellness, ancestral wisdom, natural healing, evidence-based spices"
+        description="Learn about SpiceMight's mission to bridge ancient wellness wisdom with modern science. Discover our evidence-based approach to spice-based healing."
+        keywords="about SpiceMight, spice wellness, ancestral wisdom, natural healing, evidence-based spices"
         canonical="/about"
       />
       <section className="page-hero">
         <div className="container">
-          <h1>About SpiceCraft</h1>
+          <h1>About SpiceMight</h1>
           <p className="page-subtitle">
             Bridging ancient knowledge with modern tools at the forefront of a spice revival.
           </p>
@@ -52,7 +52,7 @@ export default function AboutPage() {
             <div className="mission-content">
               <h2>Our Mission</h2>
               <p className="mission-lead">
-                SpiceCraft was created to make the healing power of spices known to everyone.
+                SpiceMight was created to make the healing power of spices known to everyone.
               </p>
               <p>
                 We believe that your kitchen cabinet holds the potential for natural wellness,
@@ -83,7 +83,7 @@ export default function AboutPage() {
         <div className="container">
           <h2 className="section-title">At Our Core</h2>
           <p className="section-subtitle">
-            These principles guide everything we do at SpiceCraft.
+            These principles guide everything we do at SpiceMight.
           </p>
           <div className="values-grid">
             {values.map((value, idx) => (
@@ -106,7 +106,7 @@ export default function AboutPage() {
             <h2>Join the Spice Revival</h2>
             <p>
               Be part of a community reconnecting with natural wellness wisdom.
-              Sign up for early access and be the first to experience SpiceCraft.
+              Sign up for early access and be the first to experience SpiceMight.
             </p>
             <Link to="/pricing" className="btn btn--primary btn--lg">
               Join the Waitlist

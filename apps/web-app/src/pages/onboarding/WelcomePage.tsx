@@ -15,10 +15,10 @@ export default function WelcomePage() {
     <div className="onboarding-page welcome-page">
       <div className="onboarding-content">
         <div className="welcome-logo">
-          <img src="/images/brand/logo.png" alt="SpiceCraft" className="welcome-logo-image" />
+          <img src="/images/brand/logo.png" alt="SpiceMight" className="welcome-logo-image" />
         </div>
 
-        <h1 className="welcome-title">Welcome to SpiceCraft</h1>
+        <h1 className="welcome-title">Welcome to SpiceMight</h1>
         <p className="welcome-tagline">Spice-based Wellness Wisdom at Your Fingertips</p>
 
         <div className="welcome-features">

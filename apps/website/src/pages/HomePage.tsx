@@ -19,7 +19,7 @@ const testimonials = [
   {
     name: 'Camilla M.',
     title: 'Yoga Instructor & Mom',
-    quote: 'I needed quick, healthy options for my family with allergies. SpiceCraft made it easy to find natural solutions we can trust.',
+    quote: 'I needed quick, healthy options for my family with allergies. SpiceMight made it easy to find natural solutions we can trust.',
     rating: 5,
   },
   {
@@ -60,7 +60,7 @@ const features = [
     subtitle: 'It\'s time for a spice revival!',
     bullets: [
       'Spices offer a holistic pathway to wellness, yet are underrepresented in wellness tech',
-      'SpiceCraft provides a rich, easy-to-navigate reference with a "return to our roots" approach',
+      'SpiceMight provides a rich, easy-to-navigate reference with a "return to our roots" approach',
       'Research-backed information on culturally-rooted spices used in early civilizations worldwide',
     ]
   },
@@ -198,7 +198,7 @@ export default function HomePage() {
     <div className="home-page">
       <SEO
         title="Natural Healing Through Spices"
-        description="Discover the healing power and potential of spices with SpiceCraft. Your personal guide to natural wellness through everyday kitchen ingredients. Launching this spring!"
+        description="Discover the healing power and potential of spices with SpiceMight. Your personal guide to natural wellness through everyday kitchen ingredients. Launching this spring!"
         keywords="spices, health benefits, natural remedies, cooking, wellness, turmeric, ginger, cinnamon, natural health"
         canonical="/"
       />
@@ -258,7 +258,7 @@ export default function HomePage() {
             <Icon name="star-filled" size="sm" />
             <span>Launching This Spring</span>
           </div>
-          <h1>SpiceCraft</h1>
+          <h1>SpiceMight</h1>
           <p className="hero-tagline">Spice-based Wellness Wisdom at Your Fingertips</p>
 
           {/* Email Capture Form */}
@@ -390,7 +390,7 @@ export default function HomePage() {
       {/* Testimonials */}
       <section className="section section--alt testimonials">
         <div className="container">
-          <h2 className="section-title">Early Users Love SpiceCraft</h2>
+          <h2 className="section-title">Early Users Love SpiceMight</h2>
           <div className="testimonials-grid">
             {testimonials.map((testimonial, idx) => (
               <div key={idx} className="testimonial-card">
@@ -454,7 +454,7 @@ export default function HomePage() {
           </div>
           <h2>Be First in Line</h2>
           <p className="cta-lead">
-            SpiceCraft launches this spring. Join the waitlist now and be the first to explore the healing power of your kitchen.
+            SpiceMight launches this spring. Join the waitlist now and be the first to explore the healing power of your kitchen.
           </p>
 
           {/* CTA Email Capture */}
@@ -489,7 +489,7 @@ export default function HomePage() {
             <span><Icon name="check" size="sm" /> Unsubscribe anytime</span>
           </div>
           <div className="cta-contact">
-            <p>Questions? <a href="mailto:hello@spicecraft.world">hello@spicecraft.world</a></p>
+            <p>Questions? <a href="mailto:hello@spicemight.world">hello@spicemight.world</a></p>
           </div>
         </div>
       </section>

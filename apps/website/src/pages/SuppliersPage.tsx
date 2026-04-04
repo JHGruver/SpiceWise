@@ -36,7 +36,7 @@ const ratingFeatures = [
   {
     icon: 'check-circle' as const,
     title: 'Verified Reviews',
-    description: 'Real reviews from verified SpiceCraft members who have purchased from these suppliers.'
+    description: 'Real reviews from verified SpiceMight members who have purchased from these suppliers.'
   },
   {
     icon: 'trending-up' as const,
@@ -151,7 +151,7 @@ export default function SuppliersPage() {
         <div className="container">
           <h2 className="section-title">How We Rate</h2>
           <p className="section-subtitle">
-            Our rating system is powered by the SpiceCraft community.
+            Our rating system is powered by the SpiceMight community.
           </p>
           <div className="rating-features-grid">
             {ratingFeatures.map((feature, idx) => (
@@ -230,7 +230,7 @@ export default function SuppliersPage() {
             <div className="how-step">
               <span className="step-number">2</span>
               <h3>Read Reviews</h3>
-              <p>See what other SpiceCraft members say about their experiences with each supplier.</p>
+              <p>See what other SpiceMight members say about their experiences with each supplier.</p>
             </div>
             <div className="how-step">
               <span className="step-number">3</span>

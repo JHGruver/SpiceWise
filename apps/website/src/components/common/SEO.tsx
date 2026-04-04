@@ -11,11 +11,11 @@ interface SEOProps {
 }
 
 const defaultSEO = {
-  siteName: 'SpiceCraft',
-  titleTemplate: '%s | SpiceCraft',
-  defaultTitle: 'SpiceCraft - Ancestral Wellness Wisdom',
-  description: 'Discover the healing power and potential of spices with SpiceCraft. Your comprehensive guide to natural wellness through culinary ingredients.',
-  siteUrl: 'https://spicecraft.com',
+  siteName: 'SpiceMight',
+  titleTemplate: '%s | SpiceMight',
+  defaultTitle: 'SpiceMight - Ancestral Wellness Wisdom',
+  description: 'Discover the healing power and potential of spices with SpiceMight. Your comprehensive guide to natural wellness through culinary ingredients.',
+  siteUrl: 'https://spicemight.com',
   ogImage: '/images/brand/hero-spices.png',
 }
 

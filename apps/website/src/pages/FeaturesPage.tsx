@@ -62,7 +62,7 @@ export default function FeaturesPage() {
     <div className="page features-page">
       <SEO
         title="Features"
-        description="Explore SpiceCraft's powerful features: Spice Index, Keyword Search, and Remedy Road Maps. Your complete spice-based wellness toolkit."
+        description="Explore SpiceMight's powerful features: Spice Index, Keyword Search, and Remedy Road Maps. Your complete spice-based wellness toolkit."
         keywords="spice database, spice remedies, wellness app features, spice guide"
         canonical="/features"
       />

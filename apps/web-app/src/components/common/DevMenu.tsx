@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import { createPortal } from 'react-dom'
 import './DevMenu.css'
 
-const PROD_DOMAIN = 'spicecraft.world'
+const PROD_DOMAIN = 'spicemight.world'
 
 const devLinks = {
   'Marketing Website': [
@@ -141,7 +141,7 @@ export default function DevMenu() {
         >
           <div className="dev-menu-header">
             <span className="dev-menu-badge">{isProduction ? 'NAV' : 'DEV'}</span>
-            <span className="dev-menu-title">SpiceCraft Navigation</span>
+            <span className="dev-menu-title">SpiceMight Navigation</span>
           </div>
 
           {Object.entries(devLinks).map(([section, links]) => (
@@ -163,7 +163,7 @@ export default function DevMenu() {
           ))}
 
           <div className="dev-menu-footer">
-            <span>{isProduction ? 'spicecraft.world' : 'Local Development'}</span>
+            <span>{isProduction ? 'spicemight.world' : 'Local Development'}</span>
           </div>
         </div>,
         document.body

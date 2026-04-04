@@ -6,7 +6,7 @@ export default function DisclaimerPage() {
     <div className="page disclaimer-page">
       <SEO
         title="Health Disclaimer"
-        description="Important health disclaimer for SpiceCraft. Our information is for educational purposes only and not intended as medical advice."
+        description="Important health disclaimer for SpiceMight. Our information is for educational purposes only and not intended as medical advice."
         keywords="health disclaimer, medical disclaimer, spice information disclaimer"
         canonical="/disclaimer"
       />
@@ -14,7 +14,7 @@ export default function DisclaimerPage() {
         <div className="container">
           <h1>Health Disclaimer</h1>
           <p className="page-subtitle">
-            Important information about how to use SpiceCraft responsibly.
+            Important information about how to use SpiceMight responsibly.
           </p>
         </div>
       </section>
@@ -24,7 +24,7 @@ export default function DisclaimerPage() {
           <div className="disclaimer-section">
             <h2>Educational Purpose Only</h2>
             <p>
-              The information provided by SpiceCraft, including but not limited to text, graphics,
+              The information provided by SpiceMight, including but not limited to text, graphics,
               images, and other material contained on the application and website, is for <strong>informational
               and educational purposes only</strong>. The content is not intended to be a substitute for
               professional medical advice, diagnosis, or treatment.
@@ -34,14 +34,14 @@ export default function DisclaimerPage() {
           <div className="disclaimer-section">
             <h2>Not Medical Advice</h2>
             <p>
-              SpiceCraft does not provide medical advice. The information about spices and their
+              SpiceMight does not provide medical advice. The information about spices and their
               potential health benefits is compiled from traditional uses and published research, but should
               not be interpreted as medical recommendations.
             </p>
             <p>
               <strong>Always seek the advice of your physician or other qualified health provider</strong> with
               any questions you may have regarding a medical condition. Never disregard professional medical
-              advice or delay in seeking it because of something you have read on SpiceCraft.
+              advice or delay in seeking it because of something you have read on SpiceMight.
             </p>
           </div>
 
@@ -99,7 +99,7 @@ export default function DisclaimerPage() {
             <h2>Emergency Situations</h2>
             <p>
               <strong>If you think you may have a medical emergency, call your doctor or emergency services
-              immediately.</strong> SpiceCraft does not recommend or endorse any specific tests,
+              immediately.</strong> SpiceMight does not recommend or endorse any specific tests,
               physicians, products, procedures, opinions, or other information that may be mentioned on
               the application or website.
             </p>
@@ -108,7 +108,7 @@ export default function DisclaimerPage() {
           <div className="disclaimer-section">
             <h2>Accuracy of Information</h2>
             <p>
-              While we strive to provide accurate and up-to-date information, SpiceCraft makes no
+              While we strive to provide accurate and up-to-date information, SpiceMight makes no
               warranties or representations about the accuracy, completeness, or suitability of the
               information contained on the application or website. The field of spice-based wellness and
               nutrition is constantly evolving, and information may become outdated.
@@ -118,7 +118,7 @@ export default function DisclaimerPage() {
           <div className="disclaimer-section">
             <h2>Use at Your Own Risk</h2>
             <p>
-              Reliance on any information provided by SpiceCraft is solely at your own risk. We
+              Reliance on any information provided by SpiceMight is solely at your own risk. We
               are not liable for any damages or negative consequences from any treatment, action, or
               application of information from our services.
             </p>
@@ -127,7 +127,7 @@ export default function DisclaimerPage() {
           <div className="disclaimer-section">
             <h2>External Links</h2>
             <p>
-              SpiceCraft may contain links to external websites. We are not responsible for the
+              SpiceMight may contain links to external websites. We are not responsible for the
               content, accuracy, or privacy practices of these external sites.
             </p>
           </div>
@@ -136,7 +136,7 @@ export default function DisclaimerPage() {
             <h2>Questions?</h2>
             <p>
               If you have any questions about this disclaimer or our services, please contact us at{' '}
-              <a href="mailto:hello@spicecraft.world">hello@spicecraft.world</a>
+              <a href="mailto:hello@spicemight.world">hello@spicemight.world</a>
             </p>
           </div>
 

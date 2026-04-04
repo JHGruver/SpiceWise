@@ -1,4 +1,4 @@
-# SpiceCraft Design System & Style Guide
+# SpiceMight Design System & Style Guide
 
 **Version:** 2.0
 **Last Updated:** November 2024
@@ -26,7 +26,7 @@
 
 ## Brand Overview
 
-SpiceCraft embodies a **"New Age Rustic Professional"** aesthetic that combines:
+SpiceMight embodies a **"New Age Rustic Professional"** aesthetic that combines:
 
 - **Earthy, organic warmth** - Natural colors inspired by herbs and spices
 - **Modern sophistication** - Clean lines, glassmorphic effects, smooth animations

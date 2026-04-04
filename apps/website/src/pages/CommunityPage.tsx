@@ -101,7 +101,7 @@ export default function CommunityPage() {
     <div className="page community-page">
       <SEO
         title="Community"
-        description="Join the SpiceCraft community. Play trivia games, learn from educational content, connect with fellow spice enthusiasts, and attend virtual tasting events."
+        description="Join the SpiceMight community. Play trivia games, learn from educational content, connect with fellow spice enthusiasts, and attend virtual tasting events."
         keywords="spice community, spice wellness community, spice trivia, virtual tasting, wellness education"
         canonical="/community"
       />
@@ -113,7 +113,7 @@ export default function CommunityPage() {
             <Icon name="users" size="sm" />
             Coming Soon
           </span>
-          <h1>Join the SpiceCraft Community</h1>
+          <h1>Join the SpiceMight Community</h1>
           <p className="page-subtitle">
             Learn, play, and connect with thousands of people passionate about natural wellness through spices.
           </p>
@@ -125,7 +125,7 @@ export default function CommunityPage() {
         <div className="container">
           <h2 className="section-title">Community Features</h2>
           <p className="section-subtitle">
-            More than just an app—SpiceCraft is a community of wellness seekers.
+            More than just an app—SpiceMight is a community of wellness seekers.
           </p>
           <div className="community-features-grid">
             {communityFeatures.map((feature, idx) => (
@@ -155,7 +155,7 @@ export default function CommunityPage() {
         <div className="container">
           <h2 className="section-title">Become a Member</h2>
           <p className="section-subtitle">
-            Unlock exclusive community features with a SpiceCraft membership.
+            Unlock exclusive community features with a SpiceMight membership.
           </p>
           <div className="membership-grid">
             {membershipBenefits.map((benefit, idx) => (
@@ -180,9 +180,9 @@ export default function CommunityPage() {
                 <Icon name="star-filled" size="sm" />
                 Host Program
               </span>
-              <h2>Become a SpiceCraft Host</h2>
+              <h2>Become a SpiceMight Host</h2>
               <p>
-                Love sharing your passion for spices? Become a certified SpiceCraft Host
+                Love sharing your passion for spices? Become a certified SpiceMight Host
                 and lead tasting parties in your community. Earn rewards while helping
                 others discover natural wellness.
               </p>

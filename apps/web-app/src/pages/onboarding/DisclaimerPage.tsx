@@ -31,7 +31,7 @@ export default function DisclaimerPage() {
           <div className="disclaimer-box">
             <h3>Educational Purposes Only</h3>
             <p>
-              The information provided by SpiceCraft is for educational purposes only and is
+              The information provided by SpiceMight is for educational purposes only and is
               not intended as medical advice, diagnosis, or treatment.
             </p>
           </div>

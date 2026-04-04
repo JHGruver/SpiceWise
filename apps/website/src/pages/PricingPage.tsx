@@ -62,7 +62,7 @@ const faqs = [
     answer: 'We\'re launching in spring 2026! Join the waitlist to be the first to know.'
   },
   {
-    question: 'Is SpiceCraft free?',
+    question: 'Is SpiceMight free?',
     answer: 'Yes! The app and membership are completely free. We\'re building a community-driven movement for spice-based wellness.'
   },
   {
@@ -79,7 +79,7 @@ const faqs = [
   },
   {
     question: 'Is this medical advice?',
-    answer: 'No. SpiceCraft provides educational information only. Always consult a healthcare professional for medical advice.'
+    answer: 'No. SpiceMight provides educational information only. Always consult a healthcare professional for medical advice.'
   }
 ]
 
@@ -104,8 +104,8 @@ export default function PricingPage() {
     <div className="page pricing-page">
       <SEO
         title="Pricing"
-        description="Simple, transparent pricing for SpiceCraft. Start free, upgrade when ready. 7-day free trial on all paid plans."
-        keywords="SpiceCraft pricing, wellness app subscription, spice app plans, spice guide pricing"
+        description="Simple, transparent pricing for SpiceMight. Start free, upgrade when ready. 7-day free trial on all paid plans."
+        keywords="SpiceMight pricing, wellness app subscription, spice app plans, spice guide pricing"
         canonical="/pricing"
       />
 
@@ -190,7 +190,7 @@ export default function PricingPage() {
         <div className="container">
           <div className="waitlist-cta">
             <h2>Join the Waitlist</h2>
-            <p>Be the first to access SpiceCraft when we launch this spring.</p>
+            <p>Be the first to access SpiceMight when we launch this spring.</p>
 
             {isSubmitted ? (
               <div className="waitlist-success">

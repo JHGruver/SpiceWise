@@ -1,4 +1,4 @@
-const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/hello@spicecraft.world'
+const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/hello@spicemight.world'
 
 interface WaitlistData {
   email: string
