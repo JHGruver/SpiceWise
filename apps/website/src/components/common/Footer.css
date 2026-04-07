@@ -127,6 +127,12 @@
   padding-left: 0;
 }
 
+.footer-email {
+  color: inherit !important;
+  font-size: var(--sw-text-sm) !important;
+  font-family: var(--sw-font-body) !important;
+}
+
 .footer-column a::before {
   content: '';
   position: absolute;
