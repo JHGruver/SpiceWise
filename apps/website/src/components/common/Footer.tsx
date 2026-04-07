@@ -29,7 +29,7 @@ export default function Footer() {
             <ul>
               <li><span>About Us</span></li>
               <li><span>Contact</span></li>
-              <li><a href="mailto:hello@spicemight.world">hello@spicemight.world</a></li>
+              <li><a href="mailto:hello@spicemight.com">hello@spicemight.com</a></li>
             </ul>
           </div>
 

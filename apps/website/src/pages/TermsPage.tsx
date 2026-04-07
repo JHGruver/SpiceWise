@@ -192,7 +192,7 @@ export default function TermsPage() {
               For questions about these Terms, please contact us at:
             </p>
             <p>
-              <strong>Email:</strong> <a href="mailto:hello@spicemight.world">hello@spicemight.world</a>
+              <strong>Email:</strong> <a href="mailto:hello@spicemight.com">hello@spicemight.com</a>
             </p>
             <p>
               <strong>Address:</strong> SpiceMight, Atlanta, Georgia, USA

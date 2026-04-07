@@ -104,7 +104,7 @@ export default function PrivacyPage() {
             </ul>
             <p>
               To exercise these rights, please contact us at{' '}
-              <a href="mailto:hello@spicemight.world">hello@spicemight.world</a>.
+              <a href="mailto:hello@spicemight.com">hello@spicemight.com</a>.
             </p>
           </div>
 
@@ -149,7 +149,7 @@ export default function PrivacyPage() {
               If you have questions about this Privacy Policy or our data practices, please contact us at:
             </p>
             <p>
-              <strong>Email:</strong> <a href="mailto:hello@spicemight.world">hello@spicemight.world</a>
+              <strong>Email:</strong> <a href="mailto:hello@spicemight.com">hello@spicemight.com</a>
             </p>
             <p>
               <strong>Address:</strong> SpiceMight, Atlanta, Georgia, USA

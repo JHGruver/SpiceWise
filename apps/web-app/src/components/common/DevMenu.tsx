@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import { createPortal } from 'react-dom'
 import './DevMenu.css'
 
-const PROD_DOMAIN = 'spicemight.world'
+const PROD_DOMAIN = 'spicemight.com'
 
 const devLinks = {
   'Marketing Website': [
@@ -163,7 +163,7 @@ export default function DevMenu() {
           ))}
 
           <div className="dev-menu-footer">
-            <span>{isProduction ? 'spicemight.world' : 'Local Development'}</span>
+            <span>{isProduction ? 'spicemight.com' : 'Local Development'}</span>
           </div>
         </div>,
         document.body

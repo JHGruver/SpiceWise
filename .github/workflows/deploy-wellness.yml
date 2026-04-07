@@ -1,4 +1,4 @@
-name: Deploy SpiceCraft to GitHub Pages
+name: Deploy SpiceMight to GitHub Pages
 
 on:
   push:
@@ -62,7 +62,7 @@ jobs:
           cp -r apps/wellness-dashboard/dist/* combined-dist/wellness/
 
           # Add CNAME file
-          echo "spicecraft.world" > combined-dist/CNAME
+          echo "spicemight.com" > combined-dist/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

@@ -10,8 +10,8 @@ const contactInfo = [
   {
     icon: 'mail' as const,
     title: 'Email',
-    value: 'hello@spicemight.world',
-    link: 'mailto:hello@spicemight.world'
+    value: 'hello@spicemight.com',
+    link: 'mailto:hello@spicemight.com'
   },
   {
     icon: 'map-pin' as const,

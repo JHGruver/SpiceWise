@@ -489,7 +489,7 @@ export default function HomePage() {
             <span><Icon name="check" size="sm" /> Unsubscribe anytime</span>
           </div>
           <div className="cta-contact">
-            <p>Questions? <a href="mailto:hello@spicemight.world">hello@spicemight.world</a></p>
+            <p>Questions? <a href="mailto:hello@spicemight.com">hello@spicemight.com</a></p>
           </div>
         </div>
       </section>
