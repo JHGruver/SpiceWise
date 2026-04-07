@@ -19,7 +19,7 @@ export default function WelcomePage() {
         </div>
 
         <h1 className="welcome-title">Welcome to SpiceMight</h1>
-        <p className="welcome-tagline">Spice-based Wellness Wisdom at Your Fingertips</p>
+        <p className="welcome-tagline">explore the power and potential of spice at your fingertips...</p>
 
         <div className="welcome-features">
           <div className="welcome-feature">

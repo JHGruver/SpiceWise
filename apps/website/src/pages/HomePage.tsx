@@ -259,7 +259,7 @@ export default function HomePage() {
             <span>Launching This Spring</span>
           </div>
           <h1>SpiceMight</h1>
-          <p className="hero-tagline">Spice-based Wellness Wisdom at Your Fingertips</p>
+          <p className="hero-tagline">explore the power and potential of spice at your fingertips...</p>
 
           {/* Email Capture Form */}
           <div className="email-capture">
