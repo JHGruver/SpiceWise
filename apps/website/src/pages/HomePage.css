@@ -490,9 +490,15 @@
 
 /* Two-column features grid */
 .features-grid--two {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   max-width: 900px;
   margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .features-grid--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Feature cards with bullets */
