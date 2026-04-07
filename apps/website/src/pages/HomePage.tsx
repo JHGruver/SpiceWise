@@ -198,7 +198,7 @@ export default function HomePage() {
     <div className="home-page">
       <SEO
         title="Natural Healing Through Spices"
-        description="Discover the healing power and potential of spices with SpiceMight. Your personal guide to natural wellness through everyday kitchen ingredients. Launching this spring!"
+        description="Discover the healing power and potential of spices with SpiceMight. Your personal guide to natural wellness through everyday kitchen ingredients. Launching this summer!"
         keywords="spices, health benefits, natural remedies, cooking, wellness, turmeric, ginger, cinnamon, natural health"
         canonical="/"
       />
@@ -256,7 +256,7 @@ export default function HomePage() {
         <div className="container hero-content">
           <div className="launch-badge">
             <Icon name="star-filled" size="sm" />
-            <span>Launching This Spring</span>
+            <span>LAUNCHING THIS SUMMER!</span>
           </div>
           <h1>SpiceMight</h1>
           <p className="hero-tagline">explore the power and potential of spice at your fingertips...</p>
@@ -454,7 +454,7 @@ export default function HomePage() {
           </div>
           <h2>Be First in Line</h2>
           <p className="cta-lead">
-            SpiceMight launches this spring. Join the waitlist now and be the first to explore the healing power of your kitchen.
+            SpiceMight launches this summer. Join the waitlist now and be the first to explore the healing power of your kitchen.
           </p>
 
           {/* CTA Email Capture */}

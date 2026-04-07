@@ -59,7 +59,7 @@ const pricingTiers = [
 const faqs = [
   {
     question: 'When does the app launch?',
-    answer: 'We\'re launching in spring 2026! Join the waitlist to be the first to know.'
+    answer: 'We\'re launching in summer 2026! Join the waitlist to be the first to know.'
   },
   {
     question: 'Is SpiceMight free?',
@@ -114,7 +114,7 @@ export default function PricingPage() {
         <div className="container">
           <span className="pricing-hero-badge">
             <Icon name="star-filled" size="sm" />
-            Launching This Spring
+            LAUNCHING THIS SUMMER!
           </span>
           <h1>Choose Your Path</h1>
           <p className="pricing-hero-subtitle">
@@ -190,7 +190,7 @@ export default function PricingPage() {
         <div className="container">
           <div className="waitlist-cta">
             <h2>Join the Waitlist</h2>
-            <p>Be the first to access SpiceMight when we launch this spring.</p>
+            <p>Be the first to access SpiceMight when we launch this summer.</p>
 
             {isSubmitted ? (
               <div className="waitlist-success">
