@@ -10,7 +10,7 @@ export default function Footer() {
             <span className="logo-text">SpiceMight</span>
           </div>
           <p className="footer-tagline">
-            Spice-based Wellness Wisdom
+            explore the power and potential of spice at your fingertips...
           </p>
         </div>
 
