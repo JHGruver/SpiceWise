@@ -203,11 +203,6 @@
     height: calc(56px * 1.8);
     max-height: calc(56px * 1.8);
   }
-
-  .email-capture .btn--lg {
-    font-size: calc(var(--sw-text-lg) * 1.8);
-    padding: calc(var(--sw-spacing-md) * 1.8) var(--sw-spacing-xl);
-  }
 }
 
 .email-input {
