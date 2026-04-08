@@ -204,7 +204,7 @@
   max-height: 56px;
   padding: 0 var(--sw-spacing-lg);
   font-family: var(--sw-font-body);
-  font-size: var(--sw-text-base);
+  font-size: calc(var(--sw-text-lg) * 0.8);
   border: 2px solid var(--sw-color-sand);
   border-radius: var(--sw-radius-lg);
   background-color: var(--sw-color-bg-card);
