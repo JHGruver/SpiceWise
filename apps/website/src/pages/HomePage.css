@@ -208,6 +208,17 @@
     font-size: calc(var(--sw-text-lg) * 0.2);
     padding: calc(var(--sw-spacing-md) * 0.2) var(--sw-spacing-xl);
   }
+
+  .cta-email-capture .email-input {
+    font-size: calc(var(--sw-text-lg) * 0.8 * 1.8);
+    height: calc(56px * 1.8);
+    max-height: calc(56px * 1.8);
+  }
+
+  .cta-email-capture .btn--lg {
+    font-size: calc(var(--sw-text-lg) * 1.8);
+    padding: calc(var(--sw-spacing-md) * 1.8) var(--sw-spacing-xl);
+  }
 }
 
 .email-input {
