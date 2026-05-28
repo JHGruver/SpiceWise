@@ -1356,6 +1356,12 @@
 /* ============================================
    Responsive Styles
    ============================================ */
+@media (max-width: 639px) {
+  .hero-tagline {
+    font-size: var(--sw-text-base);
+  }
+}
+
 @media (min-width: 640px) {
   .hero h1 {
     font-size: var(--sw-text-6xl);
