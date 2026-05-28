@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import DevMenu from './DevMenu'
+import Icon from './Icon'
 import './Header.css'
 
 const navLinks = [
@@ -88,15 +89,21 @@ export default function Header() {
         <div className="container header-content">
           <div className="header-left">
             {!isSecretMode && <DevMenu />}
-            <Link
-              to="/"
-              className={`logo ${isHomePage && menuUnlocked ? 'logo--shifted' : ''}`}
-              aria-label="SpiceMight home"
-              onClick={handleLogoClick}
-            >
-              <img src="/images/brand/logo.png" alt="SpiceMight" className="logo-image" />
-              <span className="logo-text">SpiceMight</span>
-            </Link>
+            <div className="logo-wrapper">
+              <Link
+                to="/"
+                className={`logo ${isHomePage && menuUnlocked ? 'logo--shifted' : ''}`}
+                aria-label="SpiceMight home"
+                onClick={handleLogoClick}
+              >
+                <img src="/images/brand/logo.png" alt="SpiceMight" className="logo-image" />
+                <span className="logo-text">SpiceMight</span>
+              </Link>
+              <div className="launch-badge">
+                <Icon name="star-filled" size="sm" />
+                <span>LAUNCHING THIS SUMMER!</span>
+              </div>
+            </div>
           </div>
 
           <nav

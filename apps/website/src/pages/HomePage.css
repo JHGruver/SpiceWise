@@ -80,7 +80,7 @@
    ============================================ */
 .hero {
   position: relative;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -123,38 +123,8 @@
   padding: var(--sw-spacing-3xl) 0;
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--sw-spacing-sm);
-  padding: var(--sw-spacing-sm) var(--sw-spacing-lg);
-  background: linear-gradient(135deg, rgba(45, 74, 62, 0.06) 0%, rgba(196, 162, 101, 0.1) 100%);
-  border: 1px solid rgba(196, 162, 101, 0.4);
-  border-radius: var(--sw-radius-full);
-  font-size: var(--sw-text-sm);
-  font-weight: var(--sw-font-medium);
-  color: var(--sw-color-gold-dark);
-  letter-spacing: var(--sw-tracking-widest);
-  text-transform: uppercase;
-  margin-bottom: var(--sw-spacing-xl);
-  transition: all var(--sw-duration-normal) var(--sw-ease-luxury);
-  animation: badgePulse 3s ease-in-out infinite;
-}
-
-@keyframes badgePulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(196, 162, 101, 0);
-  }
-  50% {
-    box-shadow: 0 0 25px 3px rgba(196, 162, 101, 0.2);
-  }
-}
-
-.hero-badge:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, rgba(45, 74, 62, 0.1) 0%, rgba(196, 162, 101, 0.15) 100%);
-  border-color: var(--sw-color-gold);
-  box-shadow: 0 4px 16px rgba(196, 162, 101, 0.2);
+.hero-badge-placeholder {
+  display: none;
 }
 
 .hero h1 {
@@ -168,12 +138,19 @@
 }
 
 .hero-tagline {
+  display: inline-block;
   font-family: var(--sw-font-heading);
   font-size: var(--sw-text-2xl);
   font-style: italic;
-  color: var(--sw-color-text-primary);
+  color: var(--sw-color-primary);
+  font-weight: var(--sw-font-bold);
+  padding: var(--sw-spacing-sm) var(--sw-spacing-lg);
+  background: linear-gradient(135deg, rgba(45, 74, 62, 0.06) 0%, rgba(196, 162, 101, 0.1) 100%);
+  border: 1px solid rgba(196, 162, 101, 0.4);
+  border-radius: var(--sw-radius-xl);
   margin-bottom: var(--sw-spacing-lg);
-  font-weight: var(--sw-font-normal);
+  transform: scale(1.05);
+  transform-origin: left center;
 }
 
 .hero-subtitle {

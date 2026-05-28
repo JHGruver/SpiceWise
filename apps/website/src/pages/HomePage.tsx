@@ -254,12 +254,8 @@ export default function HomePage() {
           <div className="hero-overlay"></div>
         </div>
         <div className="container hero-content">
-          <div className="launch-badge">
-            <Icon name="star-filled" size="sm" />
-            <span>LAUNCHING THIS SUMMER!</span>
-          </div>
           <h1>SpiceMight</h1>
-          <p className="hero-tagline">explore the power and potential of spice at your fingertips...</p>
+          <p className="hero-tagline">explore the power and potential<br />of spice at your fingertips...</p>
 
           {/* Email Capture Form */}
           <div className="email-capture">
